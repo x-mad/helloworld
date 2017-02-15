@@ -1,0 +1,36 @@
+---
+jpsVersion: '0.99'
+jpsType: update
+id: java-vertical-scaling
+name: Java Memory Vertical Scaling
+categories:
+- apps/dev-and-admin-tools
+version: '1.1'
+homepage: https://github.com/jelastic-jps/java-memory-agent/
+description:
+  text: Java Memory Vertical Scaling
+  short: Java Memory Vertical Scaling
+globals:
+  baseUrl: https://raw.githubusercontent.com/jelastic-jps/java-memory-agent/master/scripts
+  homeDir: "/java_agent"
+onInstall: install
+onAfterRedeployContainer: install
+onUninstall:
+  cmd[cp]:
+  - "/bin/bash ${globals.homeDir}/java --uninstall >> /var/log/run.log 2>&1"
+  user: root
+actions:
+  install:
+  - cmd[cp]:
+    - while $(pgrep 'apk|apt|yum' 1> /dev/null); do sleep 1; echo waiting... >> /var/log/run.log
+      2>&1; done
+    - mkdir -p ${globals.homeDir}
+    - wget ${globals.baseUrl}/supervisor.sh -O ${globals.homeDir}/java
+    - wget ${globals.baseUrl}/memoryConfig.sh -O ${globals.homeDir}/memoryConfig.sh
+    - wget ${globals.baseUrl}/../lib/jelastic-gc-agent.jar -O ${globals.homeDir}/jelastic-gc-agent.jar
+    - "/bin/bash ${globals.homeDir}/java --install >> /var/log/run.log"
+    user: root
+  - restartContainers:
+      nodeGroup: cp
+success:
+  text: Done!
