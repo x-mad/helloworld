@@ -1,0 +1,40 @@
+---
+name : wildfly_controller_added
+title : Wildfly domain controller node added,
+subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} environment
+---
+
+<div class="jel-main-content">
+    Just wanted to let you know that a new Wildfly domain controller node&nbsp;was added to&nbsp;your ${ENV_NAME} environment.
+    <br>
+    <br>Please use the following details to access its Admin Console:
+    <br>
+    <div class="highlighted-block">
+        <b>Admin Console URL:</b>  <a href="${URL}" target="_blank">${URL}</a>
+        <br>
+        <b>Admin Console Login: </b> ${LOGIN}
+        <br>
+        <b>Admin Console Password: </b>
+        <span class="password-field">${PASSWORD}</span>
+    </div>
+</div>
+---
+name : wildfly_controller_added_tmp
+title : Wildfly domain controller node added tmp,
+subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} environment
+---
+tmp
+<div class="jel-main-content">
+    Just wanted to let you know that a new Wildfly domain controller node&nbsp;was added to&nbsp;your ${ENV_NAME} environment.
+    <br>
+    <br>Please use the following details to access its Admin Console:
+    <br>
+    <div class="highlighted-block">
+        <b>Admin Console URL:</b>  <a href="${URL}" target="_blank">${URL}</a>
+        <br>
+        <b>Admin Console Login: </b> ${LOGIN}
+        <br>
+        <b>Admin Console Password: </b>
+        <span class="password-field">${PASSWORD}</span>
+    </div>
+</div>
