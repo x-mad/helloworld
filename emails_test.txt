@@ -1,5 +1,5 @@
 ---
-name  wildfly_controller_added
+name : wildfly_controller_added
 title : Wildfly domain controller node added
 subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} environment
 ---
