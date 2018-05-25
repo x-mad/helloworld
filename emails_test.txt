@@ -20,7 +20,7 @@ subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} e
 </div>
 ---
 name : wildfly_controller_added_tmp
-title : Wildfly domain controller node added tmp
+title 2 Wildfly domain controller node added tmp
 subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} environment
 ---
 tmp
