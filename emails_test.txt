@@ -19,15 +19,15 @@ subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} e
     </div>
 </div>
 ---
-name : wildfly_controller_added_tmp
-title : Wildfly domain controller node added tmp
-subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} environment
+name : wildfly_controller_password_changed
+title : titttle
+subject : sbjjjject
 ---
 tmp
 <div class="jel-main-content">
-    Just wanted to let you know that a new Wildfly domain controller node&nbsp;was added to&nbsp;your ${ENV_NAME} environment.
+    super content
     <br>
-    <br>Please use the following details to access its Admin Console:
+    <br>oppppa:
     <br>
     <div class="highlighted-block">
         <b>Admin Console URL:</b>  <a href="${URL}" target="_blank">${URL}</a>
