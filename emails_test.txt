@@ -1,40 +1,1784 @@
 ---
-name : wildfly_controller_added
-title : Wildfly domain controller node added
-subject : ${HOSTER_NAME} - Wildfly domain controller node added to ${ENV_NAME} environment
+name: cartridge_password_changed
+subject: Jelastic - Password for ${NODE_NAME} has been successfully changed
+title: Password for ${NODE_NAME} has been successfully changed
 ---
-
 <div class="jel-main-content">
-    Just wanted to let you know that a new Wildfly domain controller node&nbsp;was added to&nbsp;your ${ENV_NAME} environment.
-    <br>
-    <br>Please use the following details to access its Admin Console:
-    <br>
-    <div class="highlighted-block">
-        <b>Admin Console URL:</b>  <a href="${URL}" target="_blank">${URL}</a>
-        <br>
-        <b>Admin Console Login: </b> ${LOGIN}
-        <br>
-        <b>Admin Console Password: </b>
-        <span class="password-field">${PASSWORD}</span>
+    Just wanted to let you know that the password for <strong>${NODE_NAME}</strong> node has been successfully changed.
+
+    <br>Please use the credentials below to get the admin access to your <strong>${NODE_NAME}</strong> node:
+
+    <div class="highlighted-block"><strong>Login:</strong> ${LOGIN}
+        <br><strong>Password:</strong> ${PASSWORD}
     </div>
 </div>
 ---
-name : wildfly_controller_password_changed
-title : titttle
-subject : sbjjjject
+name: reseller_solution_deploy_successful
+subject: Application ${SOLUTION_NAME} has been deployed for ${TARGET_USER_EMAIL}
+title: Application ${SOLUTION_NAME} has been successfully deployed for ${TARGET_USER_EMAIL}
 ---
-tmp
 <div class="jel-main-content">
-    super content
+    Your ${SOLUTION_NAME} application has been successfully deployed to your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> hosting <a href="${ENV_URL}">environment</a>.
     <br>
-    <br>oppppa:
+    <br>${SOLUTION_TEXT}
+</div>
+---
+name: docker_node_added
+subject: ${HOSTER_NAME} - Docker container "${DOCKER_NAME}" has been successfully created
+title: Docker container "${DOCKER_NAME}" has been successfully created
+---
+<div class="jel-main-content">
+    Congratulations! A new Docker container <b>${DOCKER_NAME}</b> has been successfully added to your <a href="${ENV_URL}" target="_blank"><em>${ENV_NAME}</em></a> environment in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud</a>.
     <br>
-    <div class="highlighted-block">
-        <b>Admin Console URL:</b>  <a href="${URL}" target="_blank">${URL}</a>
-        <br>
-        <b>Admin Console Login: </b> ${LOGIN}
-        <br>
-        <b>Admin Console Password: </b>
-        <span class="password-field">${PASSWORD}</span>
+    <br>
+    <div class="highlighted-block"><strong>Image Name</strong>: ${DOCKER_NAME}#if(${DOCKER_HUB_URL})
+        <br><strong>Hub URL</strong>: ${DOCKER_HUB_URL}#end #if(${URL})
+        <br><strong>Access URL</strong>: <a href="${URL}" target="_blank">${URL}</a>#end #if(${IPV4_LIST_JOINED})
+        <br><b>Public IPv4 address(es):</b> ${IPV4_LIST_JOINED} #end #if(${IPV6_LIST_JOINED})
+        <br><b>Public IPv6 address(es):</b> ${IPV6_LIST_JOINED} #end
+        <br><strong>Internal IPv4 address</strong>: ${IP}
     </div>
+
+    <br>For the further server management, connect to it through either Jelastic <a href="${URL_DOCS_SSH_ACCESS}" target="_blank">SSH Gate</a> or node's <a href="${URL_DOCS_PUBLIC_IP}" target="_blank">external IP</a> address (if any is attached) using the following credentials:
+    <br>
+
+    <div class="highlighted-block"><strong>SSH Login</strong>: ${LOGIN}
+        <br><strong>SSH Password</strong>: <span class="password-field">${PASSWORD}</span>
+    </div>
+
+    <br>The embedded ${DOCKER_NAME}&nbsp;administrating utility could be launched with the <a href="${URL}" target="_blank">${URL}</a>&nbsp;command. &nbsp;For more details on the management possibiilities it provides, refer&nbsp;to the official&nbsp;${DOCKER_NAME}&nbsp;documentation
+    <br>
+
+    <br>The detailed information on <a href="http://docs.jelastic.com/docker-configuration" target="_blank">configuring</a>, <a href="http://docs.jelastic.com/docker-update" target="_blank">updating</a> and <a href="http://docs.jelastic.com/docker-ssh-access" target="_blank">accessing</a> Docker containers via SSH at Jelastic is available in the documentation.
+</div>
+---
+name: postgres_node_added
+subject: ${HOSTER_NAME} - PostgreSQL node added to ${ENV_NAME} environment
+title: PostgreSQL node added
+---
+<div class="jel-main-content">
+    A new PostgreSQL server was added to your ${ENV_NAME} PaaS environment.
+    <br>
+    <br>This server is exclusively for your use (not shared with other users), so all of its resources and power are under your control, including the ability to customise its <a href="http://docs.jelastic.com/database-configuration-files#postgresql" target="_blank">configuration files</a> via the <a href="${URL_DASHBOARD}" target="_blank">dashboard</a>.
+    <br>
+    <br>phpPgAdmin web administration interface:
+    <br>
+    <div class="highlighted-block"> <b>Access URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span>
+    </div>
+
+    <br>Connect to PostgreSQL from your application code using the following details:
+    <br>
+
+    <div class="highlighted-block"> <strong>Host: ${DB_HOST}</strong>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> ${PASSWORD}
+        <br><b>Database:</b> (create it using phpPgAdmin above)
+    </div>
+
+    <br><strong>Do not use localhost in your application code. PostgreSQL is on its own separate server so you must use ${DB_HOST} to connect.</strong>
+    <br>
+    <br>(Note: You should define a new restricted user via phpPgAdmin - only use ${LOGIN} for testing because this user has full administrative access to your server)
+    <br>Detailed guidance is available in the <a href="http://docs.jelastic.com/connection-to-postgresql" target="_blank">documentation.</a>
+</div>
+---
+name: mysql_node_added
+subject: ${HOSTER_NAME} - MySQL node added to ${ENV_NAME} environment
+title: MySQL node added
+---
+<div class="jel-main-content">
+    A new MySQL server was added to your ${ENV_NAME} PaaS environment.
+    <br>
+    <br>This server is exclusively for your use (not shared with other users), so all of its resources and power are under your control, including the ability to customise its <a href="http://docs.jelastic.com/database-configuration-files#etc" target="_blank">configuration files</a> via the <a href="${URL_DASHBOARD}" target="_blank">dashboard</a>.
+    <br>
+    <br>phpMyAdmin web administration interface:
+    <br>
+
+    <div class="highlighted-block"> <b>Access URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span>
+    </div>
+
+    <br>Connect to MySQL from your application code using the following details:
+    <br>
+
+    <div class="highlighted-block"> <strong>Host: ${DB_HOST}</strong>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> ${PASSWORD}
+        <br><b>Database:</b> (create it using phpMyAdmin above)
+    </div>
+    <br><strong>Do not use localhost in your application code. MySQL is on its own separate server so you must use ${DB_HOST} to connect.</strong>
+    <br>
+    <br>(Note: You should define a new restricted user via phpMyAdmin - only use ${LOGIN} for testing because this user has full administrative access to your server)
+    <br>Detailed guidance is available in the <a href="http://docs.jelastic.com/connection-to-mysql" target="_blank">documentation.</a>
+</div>
+---
+name: reseller_confirm_install_solution
+subject: Request for ${SOLUTION_NAME} application deployment from ${TARGET_USER_EMAIL}
+title: Request for ${SOLUTION_NAME} application deployment
+---
+<div class="jel-main-content">
+    Someone used your email address to request an install of ${SOLUTION_NAME} on ${HOSTER_NAME} PaaS.
+    <br>
+    <br>Click below to deploy ${SOLUTION_NAME} now:
+
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_INSTALL_SOLUTION}" target="_blank"><span>DEPLOY NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>Please ignore this email if you did not request this installation.
+</div>
+---
+name: billing_account_needs_refill_in_days
+subject: Your ${HOSTER_NAME} Cloud account needs to be refilled!
+title: Your balance is running low
+---
+<div class="jel-main-content">
+    Based on your recent usage, it looks like your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account will run out of money in the next ${DAYS_COUNT} day(s)!!
+    <br>
+    <br>If your balance runs out, all environments will be temporarily stopped, so nobody will be able to access your application or websites.
+    <br>
+    <br><a href="${URL_REFILL_ACCOUNT}">Refill your balance</a> now to avoid any disruption.
+
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_REFILL_ACCOUNT}" target="_blank"><span>REFILL NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    If you already have auto-refill configured, take a moment to check its settings - you might need to increase the refill frequency or low balance refill limit.
+</div>
+---
+name: billing_account_destroyed_not_refill_during_days
+subject: Your ${HOSTER_NAME} Cloud account was destroyed!
+title: Your ${HOSTER_NAME} Cloud account was destroyed!
+---
+<div class="jel-main-content">
+    Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account has been just destroyed because it wasn't refilled in ${DAYS_COUNT} days after your balance was depleted.
+    <br>
+    <br>Sadly all environments owned by your account were deleted, but you can still reactivate your account to create new environments or use environments owned by other users.
+    <br>
+    <br>You can still log in to the <a href="${AUTH_LINK_REFILL}">the dashboard</a> and reactivate your account if you wish to create new Jelastic environments or use environments shared by other users.
+    <br>
+    <br><b> If you haven't already, please take a moment to let us know why you decided not to refill and continue using your ${HOSTER_NAME} PaaS account so that we can improve the platform in future.</b>
+</div>
+---
+name: billing_account_needs_convert_in_days
+subject: Your ${HOSTER_NAME} Cloud account needs to be converted!
+title: Your ${HOSTER_NAME} Cloud account needs to be converted!
+---
+<div class="header-filling">
+    <table class="button">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="jel-main-content">
+    Your ${HOSTER_NAME} account is going to run out of bonus money in ${DAYS_COUNT} day(s).
+    <br>
+    <br>You're near the end of your free trial on our ${HOSTER_NAME} platform, but our relationship doesn't have to end here!
+    <br>
+    <br><b>Let's Work Together for Your Success!</b>
+    <br>
+    <br>We know you felt the magic too over these last couple of weeks, it seems that we really have something special going on...
+    <br>
+    <br>Not ready for an exclusive relationship yet?
+    <br>
+    <br>Don't worry, you can <a href="https://docs.jelastic.com/clone-environment">clone</a> or <a href="https://docs.jelastic.com/share-environment">share</a> your environment with others any time. You can even STOP it overnight, or when you need to take a break.
+    <br>
+    <br>Stopped environments only consume disk space, no cloudlets, so are practically free!
+    <br>
+    <br>Continue enjoying our ${HOSTER_NAME} Cloud platform by upgrading to a paid account.
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+    Don't forget to <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convert your account</a> to keep using ${HOSTER_NAME} cloud service.
+    <br>
+    <br>The service is prepaid, and you can top-up as little as $10 at a time.
+</div>
+---
+name: billing_account_convert_to_billing
+subject: Welcome to Jelastic
+title: Welcome to Jelastic
+---
+<div class="jel-main-content">
+    Thank you for choosing ${HOSTER_NAME} Cloud Services.
+    <br>
+    <br>You should receive an e-mail containing your ${HOSTER_NAME} Customer Portal login soon. We encourage you to spend some time in the Portal to get acquainted with our billing and support functions before you get started. If you want to start using Cloud services right away, simply log in to the <a href="${URL_DASHBOARD}" target="_blank">Cloud dashboard</a>.
+    <br>
+    <br>Thanks for your interest in ${HOSTER_NAME} Cloud Services, and welcome aboard.
+    <br>
+</div>
+---
+name: billing_account_created_in_external_billing
+subject: Your Jelastic PBA account is successfully created
+title: Your Jelastic PBA account is successfully created
+---
+<div class="jel-main-content">
+    Congratulations! Your ${HOSTER_NAME} Cloud account is upgraded to the full version.
+    <br>
+    <br>Now you have access to ${HOSTER_NAME} billing control panel which allows you to manage your invoices and payment methods.
+    <br>
+    <br>Use the following details to log in to your Billing Control Panel:
+    <br>
+    <br>
+    <div class="highlighted-block"><b>Billing Control Panel URL:</b> ${BILLING_PORTAL_URL}
+        <br><b>Username:</b> ${BILLING_PORTAL_USERNAME}
+        <br><b>Password:</b> ${BILLING_PORTAL_PASSWORD}
+    </div>
+
+    <br>We encourage you to spend some time in the Portal to get acquainted with our billing and support functions before you get started. If you want to start using ${HOSTER_NAME} Cloud right away, simply log in to the <a href="${URL_DASHBOARD}" target="_blank">Cloud dashboard</a>.
+</div>
+---
+name: billing_account_activated
+subject: Your Jelastic account was successfully activated!
+title: Your Jelastic was successfully activated!
+---
+<div class="jel-main-content">
+    Great! Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account has been reactivated and is ready for you to use again.
+    <br>
+    <br>Dashboard URL: <a href="${URL_DASHBOARD}">${URL_DASHBOARD}</a>
+</div>
+---
+name: jelastic_software_package_ftp_installed
+subject: ${HOSTER_NAME} - FTP enabled for ${ENV_NAME} environment
+title: FTP enabled for ${ENV_NAME} environment
+---
+<div class="jel-main-content">
+    The FTP / FTPS add-on has been installed successfully to one of the servers within your ${HOSTER_NAME} PaaS environment: ${ENV_URL}
+    <br>
+    <br>Please find your credentials below:
+    <br>
+    <div class="highlighted-block"> <b>Your FTP link(s):</b> ${FTP_URL}
+        <br><b>Login:</b> ${PACKAGE_LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PACKAGE_PASSWORD}</span>
+        <br><b>Public IP:</b> ${PACKAGE_IP}
+    </div>
+
+    <br>Detailed guidance regarding FTP / FTPS access is provided within the <a href="http://docs.jelastic.com/ftp-ftps-support" target="_blank">documentation</a>
+</div>
+---
+name: confirm_install_solution
+subject: ${HOSTER_NAME}  - Confirmation of application deploy to Jelastic
+title: Confirmation of application deploy to Jelastic
+---
+<div class="jel-main-content">
+    Someone used your email address to request an install of ${SOLUTION_NAME} on ${HOSTER_NAME} PaaS.
+    <br>
+    <br>Click below to deploy ${SOLUTION_NAME} now:
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_INSTALL_SOLUTION}" target="_blank"><span>DEPLOY NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+    Please ignore this email if you did not request this installation.
+</div>
+---
+name: user_relation_confirm
+subject: ${LINKED_USER_NAME} accepted your collaboration invite
+title: Invitation accepted
+---
+<div class="jel-main-content">
+    Great news!
+    <br>${LINKED_USER_NAME} user has confirmed your invitation to share your ${HOSTER_NAME} PaaS account.
+    <br>
+    <br>Please click below to set which environment(s) you wish to share with them
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINKED_USERS_SETTINGS}" target="_blank"><span>Configure settings</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+---
+name: mariadb_node_added
+subject: ${HOSTER_NAME} - MariaDB node added to ${ENV_NAME} environment
+title: MariaDB node added
+---
+<div class="jel-main-content">
+    A new MariaDB server was added to your ${ENV_NAME} PaaS environment.
+    <br>
+    <br>This server is exclusively for your use (not shared with other users), so all of its resources and power are under your control, including the ability to customise its <a href="http://docs.jelastic.com/database-configuration-files#etc" target="_blank">configuration files</a> via the <a href="${URL_DASHBOARD}" target="_blank">dashboard</a>.
+    <br>
+    <br>phpMyAdmin web administration interface:
+    <br>
+    <div class="highlighted-block"> <b>Access URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span> </div>
+    <br>Connect to MariaDB from your application code using the following details:
+    <br>
+    <div class="highlighted-block"> <strong>Host: ${DB_HOST}</strong>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> ${PASSWORD}
+        <br><b>Database:</b> (create it using phpMyAdmin above) </div>
+    <br><strong>Do not use localhost in your application code. MariaDB is on its own separate server so you must use ${DB_HOST} to connect.</strong>
+    <br>
+    <br>(Note: You should define a new restricted user via phpMyAdmin - only use ${LOGIN} for testing because this user has full administrative access to your server)
+    <br>Detailed guidance is available in the <a href="http://docs.jelastic.com/connection-to-mariadb" target="_blank">documentation.</a>
+</div>
+---
+name: user_relation_unlink_user
+subject: Removal from ${OWNER_USER_NAME}'s account
+title: Collaboration ended
+---
+<div class="jel-main-content">
+    This email is to inform you that your account has been unlinked from ${OWNER_USER_NAME} user.
+    <br>
+    <br>Please click below to manage your current relationships to other accounts:
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_RELATIONS_SETTINGS}" target="_blank"><span>Manage sharing settings</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+---
+name: hivext_welcome_for_billing
+subject: Welcome to Jelastic Cloud!
+title: Welcome to Jelastic Cloud
+---
+<div class="header-filling">
+    <table class="button">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINK}" target="_blank"><span>LOG IN NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="jel-main-content">
+    Congratulations! Your account has been upgraded.
+    <br>
+    <br>You are going to receive an email with your ${HOSTER_NAME} Customer Portal login soon. To start leveraging the newly received possibilities with ${HOSTER_NAME} Cloud paid account right away, simply log in with the following data:
+    <br>
+    <div class="highlighted-block"> <b>${HOSTER_NAME} dashboard:</b> <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a>
+        <br><b>Login:</b> ${EMAIL}
+        <br><b>Password:</b> ${PASSWORD}</div>
+    <br/> Useful links:
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; mso-line-height-rule: exactly;" data-line-height="1.5"><strong>Dashboard Guide: <a href="https://docs.jelastic.com/jelastic-dashboard-guide"><span style="font-weight: 400;">https://docs.jelastic.com/jelastic-dashboard-guide</span></a></strong>
+        <br/> <strong>User guides on Youtube: <a href="https://www.youtube.com/JelasticCloud"><span style="font-weight: 400;">https://www.youtube.com/JelasticCloud</span></a> </strong>
+        <br/> <strong>User documentation: <a href="https://docs.jelastic.com/"><span style="font-weight: 400;">https://docs.jelastic.com/</span></a></strong>
+        <br/> <strong>Connecting to database: <a href="https://docs.jelastic.com/add-database"><span style="font-weight: 400;">https://docs.jelastic.com/add-database</span></a></strong>
+        <br/> <strong>Community:<span style="font-weight: 400;"> ${URL_JELASTIC_COMMUNITY}</span></strong>
+        <br/> <strong>Support:<span style="font-weight: 400;"> ${URL_HOSTER_SUPPORT}</span></strong> </div>
+    <div style="line-height: 1.5; margin: 0; outline: none; padding: 20px 0px 0px 0px; font-size: 20px; mso-line-height-rule: exactly;" data-line-height="1.5">
+        <div style="margin: 0; outline: none; padding: 0;">
+            <div style="margin: 0; outline: none; padding: 0; text-align: center;"><span><h2>Available Resources</h2></span></div>
+        </div>
+    </div>
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; mso-line-height-rule: exactly;" data-line-height="1.5">-&nbsp;<span style="font-weight: 400;">100 cloud environments per account</span>
+        <br/> -&nbsp;<span>30 app servers per environment</span>
+        <br/> -&nbsp;<span>32 GB RAM and 24 CPU cores per app server or database</span>
+        <br/> -&nbsp;<span style="font-weight: 400;">100 GB storage per app server or database</span>
+        <br/> -&nbsp;<span style="font-weight: 400;">Bandwidth is limited by 1Gb/s</span> </div>
+    <br>Thank you for choosing <a href="${URL_HOSTER_SITE}" target="_blank">${HOSTER_NAME} PaaS</a> and welcome aboard!
+</div>
+---
+name: billing_account_needs_refill
+subject: Your ${HOSTER_NAME} Cloud account balance is low
+title: Your balance is running low
+---
+<div class="jel-main-content">
+    Based on your recent usage, it looks like your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account is going to run out of money!
+    <br>
+    <br>If your balance runs out, all environments will be temporarily stopped, so nobody will be able to access your application or websites.
+    <br>
+    <br><a href="${URL_REFILL_ACCOUNT}">Refill your balance</a> now to avoid any disruption.
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_REFILL_ACCOUNT}" target="_blank"><span>REFILL NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+    Whilst you're there, take a moment to check your auto-refill settings. You can auto-refill when your balance reaches a limit of your choice; if it's already enabled, you might consider increasing the limit slightly to ensure continuous service in the event of any unexpected payment errors.
+</div>
+---
+name: notify_disk_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment used ${LOAD_VALUE}% of disk space
+title: ${NODE_NAME} is using ${LOAD_VALUE}% of available disk space
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>
+
+    #if(${TRIGGER_CONDITION_GREATER})The amount of disk space consumed by&nbsp;${NODE_NAME}&nbsp;in environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>&nbsp;exceeded ${TRIGGER_VALUE}% #else The amount of disk space consumed by ${NODE_NAME} in environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> fell below&nbsp;${TRIGGER_VALUE}% #end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Collectively, all ${NODE_NAME} nodes(s) within this environment are consuming&nbsp;${DISK_USED}GB of disk space. That's ${LOAD_VALUE}% of available disk space. #if(${TRIGGER_CONDITION_GREATER})
+    <br>
+    <br><strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul>
+            <li>Change your disk limits at ${HOSTER_NAME} dashboard.</li>
+            <li>Request additional disk space for ${NODE_NAME} by contacting our support team (<a href="${URL_HOSTER_SUPPORT}">${URL_HOSTER_SUPPORT}</a>).</li>
+        </ul>
+    </div>
+    #end
+
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: mssql_node_added
+subject: ${HOSTER_NAME} - MSSQL node has been successfully created
+title: MSSQL node has been successfully created
+---
+<div class="jel-main-content">
+    Congratulations! A new <strong>${NODE_NAME}</strong> node has been successfully added to your <strong>${ENV_NAME}</strong> environment in the <a href="${URL_DASHBOARD}">${HOSTER_NAME}</a>.
+    <br>
+    <br>Please use the following details to gain the <strong>admin access</strong> to it:
+    <br><strong>Host</strong>: ${DB_HOST}
+    <br><strong>Internal IP</strong>: ${INTERNAL_IP}
+    <br><strong>Login</strong> : ${LOGIN}
+    <br><strong>Password</strong> : <span class="password-field">${PASSWORD}</span>
+    <br>
+    <br>For establishing the connection to your remote ${NODE_NAME} desktop via <strong>RDP</strong>, please use the next data:
+    <br><strong>Access URL</strong>: ${RDP_URL}
+    <br><strong>Login</strong>: ${RDP_LOGIN}
+    <br><strong>Password</strong>: ${RDP_PASSWORD}
+    <br>
+    <br>To quickly connect to your ${NODE_NAME} node via the HTML5 client, use the next one-time link:
+    <br><a href="${AUTH_URL_RDP_CONNECT}" target="_blank">${AUTH_URL_RDP_CONNECT}</a>
+    <br>
+    <br>The detailed instruction on :&nbsp;<a href="https://docs.jelastic.com/connection-to-mssql" target="_blank">how to work with MSSQL server</a> at ${HOSTER_NAME} is available in the documentation
+    <br>
+    <br>
+</div>
+---
+name: billing_account_going_be_destroyed
+subject: Your ${HOSTER_NAME} Cloud account is going to be destroyed!
+title: Your ${HOSTER_NAME} Cloud account is going to be destroyed!
+---
+<div class="jel-main-content">
+    Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account is going to be destroyed in ${DAYS_COUNT} day(s).
+    <br>Pay attention that after this all your environments will be deleted.
+    <br>
+    <br><a href="${URL_REFILL_ACCOUNT}">Refill now</a> to continue using Jelastic service.
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_REFILL_ACCOUNT}" target="_blank"><span>REFILL NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+    <strong>Stay with us and get more</strong>
+    <br>
+    <br>Tell us what you're missing and we'll get the devs onto it for you ASAP - and we'll also give you a free bonus to thank you for your feedback!
+</div>
+---
+name: rdp_password_changed
+subject: Password for ${NODE_NAME} changed
+title: Password for ${NODE_NAME} changed
+---
+<div class="jel-main-content">
+    Just wanted to let you know that the password for <strong>${NODE_NAME}</strong> node in your <strong>${ENV_NAME}</strong> environment has been successfully changed.
+    <br>Please use the following data for establishing the connection to your remote <strong>${NODE_NAME}</strong> desktop via RDP:
+    <div class="highlighted-block"> <strong>Host Address</strong>: ${RDP_URL}
+        <br><strong>Login</strong>: ${RDP_LOGIN}
+        <br><strong>Password</strong>: <span class="password-field">${RDP_PASSWORD}</span>
+    </div>
+    To quickly connect to your ${NODE_NAME} node via the HTML5 client, use the next one-time link:
+    <br><a href="${AUTH_URL_RDP_CONNECT}" target="_blank">${AUTH_URL_RDP_CONNECT}</a>
+</div>
+---
+name: solution_deploy_successful
+subject: Jelastic - ${SOLUTION_NAME} has been successfully deployed
+title: Your ${SOLUTION_NAME} application has been successfully deployed to Jelastic
+---
+<div class="jel-main-content">
+    Your ${SOLUTION_NAME} application has been successfully deployed to your <a href="${URL_DASHBOARD}">${HOSTER_NAME}&nbsp;Cloud</a> hosting <a href="${ENV_URL}">environment</a>.
+    <br>
+    <br>${SOLUTION_TEXT}<span data-mce-bogus="true"></span>
+</div>
+---
+name: billing_account_deactivated
+subject: Your ${HOSTER_NAME} Cloud account was deactivated!
+title: Your ${HOSTER_NAME} Cloud account was deactivated!
+---
+<div class="jel-main-content">
+    You still have the access to the <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud dashboard</a>, but all your environments are stopped and you can't make any changes or create the new ones.
+    <br>
+    <br>To activate your account you need to refill it:
+    <br>Billing panel: <a href="${URL_REFILL_ACCOUNT}" target="_blank">${URL_REFILL_ACCOUNT}</a>
+    <br>
+    <br>When you activate your account, restart your environment(s) manually by clicking the <strong>Start </strong>button.
+</div>
+---
+name: cartridge_node_added
+subject: ${NODE_NAME} node was added to your "${ENV_NAME}" PaaS environment
+title: ${NODE_NAME} node successfully added
+---
+<div class="jel-main-content">
+    Congratulations! A new <strong>${NODE_NAME}</strong> node has been successfully added to your ${ENV_NAME} environment.
+    <br>
+    <br>Please use the credentials below to gain admin access to your <strong>${NODE_NAME}</strong> node:
+    <br>
+    <div class="highlighted-block"> <b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span>
+        <br><b>IP:</b> ${INTERNAL_IP} #set($NODE=${NODE_NAME}) #printCartValues({"OPENSHIFT_APP_DNS" : "DNS address"} $CART_DATA "http://" "") #if ($NODE=="Redis") #printCartValues({"OPENSHIFT_REDIS_PORT" : "Port", "OPENSHIFT_REDIS_SENTINEL_PORT" : "Sentinel Port"} $CART_DATA "" "") #end #if ($NODE=="Neo4j") #printCartValues({"OPENSHIFT_NEO4J_DB_PORT" : "Port"} $CART_DATA "" "") #end #if ($NODE=="Cassandra") #printCartValues({"OPENSHIFT_CASSANDRA_DB_PORT" : "Port"} $CART_DATA "" "") #end #macro(printCartValues $keysMap $CART_DATA $prefix $suffix ) #foreach($data in $CART_DATA) #set($keyData=false) #set($keyData=$keysMap.get($data.Key)) #if($keyData) #set($value=$data.Value) #if(!$value)#set($value="-")#end
+        <br><b>$keyData:</b> ${prefix}${value}${suffix}#end #end #end </div>
+    <br>Read our guides to learn how to:
+
+    <div class="highlighted-block"> #if ($NODE=="Tomcat"||$NODE=="Wildfly"||$NODE=="GlassFish"||$NODE=="JBossas"||$NODE=="Jetty"||$NODE=="Springboot") - Deploy projects: <a href="https://docs.jelastic.com/maven-cloud-hosting-in-jelastic">Maven build node</a> to deploy via GIT/SVN and <a href="https://docs.jelastic.com/bitbucket-project-maven">Bitbucket</a>, or <a href="https://docs.jelastic.com/git-svn-auto-deploy">GIT & SVN Auto-Deploy</a>
+        <br>- Use IDE plugins such as <a href="https://docs.jelastic.com/netbeans-plugin-guide">NetBeans</a>, <a href="https://docs.jelastic.com/maven-plugin-jelastic">Maven</a>, <a href="https://docs.jelastic.com/idea-plugin">IntelliJ IDEA</a>, <a href="https://docs.jelastic.com/eclipse-plugin-user-manual">Eclipse</a> and <a href="https://docs.jelastic.com/ant-task-jelastic">ANT</a>
+        <br>- Perform Continuous Integration tasks: <a href="https://docs.jelastic.com/hudson">Hudson</a>, <a href="http://blog.jelastic.com/2012/07/25/continuous-integration-in-the-cloud-part-ii-jenkins/">Jenkins</a>
+        <br>- Use Frameworks: <a href="https://docs.jelastic.com/jelastic-grails-deploy">Grails</a>, <a href="https://docs.jelastic.com/google-web-toolkit">GWT</a>, <a href="http://blog.jelastic.com/2013/07/02/play-2-web-application-deployment-tutorial/">Play 2</a>, <a href="https://docs.jelastic.com/spring">Spring</a> and many more
+        <br>- Connect to database: <a href="https://docs.jelastic.com/add-database"><span style="font-weight: 400;">https://docs.jelastic.com/add-database</span></a>
+        <br>#end #if ($NODE=="Nodejs") - <a href="https://docs.jelastic.com/nodejs-versions">Node.JS Overview</a>
+        <br>- <a href="https://docs.jelastic.com/nodejs-tutorials">Node.JS tutorials</a>
+        <br>- <a href="https://docs.jelastic.com/deploy-nodejs-archive-url">Deploying Node.JS projects</a>
+        <br>- <a href="https://docs.jelastic.com/nodejs-git-svn">Deploying Node.JS projects via GIT/SVN</a>
+        <br>- Connect to database: <a href="https://docs.jelastic.com/add-database"><span style="font-weight: 400;">https://docs.jelastic.com/add-database</span></a>
+        <br>#end - <a href="http://docs.jelastic.com/application-configuration"><span style="font-weight: 400;">Configure</span></a><span style="font-weight: 400;"> your servers</span>
+        <br/> - <a href="https://docs.jelastic.com/public-ipv4"><span style="font-weight: 400;">Add Public IP</span></a>
+        <br/> - <a href="http://docs.jelastic.com/view-app-statistics"><span style="font-weight: 400;">Monitor</span></a><span style="font-weight: 400;"> your app's stats and get </span><a href="http://docs.jelastic.com/environment-triggers"><span style="font-weight: 400;">load notifications</span></a>
+        <br/> - <a href="https://docs.jelastic.com/ssh-access"><span style="font-weight: 400;">Connect via SSH</span></a>
+        <br>- Connect via <a href="https://docs.jelastic.com/ftp-ftps-support"><span style="font-weight: 400;">FTP </span></a> and <a href="https://docs.jelastic.com/ssh-protocols">SFTP</a> </div>
+</div>
+---
+name: pool_system
+subject: ${HOSTER_NAME} - Pool information message
+title: Pool information message
+---
+<div class="jel-main-content">
+    ${MESSAGE}
+    <br>
+</div>
+---
+name: billing_account_convert_to_trial
+subject: ${HOSTER_NAME} - Welcome to Full Version
+title: Welcome to ${HOSTER_NAME} Full Version
+---
+<div class="jel-main-content">
+    Thank you very much for being a member of the extended product development team. Thanks to your input, we are now rolling out the best cloud-based Java and PHP hosting platform available today. ${HOSTER_NAME} just made the seamless transition from free beta to commercial release. This has no impact on any applications you may have been running on your beta test environments. However, it means that, once you elect to begin paying for your environment, all beta test restrictions on your parameters will be removed or greatly increased.
+    <br>
+    <br>Please note that -- unless you convert to a fully funded account -- when trial period&nbsp;ends in <strong>14 days</strong>, your beta environment will be stopped, and any data stored in it will be destroyed.
+    <br>
+    <br><span style="font-weight: bold;">To remove all limitations from your ${HOSTER_NAME} account right now just go to <a  href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a>, log in, and click the "Upgrade trial account" link in ${HOSTER_NAME} dashboard.</span>
+    <br>
+    <br>Thanks again for joining the ${HOSTER_NAME} family. We look forward to having you on board as a full customer soon!
+    <br>
+    <br>
+</div>
+---
+name: environment_access_granted
+subject: Access granted to Jelastic PaaS environment(s)
+title: Access to environment(s) has been granted
+---
+<div class="jel-main-content">
+    Great news! You have been granted access to the following environment(s) of ${OWNER_USER_NAME} user:${ENVS_LIST}
+    <br>
+    <br>Follow the link to manage the shared environments:
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINK}" target="_blank"><span>Manage environments</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+---
+name: reseller_request_install_details
+subject: Request for ${SOLUTION_NAME} deployment has been submitted
+title: Request for ${SOLUTION_NAME} application deployment has been successfully submitted
+---
+<div class="jel-main-content">
+    Thank you for using our service!
+    <br>
+    <br>Let us inform you that your request for <strong>${SOLUTION_NAME}</strong> application deployment has been successfully submitted.
+    <br>
+    <br>Our team will contact you and provide with the details in the nearest future.
+</div>
+---
+name: jelastic_system
+subject: ${HOSTER_NAME} - System information message
+title: System information message.
+---
+<div class="jel-main-content">
+    ${MESSAGE}
+</div>
+---
+name: glassfish_das_password_changed
+subject: ${NODE_NAME} password for DAS node changed
+title: ${NODE_NAME} password for DAS node changed
+---
+<div class="jel-main-content">
+    You recently requested a password reset for your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> ${NODE_NAME} DAS (Domain Administration Server).
+    <br>
+    <br>Here are the new credentials:
+    <div class="highlighted-block"> <b>Admin Console URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Admin Console Login: </b> ${LOGIN}
+        <br><b>Admin Console Password: </b> <span class="password-field">${PASSWORD}</span>
+    </div>
+</div>
+---
+name: billing_account_going_be_destroyed_trial
+subject: Your ${HOSTER_NAME} Cloud account is going to be destroyed!
+title: Your ${HOSTER_NAME} Cloud account is going to be destroyed!
+---
+<div class="jel-main-content">
+    Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account is going to be destroyed in ${DAYS_COUNT} day(s).
+    <br>Pay attention that after this all your environments will be deleted.
+    <br>
+    <br>Please <a href="${URL_UPGRADE_ACCOUNT}"> upgrade your account</a> to continue using ${HOSTER_NAME} cloud service.
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+    <strong>Stay with us and get more</strong>
+    <br>
+    <br>We're always working hard to improve the Jelastic platform, so we've already added new features, functionality, and improvements since you stopped using it. We'd love you to stay with us and see what we've done
+</div>
+---
+name: mongodb_node_added
+subject: ${HOSTER_NAME} - MongoDB node added to ${ENV_NAME} environment
+title: MongoDB node added
+---
+<div class="jel-main-content">
+    A new MongoDB server was added to your ${ENV_NAME} PaaS environment.
+    <br>
+    <br>This server is exclusively for your use (not shared with other users), so all of its resources and power are under your control, including the ability to customise its <a href="http://docs.jelastic.com/database-configuration-files#mongodb" target="_blank">configuration files</a> via the <a href="${URL_DASHBOARD}" target="_blank">dashboard</a>.
+    <br>
+    <br>RockMongo web administration interface:
+    <br>
+    <div class="highlighted-block"> <b>Access URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span> </div>
+    <br>Connect to MongoDB from your application code using the following details:
+    <br>
+    <div class="highlighted-block"> <strong>Host: ${DB_HOST}</strong>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> ${PASSWORD}
+        <br><b>Database:</b> (create it using RockMongo above)
+    </div>
+    <br><<strong>Do not use localhost in your application code. MongoDB is on its own separate server so you must use ${DB_HOST} to connect.</strong>\
+    <br>
+    <br>(Note: You should define a new restricted user via RockMongo - only use ${LOGIN} for testing because this user has full administrative access to your server)
+    <br>Detailed guidance is available in the <a href="http://docs.jelastic.com/connection-to-mongodb" target="_blank">documentation.</a>
+</div>
+---
+name: billing_account_trial_out_of_bonus
+subject: Your ${HOSTER_NAME} Cloud trial account needs to be converted!
+title: Your ${HOSTER_NAME} Cloud trial account needs to be converted!
+---
+<div class="jel-main-content">
+    Your ${HOSTER_NAME} trial bonuses are finished. Your environments are stopped.
+    <br>Please, <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convert your account</a> to activate your environments and keep using&nbsp;${HOSTER_NAME} service.
+</div>
+---
+name: environment_has_been_slept
+subject: ${HOSTER_NAME} - Your environment has been slept
+title: Your ${HOSTER_NAME} Environment has been put to sleep!
+---
+<div class="jel-main-content">
+    Did you forget to use your <a href="${URL_DASHBOARD}">${HOSTER_NAME}</a> servers? They got lonely and fell asleep waiting for you!
+    <br>
+    <br>Environment Name: ${ENV_NAME}
+    <br>
+    <br>Your environment will automatically wake up if any activity is detected (e.g. someone tries to visit your website), or you can wake it up manually using the <strong>Start</strong> button in the <a href="${URL_DASHBOARD}">Dashboard</a>
+    <br>
+    <br>
+</div>
+---
+name: notify_net_ext_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE} Mbps
+title: ${NODE_NAME} consumes ${LOAD_VALUE} Mbps
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>
+
+    #if(${TRIGGER_CONDITION_GREATER})The transfer rate of external network traffic at ${NODE_NAME} in the <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment exceeded ${TRIGGER_VALUE}&nbsp;Mbps #else The transfer rate of external network traffic at ${NODE_NAME} in the <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment became lower than ${TRIGGER_VALUE}&nbsp;Mbps #end&nbsp;
+    <br>
+    <br><strong>Result</strong>:
+    <br>Currently ${NODE_NAME}(s) consume(s) ${NET_EXT_USED}&nbsp;Mbps.
+    <br>
+    <br><strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul>
+            <li> Please contact our support team (<a href="${URL_HOSTER_SUPPORT}">${URL_HOSTER_SUPPORT}</a>)&nbsp;to request increasing bandwidth for ${NODE_NAME} if required. </li>
+        </ul>
+    </div>
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: docker_password_changed
+subject: Password for Docker container changed
+title: Password for Docker container changed
+---
+<div class="jel-main-content">
+    Just wanted to let you know that the password for <strong>${DOCKER_NAME}</strong> Docker container in your <a href="${ENV_URL}" target="_blank"><em>${ENV_NAME}</em></a> environment has been successfully changed.
+    <br>Please use the following data to gain the admin access to your Docker:
+    <br>
+    <div class="highlighted-block"> #if(${URL}) <strong>Access URL</strong>: <a href="${URL}" target="_blank">${URL}</a>
+        <br>#end <strong>Login</strong>: ${LOGIN}
+        <br><strong>Password</strong>: <span class="password-field">${PASSWORD}</span>
+        <br><strong>IP</strong>: ${IP}
+    </div>
+</div>
+---
+name: billing_account_deactivated_trial
+subject: Your ${HOSTER_NAME} Cloud account was deactivated!
+title: Your ${HOSTER_NAME} Cloud account was deactivated!
+---
+<div class="jel-main-content">
+    You still have the access to the <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud dashboard</a>, but all your environments are stopped and you can't make any changes or create the new ones.
+    <br>
+    <br>To activate your account you need to convert it:
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+    When you activate your account, restart your environment(s) manually by clicking the <strong>Start </strong>button.
+</div>
+---
+name: notify_cloudlets_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available cloudlets
+title: ${NODE_NAME} at ${LOAD_VALUE}% of its Cloudlet Scaling Limit
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>#if(${TRIGGER_CONDITION_GREATER})The amount of cloudlets currently consumed by ${NODE_NAME} in environment <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> exceeded ${TRIGGER_VALUE}% #else The amount of cloudlets currently consumed by ${NODE_NAME} in environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> fell below&nbsp;${TRIGGER_VALUE}%#end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Collectively, the&nbsp;${NODE_NAME} node(s) within this environment are consuming ${CLOUDLETS_USED} cloudlets at this time, which is ${LOAD_VALUE}% of the configured Cloudlet Scaling Limit for ${NODE_NAME} in this environment.
+    <br>
+    <br><strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul> #if(${TRIGGER_CONDITION_GREATER})
+            <li> You may wish to review your code, or else consider increasing the Cloudlet Scaling Limit for ${NODE_NAME} to avoid performance degradation.
+                <br><a href="${AUTH_CHANGE_TOPOLOGY}" target="_blank">Click here to edit the Cloudlet Scaling Limit for ${NODE_NAME}</a> </li>#end
+            <li>A Cloudlet is a composite unit of RAM and CPU. Your hourly usage charges are composed of Cloudlet usage (highest of peak RAM, or average CPU) split into Reserved and Dynamic Cloudlets. </li>
+            <li> By adjusting the Cloudlet Scaling Limit, you are allowing your ${NODE_NAME} to access more resources (Dynamic Cloudlets). You are only charged for Dynamic Cloudlets in use (setting a high maximum limit does not imply a high charge: you are only charged for periods where those resources are actively used). </li>
+            <li> Using Cloudlets, Jelastic's automatic vertical scaling saves you money, automatically scaling down as soon as intensive ${NODE_NAME} activity is completed. </li>
+        </ul>
+    </div>
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: environment_migration_failed
+subject: ${HOSTER_NAME} - Environment ${ENV_NAME} migration has been failed
+title: Environment migration has been failed
+---
+<div class="jel-main-content">
+    Let us inform you that migration of your <a href="${URL_DASHBOARD}">${HOSTER_NAME}</a> environment <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> to the <strong>${NEW_REGION_NAME}</strong> region has been failed due to some technical reasons.
+    <br> Please <a href="${URL_HOSTER_SUPPORT}" target="_blank">contact support</a> team regarding this issue and provide them with the following details:
+    <br>
+    <br><strong>Environment:</strong> <a href="${ENV_URL}" target="_blank">${ENV_URL}</a>
+    <br> <strong>Current region:</strong> ${OLD_REGION_NAME}
+    <br> <strong>Target region:</strong> ${NEW_REGION_NAME}
+    <br> <strong>Start time:</strong> ${MIGRATION_START_TIME}
+    <br> <strong>End time:</strong> ${MIGRATION_END_TIME}
+    <br>
+    <br>
+</div>
+---
+name: couchdb_node_added
+subject: CouchDB node added to ${ENV_NAME} environment
+title: CouchDB node successfully added
+---
+<div class="jel-main-content">
+    A new CouchDB server was added to your ${ENV_NAME} ${HOSTER_NAME} PaaS environment.
+    <br>
+    <br>This server is exclusively for your use (not shared with other users), so all of its resources and power are under your control, including the ability to customise its <a href="http://docs.jelastic.com/database-configuration-files#CouchDB" target="_blank">configuration files</a> via the <a href="${URL_DASHBOARD}" target="_blank">dashboard</a>.
+    <br>
+    <br>Futon web administration interface:
+    <br>
+    <div class="highlighted-block"> <b>Access URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span> </div>
+    <br>Connect to CouchDB from your application code using the following details:
+    <br>
+    <div class="highlighted-block"> <strong>Host: ${DB_HOST}</strong>
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> ${PASSWORD}
+        <br><b>Database:</b> (create it using Futon above) </div>
+    <br><strong>Do not use localhost in your application code. CouchDB is on its own separate server so you must use ${DB_HOST} to connect.</strong>
+    <br><br>(Note: You should define a new restricted user via Futon - only use ${LOGIN} for testing because this user has full administrative access to your server)
+    <br>Detailed guidance is available in the <a href="http://docs.jelastic.com/connection-to-couchdb" target="_blank">documentation.</a>
+</div>
+---
+name: hivext_welcome_for_trial
+subject: Welcome to Jelastic!
+title: Welcome to Jelastic PaaS
+---
+<div class="header-filling">
+    <table class="button">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINK}" target="_blank"><span>LOG IN NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="jel-main-content">
+    Thank you for choosing <a href="http://jelastic.com/" target="_blank">Jelastic PaaS</a>. Here's what you need to get started:
+    <br/>
+    <br/>
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; outline: none; mso-line-height-rule: exactly;" data-line-height="1.5"><strong>Dashboard: </strong> <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a>
+        <br/> <strong>Login:</strong> ${EMAIL}
+        <br/> <strong>Password:</strong> ${PASSWORD}</div>
+    <br>
+    <div style="line-height: 1.5; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly;"><span>Find some helpful links below to get the most out of using our platform:</span> </div>
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; mso-line-height-rule: exactly;" data-line-height="1.5"><strong>Dashboard Guide: <a href="https://docs.jelastic.com/jelastic-dashboard-guide"><span style="font-weight: 400;">https://docs.jelastic.com/jelastic-dashboard-guide</span></a></strong>
+        <br/> <strong>User guides on Youtube: <a href="https://www.youtube.com/JelasticCloud"><span style="font-weight: 400;">https://www.youtube.com/JelasticCloud</span></a> </strong>
+        <br/> <strong>User documentation: <a href="https://docs.jelastic.com/"><span style="font-weight: 400;">https://docs.jelastic.com/</span></a></strong>
+        <br/> <strong>Connecting to database: <a href="https://docs.jelastic.com/add-database"><span style="font-weight: 400;">https://docs.jelastic.com/add-database</span></a></strong>
+        <br/> <strong>Community:<span style="font-weight: 400;"> ${URL_JELASTIC_COMMUNITY}</span></strong>
+        <br/> <strong>Support:<span style="font-weight: 400;"> ${URL_HOSTER_SUPPORT}</span></strong></div>
+    <div style="line-height: 1.5; margin: 0; outline: none; padding: 20px 0px 0px 0px; font-size: 20px; mso-line-height-rule: exactly;" data-line-height="1.5">
+        <div style="margin: 0; outline: none; padding: 0;">
+            <div style="margin: 0; outline: none; padding: 0; text-align: center;"><span><h2>Available Resources</h2></span></div>
+        </div>
+    </div>
+    <div style="line-height: 1.51; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly;" data-line-height="1.51">
+        <div style="line-height: 1.51; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly;"><strong><span style="font-weight: 400;">With your free 14-days trial account, your system resources will be restricted as follows:</span></strong> </div>
+    </div>
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; mso-line-height-rule: exactly;" data-line-height="1.5">-&nbsp;<span style="font-weight: 400;">3 environments per account</span>
+        <br/> -&nbsp;<span>4 app servers per environment</span>
+        <br/> -&nbsp;<span>16 GB RAM and 51 GHz CPU (20 CPU cores) per app server or database</span>
+        <br/> -&nbsp;<span style="font-weight: 400;">1 GB storage per app server or database</span>
+        <br/> -&nbsp;<span style="font-weight: 400;">Environment will go to sleep when inactive for 2 hours</span>
+        <br/> -&nbsp;<span style="font-weight: 400;">Bandwidth is limited by 10Mb/s</span> </div>
+    <br>
+    <div style="line-height: 1.51; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly;"><strong><span style="font-weight: 400;">Get more resources and wider list of features available by switching to the full account.</span></strong> </div>
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+---
+name: billing_account_upgrade_bonus
+subject: '${HOSTER_NAME}  - You’ve got a FREE bonus! '
+title: Congratulations! You’ve got a FREE bonus!
+---
+<div class="jel-main-content">
+    We'd like to thank you for upgrading to a paid account with an exciting reward!
+    <br>Let us inform you that we&rsquo;ve added you <strong>FREE bonus</strong> credit for your ${HOSTER_NAME} Cloud.
+    <br>
+    <br>You initially funded your account with ${FUND_AMOUNT}, and we've added ${BONUS} bonus.
+    <br>
+    <br>Your total balance: <strong>${TOTAL_BALANCE}</strong>
+    <br>
+    <br>Now you can buy plenty of trouble-free hosting on our awesome platform! Enjoy using Jelastic!
+</div>
+---
+name: notify_inodes_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment using ${LOAD_VALUE}% of available inodes
+title: ${NODE_NAME} is using ${LOAD_VALUE}% of available inodes
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>#if(${TRIGGER_CONDITION_GREATER}) The amount of inodes currently consumed by ${NODE_NAME} in environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>&nbsp;exceeded ${TRIGGER_VALUE}% #else The amount of inodes currently consumed by ${NODE_NAME} in environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>&nbsp;fell below&nbsp;${TRIGGER_VALUE}% #end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Cumulatively,&nbsp;${NODE_NAME} nodes(s) are consuming&nbsp;${INODES_USED} inodes. That's ${LOAD_VALUE}% of available resources. #if(${TRIGGER_CONDITION_GREATER})
+    <br>
+    <br><strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul>
+            <li>Please contact our support team (<a href="${URL_HOSTER_SUPPORT}">${URL_HOSTER_SUPPORT}</a>)&nbsp;to request more inodes for&nbsp;${NODE_NAME}&nbsp;if required. </li>
+        </ul>
+    </div>#end
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: billing_account_trial_ended
+subject: Your ${HOSTER_NAME} Cloud account needs to be converted!
+title: Your ${HOSTER_NAME} Cloud account needs to be converted!
+---
+<div class="jel-main-content">
+    Your ${HOSTER_NAME} trial period is ended. You still have the access to the <a href="${URL_DASHBOARD}">${HOSTER_NAME} dashboard</a>, but all your environments are stopped and you can't make any changes or create the new ones.
+    <br>
+    <br>Please, <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convert your account</a> to activate your environments and keep using ${HOSTER_NAME} cloud service.
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>When you convert your account, restart your environment(s) manually by clicking the <strong>Start </strong>button.
+</div>
+---
+name: billing_account_destroyed_trial_ended
+subject: Your ${HOSTER_NAME} Cloud account was destroyed!
+title: Your ${HOSTER_NAME} Cloud account was destroyed!
+---
+<div class="jel-main-content">
+    Thank you for trialling your application on our ${HOSTER_NAME} Cloud.
+    <br>
+    <br>Your account has now been destroyed because the trial period ended and you did not upgrade to a paid account in time.
+    <br>
+    <br>But, it's not too late! Just contact us by reply and we'll help get you up and running again.
+    <br>
+    <br><b>If you decided that our cloud platform is not your ideal solution, we really appreciate if you can tell us why so that we can improve the platform.</b>
+</div>
+---
+name: hivext_welcome_for_beta
+subject: Welcome to Jelastic!
+title: Welcome to Jelastic PaaS
+---
+<div class="header-filling">
+    <div class="sub-header" style="margin: 0; outline: none; padding: 0; text-align: center;"> Your Account is Ready</div>
+    <table class="button">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINK}" target="_blank"><span>LOG IN NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="jel-main-content">
+    Thank you for choosing <a href="http://jelastic.com/" target="_blank">Jelastic PaaS</a>. Here's what you need to start:
+    <br>
+    <br>
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; outline: none; mso-line-height-rule: exactly;" data-line-height="1.5"> <b>Jelastic dashboard: </b> <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a>
+        <br><b>Your login:</b> ${EMAIL}
+        <br><b>Password:</b> ${PASSWORD}
+        <br>
+    </div>
+    <br>Dashboard Guide: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a>
+    <br>Feedback &amp; Support: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a>
+    <br>
+    <div style="line-height: 1.5; margin: 0; outline: none; padding: 20px 0px 0px 0px; font-size: 20px; mso-line-height-rule: exactly;" data-line-height="1.5">
+        <div style="margin: 0; outline: none; padding: 0;">
+            <div style="margin: 0; outline: none; padding: 0; text-align: center;"><span style=" font-weight: bold;">Beta Resources</span></div>
+        </div>
+    </div>
+    <div style="line-height: 1.51; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly;" data-line-height="1.51">
+        <div style="line-height: 1.51; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly; "> <span>During beta period your available system resources will be limited.</span>
+            <br>
+        </div>
+    </div>
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; mso-line-height-rule: exactly;" data-line-height="1.5"> <span>- 10 cloud environments per account</span>
+        <br/> <span>- 16 app servers per cloud environment</span>
+        <br/> <span>- 16 GB RAM and 51 GHz CPU (20 CPU cores) per app server or DB</span>
+        <br/> <span>- 4 GB storage per app server or DB</span>
+        <br/>
+    </div>
+    <div style="line-height: 1.51; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly;"> <span>These limitations are valid only for system resources. All the functionality of the platform is available during the trial period.</span>
+        <br>
+    </div>
+</div>
+---
+name: billing_account_needs_convert
+subject: Your ${HOSTER_NAME} Cloud account needs to be converted!
+title: Your ${HOSTER_NAME} Cloud account needs to be converted!
+---
+<div class="header-filling">
+    <table class="button">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="jel-main-content">
+    Your Jelastic trial period will be completed in&nbsp;${DAYS_COUNT} day(s).
+    <br>
+    <br>You're near the end of your free trial on our ${HOSTER_NAME} platform, but our relationship doesn't have to end here!
+    <br>
+    <br><b>Let's Work Together for Your Success!</b>
+    <br>
+    <br>We know you felt the magic too over these last couple of weeks, it seems that we really have something special going on...
+    <br>
+    <br>Not ready for an exclusive relationship yet?
+    <br>
+    <br>Don't worry, you can <a href="https://docs.jelastic.com/clone-environment">clone</a> or <a href="https://docs.jelastic.com/share-environment">share</a> your environment with others any time. You can even STOP it overnight, or when you need to take a break.
+    <br>
+    <br>Stopped environments only consume disk space, no cloudlets, so are practically free!
+    <br>
+    <br>Continue enjoying our ${HOSTER_NAME} Cloud platform by upgrading to a paid account.
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_UPGRADE_ACCOUNT}" target="_blank"><span>UPGRADE NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table>Don't forget to <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convert your account</a> to keep using ${HOSTER_NAME} cloud service.
+    <br>
+    <br>The service is prepaid, and you can top-up as little as $10 at a time.
+</div>
+---
+name: environment_transfer_fail
+subject: ${HOSTER_NAME} - Environment transfer has been failed
+title: Environment transfer has been failed
+---
+<div class="jel-main-content">
+    Let us inform you that transfer of <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment to ${TARGET_USER_NAME} account has been failed.
+    <br>
+    <br>#set($code = $ERROR_CODE)#set($CODE_WRONG_STATUS = 8)#set($CODE_QUOTAS_REACHED = 2338)#set($CODE_MAX_ENVS = 2360)#set($CODE_MAX_CLOUDLETS = 2361)#set($CODE_HA_NOT_ALLOWED = 2362)#set($CODE_EXT_IP_NOT_ALLOWED = 2363)#set($CODE_VDS_NOT_ALLOWED = 2364)#set($CODE_MAX_NODES = 2365)#set($CODE_WRONG_GROUP = 2407) #if($code == $CODE_QUOTAS_REACHED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions.#end #if($code == $CODE_MAX_ENVS)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - the number of environments exceeded the maximum.#end #if($code == $CODE_MAX_CLOUDLETS)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - the number of cloudlets per container reached the maximum.#end #if($code == $CODE_HA_NOT_ALLOWED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - High Availability usage is restricted.#end #if($code == $CODE_EXT_IP_NOT_ALLOWED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - External IP usage is restricted.#end #if($code == $CODE_VDS_NOT_ALLOWED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - VPS usage is restricted.#end #if($code == $CODE_MAX_NODES)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - the number of containers per environment reached the maximum.#end #if($code == $CODE_WRONG_STATUS)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account status.#end #if($code == $CODE_WRONG_GROUP)<b>Reason:</b> environment can be transferred only to the billing account.#end
+    <br>
+    <br>You can find more details on the environment transfer in our <a href="${URL_DOCS_ENV_TRANSFER}" target="_blank">documentation</a>.
+    <br>
+    <br>
+</div>
+---
+name: notify_node_removed
+subject: ${NODE_NAME} node(s) were removed from ${ENV_NAME}
+title: ${NODE_NAME} node(s) were removed from ${ENV_NAME}
+---
+<div class="jel-main-content">
+    Due to your configured automatic horizontal scaling rules, we have removed one or more&nbsp;${NODE_NAME} node(s) from environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>
+    <br>
+    <br><strong>Reason:</strong>
+    <br>#if(${TRIGGER_RESOURCE_TYPE}=="CPU") CPU#elseif(${TRIGGER_RESOURCE_TYPE}=="MEM") RAM#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IO") Disk I/O#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IOPS") Disk IOPS#elseif(${TRIGGER_RESOURCE_TYPE}=="NET_EXT_OUT") External outgoing network traffic#end consumption was at ${LOAD_VALUE}% and therefore fell below the trigger value (${TRIGGER_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps#else% level#end).
+    <br>
+    <br><strong>Result:</strong>
+    <br><a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> now contains ${NODE_COUNT} ${NODE_NAME} node(s).
+</div>
+---
+name: billing_account_destroyed
+subject: Your ${HOSTER_NAME} Cloud account has been destroyed!
+title: Your ${HOSTER_NAME} Cloud account has been destroyed!
+---
+<div class="jel-main-content">
+    Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account has been just destroyed.
+    <br>
+    <br>Although your account can be reactivated at any time, sadly all environments that were left in your account were deleted.
+    <br>
+    <br>You can still log in to the <a href="${AUTH_LINK_REFILL}">the dashboard</a> and reactivate your account if you wish to create new Jelastic environments or use environments shared by other users.
+    <br>
+    <br><b> If you haven't already, please take a moment to tell us why you stopped using your account so that we can improve the platform in future.</b>
+</div>
+---
+name: jelastic_software_package_ftp_password_changed
+subject: FTP password reset for ${ENV_NAME} Jelastic PaaS server
+title: FTP password reset
+---
+<div class="jel-main-content">
+    You recently requested a password reset for FTP access to one of the servers within your ${HOSTER_NAME} PaaS environment: ${SERVER_URL}
+    <br>
+    <br>Please find the new credentials below:
+    <br>
+    <div class="highlighted-block"> <b>Your FTP link(s):</b> ${FTP_URL}
+        <br><b>Login:</b> ${PACKAGE_LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PACKAGE_PASSWORD}</span>
+        <br><b>Public IP:</b> ${PACKAGE_IP}</div>
+    <br>Detailed guidance regarding FTP / FTPS access is provided within the <a href="http://docs.jelastic.com/ftp-ftps-support" target="_blank">documentation</a>
+</div>
+---
+name: notify_cpu_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available CPU
+title: ${NODE_NAME} consumes ${LOAD_VALUE}% of available CPU
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>#if(${TRIGGER_CONDITION_TYPE}=="GREATER")The amount of CPU currently consumed by ${NODE_NAME} in environment ${ENV_NAME} exceeded ${TRIGGER_VALUE}% #else The amount of CPU consumed by ${NODE_NAME} in the ${ENV_NAME} environment fell below ${TRIGGER_VALUE}% #end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Collectively, all ${NODE_NAME}(s) nodes(s) are consuming ${CPU_USED}MHz (${CLOUDLETS_USED} cloudlets worth; if this load is sustained for 1 hour). This represents ${LOAD_VALUE}% of the CPU limit currently configured for this environment (via Cloudlet Scaling Limit).
+    <br>
+    <br><strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul> #if(${TRIGGER_CONDITION_TYPE}=="GREATER")
+            <li> You may wish to review your code, or else consider increasing the Cloudlet Scaling Limit for ${NODE_NAME} to avoid performance degradation.
+                <br><a href="${AUTH_CHANGE_TOPOLOGY}" target="_blank">Click here to edit the Cloudlet Scaling Limit for ${NODE_NAME}</a> </li>#end
+            <li>A Cloudlet is a composite unit of RAM and CPU. Your hourly usage charges are composed of Cloudlet usage (highest of peak RAM, or average CPU) split into Reserved and Dynamic Cloudlets. </li>
+            <li> By adjusting the Cloudlet Scaling Limit, you are allowing your ${NODE_NAME} to access more resources (Dynamic Cloudlets). You are only charged for Dynamic Cloudlets in use (setting a high maximum limit does not imply a high charge: you are only charged for periods where those resources are actively used). </li>
+            <li> Using Cloudlets, Jelastic's automatic vertical scaling saves you money, automatically scaling down as soon as intensive ${NODE_NAME} activity is completed. </li>
+        </ul>
+    </div>
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: user_relation_request
+subject: Collaborate with ${OWNER_USER_NAME} on the ${HOSTER_NAME} PaaS
+title: Invitation to collaborate
+---
+<div class="jel-main-content"> ${OWNER_USER_NAME} wants to share environments from their ${HOSTER_NAME} PaaS account with you.
+    <br>
+    <br>The ${HOSTER_NAME} PaaS provides enterprise-grade hosting for Java, PHP, Node.JS and Ruby powered websites and web applications.
+    <br>
+    <br>Please use the button below to accept the invitation:
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_CONFIRM_RELATION}" target="_blank"><span>Accept invite</span></a></td>
+        </tr>
+        </tbody>
+    </table> The account owner will be notified when you accept, and will then specify which environment(s) to share with you from their account.
+    <br>
+    <br>Depending on the account sharing permissions chosen, you may also be permitted to create new environments owned by and billed to ${OWNER_USER_NAME}'s account.
+    <br>
+    <br>Important! This invitation expires in ${CONFIRM_KEY_VALIDITY_DAYS} days. Simply ignore this email if you do not want to accept and it will expire automatically.
+</div>
+---
+name: environment_transfer_success
+subject: ${HOSTER_NAME} - Environment successfully transferred
+title: Environment has been successfully transferred
+---
+<div class="jel-main-content">
+    Let us inform you that <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment has been successfully transferred to ${TARGET_USER_NAME} account.
+    <br>
+    <br>You can find more details on the environment transfer in our <a href="${URL_DOCS_ENV_TRANSFER}" target="_blank">documentation</a>.
+    <br>
+    <br>
+</div>
+---
+name: environment_export_success
+subject: Environment ${ENV_NAME} has been exported
+title: Environment has been successfully exported
+---
+<div class="jel-main-content">
+    <p>Let us inform you that <a href="${ENV_URL}" target="_blank"><em>${ENV_NAME}</em></a> environment has been successfully exported.
+    </p>
+    <p><span><span><span>Follow the URL to manage the list of your exported environments:</span></span>&nbsp;<a href="${AUTH_EXPORT_SETTINGS}" target="_blank">${AUTH_EXPORT_SETTINGS}</a></span><span>.<br><br><span><span>You can find more details on the environment export in our <a href="http://docs.jelastic.com/environment-export">documentation</a>.</span></span>
+        <br>
+        </span>
+    </p>
+</div>
+---
+name: billing_account_suspended
+subject: Your ${HOSTER_NAME} Cloud account was suspended!
+title: Your ${HOSTER_NAME} Cloud account was suspended!
+---
+<div class="jel-main-content">
+    Sorry, but we've had to suspend your <a href="${URL_DASHBOARD}">Jelastic Cloud</a> account due to a Terms of Service violation. We appreciate this is disruptive and so we only ever take this step as a last resort!
+    <br>
+    <br>Please <a href="${URL_HOSTER_SUPPORT}">contact our support</a> to discuss the situation, request additional details about what went wrong, or if feel this is all just a big misunderstanding - but please note that because your case will &#114;equire management review there may be a short delay in our reply.
+</div>
+---
+name: db_password_changed
+subject: Jelastic PaaS database password reset
+title: Database password reset
+---
+<div class="jel-main-content">
+    You recently requested a password reset for your database server at <a href="${URL}">${URL}</a>.
+    <br>
+    <br>Here are the new credentials:
+    <br>
+    <div class="highlighted-block"> #if(${URL})<b>URL:</b> <a href="${URL}" target="_blank">${URL}</a> #end
+        <br><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span></div>
+    <br><b>Note: </b> Please remember that if your applications were using the old credentials, you will have to update them to these new ones&nbsp;(<em>we recommend that you create your own unprivileged users for your applications instead though!</em>)
+</div>
+---
+name: notify_disk_io_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available I/O
+title: ${NODE_NAME} consumes ${LOAD_VALUE}% of available I/O
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>#if(${TRIGGER_CONDITION_GREATER})The disk I/O usage level at ${NODE_NAME} in the <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment exceeded ${TRIGGER_VALUE}% #else The disk I/O usage level at by ${NODE_NAME} in the <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment became lower than ${TRIGGER_VALUE}% #end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Currently ${NODE_NAME}(s) consume(s) ${DISK_IO_USED}KB/s that is ${LOAD_VALUE}% of available resources.
+    <br>
+    <br>#if(${TRIGGER_CONDITION_TYPE}=="GREATER") <strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul>
+            <li>Please contact our support team (<a href="${URL_HOSTER_SUPPORT}">${URL_HOSTER_SUPPORT}</a>)&nbsp;to request more resources is made available for ${NODE_NAME} if necessary. </li>
+        </ul>
+    </div>#end
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: hivext_pswd_recovery
+subject: ${HOSTER_NAME} Cloud - Your password has been reset!
+title: Your password has been reset!
+---
+<div class="jel-main-content">
+    Your password has been reset to: ${NEW_PASSWORD}
+    <br>
+    <br>Please go back to <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a> and sign in with your email address and this new password.
+    <br>
+    <br>We highly recommend to change it to your own secure and memorable password as soon as you log in. To do that, click on your account name in the upper right corner and select <strong>Change password</strong>.
+</div>
+---
+name: statistics_system
+subject: Jelastic - Statistics information message
+title: Statistics information message
+---
+<div class="jel-main-content">
+    ${MESSAGE}
+</div>
+---
+name: billing_account_bonus
+subject: ${HOSTER_NAME} Cloud - You’ve got a FREE bonus!
+title: Congratulations! You&rsquo;ve got a FREE bonus!
+---
+<div class="jel-main-content">
+    We'd like to thank you for funding your account with an exciting reward!
+    <br>Let us inform you that we&rsquo;ve added you FREE bonus credit for your ${HOSTER_NAME} Cloud.
+    <br>
+    <br>You funded your account with ${FUND_AMOUNT}, and we've added ${BONUS}bonus.
+    <br>
+    <br>Your total balance: ${TOTAL_BALANCE}
+    <br>
+    <br>Now you can buy plenty of trouble-free hosting on our awesome platform! Enjoy using ${HOSTER_NAME} Cloud!
+</div>
+---
+name: billing_account_out_of_money
+subject: Your ${HOSTER_NAME} Cloud account balance is empty
+title: Your account balance is empty
+---
+<div class="jel-main-content">
+    Your&nbsp;<a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> environment(s) have been stopped because your account ran out of money.
+    <br>
+    <br>Don't worry, your environment(s) are still safely stored on our platform waiting to be reactivated - just <a href="${URL_REFILL_ACCOUNT}">refill your balance</a> now and they'll be up and running again in just a few seconds!
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${URL_REFILL_ACCOUNT}" target="_blank"><span>REFILL NOW</span></a></td>
+        </tr>
+        </tbody>
+    </table><strong>Warning: </strong>Your environments will be deleted in ${DAYS_COUNT} day(s) if you don't refill your account balance!
+</div>
+---
+name: billing_system
+subject: ${HOSTER_NAME} - Billing system information message
+title: Billing system information message.
+---
+<div class="jel-main-content">
+    ${MESSAGE}
+</div>
+---
+name: billing_account_change_group
+subject: Jelastic - Group has been changed
+title: Your Jelastic account group has been changed!
+---
+<div class="jel-main-content">
+    Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> group has been changed to ${GROUP}.
+    <br>
+    <br>Learn more about a new type of your account in the documentation:&nbsp;<a target="_blank" href="http://jelastic.com/docs/pricing">http://jelastic.com/docs/pricing/</a>
+</div>
+---
+name: billing_account_change_group_with_bonus
+subject: Jelastic - Group has been changed
+title: Your Jelastic account group has been changed!
+---
+<div class="jel-main-content">
+    Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud account</a> group has been changed to ${GROUP}.
+    <br>Your bonus is ${BONUS}
+    <br>
+    <br>Learn more about a new type of your account in the documentation: ${URL_JELASTIC_COMMUNITY}<span data-mce-bogus="true" id="mce_noneditablecaret"></span>
+</div>
+---
+name: environment_without_cp_created
+subject: New ${HOSTER_NAME} PaaS environment "${ENV_NAME}" created
+title: ${ENV_NAME} created
+---
+<div class="header-filling">
+    <table class="button">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINK}" target="_blank"><span>DEPLOY YOUR APP</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="jel-main-content">
+    <br/> The <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>&nbsp;environment is created exclusively for you - no sharing with other users.
+    <br/>
+    <br/> Now you are ready to get started:
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; outline: none; mso-line-height-rule: exactly;" data-line-height="1.5"><span>-</span><strong><strong><span>&nbsp;</span><span style="font-weight: 400;">Tune </span><a href="http://docs.jelastic.com/automatic-vertical-scaling"><span style="font-weight: 400;">automatic vertical</span></a><span style="font-weight: 400;"> and </span><a href="http://docs.jelastic.com/automatic-horizontal-scaling"><span style="font-weight: 400;">horizontal scaling</span></a></strong></strong>
+        <br/> -&nbsp;<strong><a href="https://docs.jelastic.com/deployment-guide"><span style="font-weight: 400;">Deploy your application</span></a></strong></div>
+    <div style="margin: 0; outline: none; padding: 0; text-align: center;">&nbsp;</div>
+    <div style="line-height: 1.51; margin: 0; outline: none; padding: 0; mso-line-height-rule: exactly;"><strong><span style="font-weight: 400;">Environment topology can be adjusted via </span><a href="${AUTH_LINK}"><span style="font-weight: 400;">dashboard</span></a><span style="font-weight: 400;">, if required.</span></strong> </div>
+    <br/> Read our guides to learn how to:
+    <div class="highlighted-block">- <strong><a href="http://docs.jelastic.com/application-configuration"><span style="font-weight: 400;">Configure</span></a><span style="font-weight: 400;"> your servers</span></strong>
+        <br/> - <strong><a href="http://docs.jelastic.com/share-environment"><span style="font-weight: 400;">Share an environment with your colleagues</span></a></strong>
+        <br/> - <strong><a href="https://docs.jelastic.com/custom-domains"><span style="font-weight: 400;">Use custom domain</span></a> </strong>
+        <br/> - <strong><a href="https://docs.jelastic.com/public-ipv4"><span style="font-weight: 400;">Add Public IP</span></a> </strong>
+        <br/> - <strong><a href="http://docs.jelastic.com/view-app-statistics"><span style="font-weight: 400;">Monitor</span></a><span style="font-weight: 400;"> your app's stats and get </span><a href="http://docs.jelastic.com/environment-triggers"><span style="font-weight: 400;">load notifications</span></a> </strong>
+        <br/> - <strong><a href="https://docs.jelastic.com/ssh-access"><span style="font-weight: 400;">Connect via SSH</span></a> </strong></div>
+</div>
+---
+name: user_ssh_key_added
+subject: New SSH key added to your Jelastic PaaS account
+title: A new SSH key was added
+---
+<div class="jel-main-content"> The following SSH key was added to your account:
+    <br>
+    <br><strong>Title:</strong>&nbsp;${SSH_KEY_TITLE}
+    <br><strong>Fingerprint:</strong>&nbsp;${SSH_KEY_FINGERPRINT}
+    <br>
+    <br>Linux and Mac users can use the following terminal command to connect via SSH:
+    <br><strong>ssh ${SSH_USER}@${DOMAIN_SSH_GATEWAY} -p 3022</strong>
+    <br>
+    <br>If you're using Windows or a graphical SSH client on any device, the required connection details are below:
+    <br>
+    <div class="highlighted-block"> <b>Username:&nbsp;</b>${SSH_USER}
+        <br><b>Authentication:</b> SSH key
+        <br><b>Host:&nbsp;</b>${DOMAIN_SSH_GATEWAY}
+        <br><b>Port:</b> 3022 </div>Please refer to the <a href="${URL_DOCS_SSH_ACCESS}">documentation</a> for more detailed guidance.
+    <br>
+    <br>If you this key was added by mistake, please <a href="${AUTH_SSH_SETTINGS}" target="_blank">remove it here</a>.
+</div>
+---
+name: centos_node_added
+subject: ${HOSTER_NAME} - ${NODE_NAME} Elastic VPS node added to ${ENV_NAME} environment
+title: Elastic VPS node successfully added
+---
+<div class="jel-main-content">
+    A new <b>${NODE_NAME}</b> Cloud VPS server was added to your <a href="${ENV_URL}" target="_blank"><em>${ENV_NAME}</em></a> environment.
+    <br>Please use the following details for access:
+    <div class="highlighted-block"> <b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span> #if(${IPV4_LIST_JOINED})
+        <br><b>Public IPv4:</b> ${IPV4_LIST_JOINED} #end #if(${IPV6_LIST_JOINED})
+        <br><b>Public IPv6:</b> ${IPV6_LIST_JOINED} #end </div>
+    <br>Detailed instructions <a href="http://jelastic.com/docs/vps">how to manage Elastic VPS with full root access</a> are available in the documentation.
+    <br>
+    <br>Find some helpful links below to learn how to use your ${NODE_NAME} Elastic VPS to <a href="https://docs.jelastic.com/adding-mail-server-vps">host an email server</a>, <a href="http://blog.jelastic.com/2013/02/01/scheduling-backups-in-jelastic/">schedule backups</a>, <a href="http://blog.jelastic.com/2012/09/19/simplifying-admin-tasks-use-cron-jobs-in-jelastic/">run cron jobs</a>, and <a href="http://blog.jelastic.com/2012/09/10/paas-vs-iaas-combine-them-instead/">more</a> in the cloud.
+</div>
+---
+name: notify_node_added
+subject: Additional ${NODE_NAME} node(s) were added to ${ENV_NAME}
+title: ${NODE_NAME} node(s) were added to ${ENV_NAME}
+---
+<div class="jel-main-content">
+    Due to your configured automatic horizontal scaling rules, we have added additional&nbsp;${NODE_NAME} node(s) to environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>
+    <br>
+    <br><strong>Reason:</strong>
+    <br>#if(${TRIGGER_RESOURCE_TYPE}=="CPU") CPU#elseif(${TRIGGER_RESOURCE_TYPE}=="MEM") RAM#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IO") Disk I/O#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IOPS") Disk IOPS#elseif(${TRIGGER_RESOURCE_TYPE}=="NET_EXT_OUT") External outgoing network traffic#end consumption was at ${LOAD_VALUE}% and therefore exceeded the trigger value (${TRIGGER_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps#else% level#end).
+    <br>
+    <br><strong>Result:</strong>
+    <br><a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> now contains ${NODE_COUNT} ${NODE_NAME} node(s).
+</div>
+---
+name: user_relation_unlink_owner
+subject: ${LINKED_USER_NAME} is no longer collaborating with you
+title: Collaborating user removed
+---
+<div class="jel-main-content">
+    This email is to inform you that ${LINKED_USER_NAME} user has been unlinked from your account.
+    <br>
+    <br>Please click below to manage current linked accounts:
+    <table class="button button-padding">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINKED_USERS_SETTINGS}" target="_blank"><span>Manage permissions</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+---
+name: user_email_successfully_changed
+subject: Jelastic - Email has been successfully changed
+title: Email has been successfully changed
+---
+<div class="jel-main-content">
+    The email address for your ${HOSTER_NAME}<span data-mce-bogus="true" id="mce_noneditablecaret"></span> account has been successfully changed to:
+    <br><b> ${EMAIL}</b>
+    <br>
+    <br>To continue working with ${HOSTER_NAME} Cloud, you can access the dashboard with your new login.
+    <br>
+    <br>
+    <div class="highlighted-block" style="line-height: 1.5; margin: 0; mso-line-height-rule: exactly;" data-line-height="1.5"><b>${HOSTER_NAME}&nbsp;dashboard:</b>&nbsp;<a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a>
+        <br><b>New login:</b> ${EMAIL}</div>
+    <br>You can <a href="${LINK_RESET_PASSWORD_DIALOG}" target="_blank">reset your password</a> if you do not remember it.
+</div>
+---
+name: environment_transfer_request
+subject: ${HOSTER_NAME} - Environment transfer request
+title: Environment transfer request
+---
+<div class="jel-main-content">
+    Let us inform you that ${OWNER_USER_NAME} user wants to transfer <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment to your account.
+    <br>
+    <br>Please follow the link to confirm the transfer:
+    <br>
+    <br><a href="${AUTH_CONFIRM_TRANSFER}" target="_blank">${AUTH_CONFIRM_TRANSFER}</a>
+    <br>
+    <br>You can find more details on the environment transfer in our <a href="${URL_DOCS_ENV_TRANSFER}" target="_blank">documentation</a>.
+    <br>
+    <br>
+</div>
+---
+name: environment_successfully_created
+subject: New ${HOSTER_NAME} PaaS environment "${ENV_NAME}" created
+title: ${ENV_NAME} created
+---
+<div class="header-filling">
+    <table class="button">
+        <tbody>
+        <tr>
+            <td><a href="${AUTH_LINK}" target="_blank"><span>DEPLOY YOUR APP</span></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="jel-main-content">
+    <br>Your Jelastic environment at ${ENV_URL} provides a collection of separate role-based servers created exclusively for you - no sharing with other users.
+    <br>
+    <br>All of their power and resources are for <strong>you</strong>&nbsp;only, and this means you also get to customise their configuration (via the <a href="${AUTH_LINK}" target="_blank">dashboard</a>) to suit your needs.
+    <br>
+    <br><strong>Now it's time to deploy your applications and enjoy the unique benefits of our auto-scaling hosting platform.</strong>
+    <br>
+    <br>How do you prefer to&nbsp;<a href="https://docs.jelastic.com/deployment-guide" target="_blank">deploy</a>&nbsp;your code?
+    <br>
+    <br>Each server in your environment has automatic vertical scaling to deliver optimum value and performance with zero effort. You can also configure&nbsp; <a href="http://docs.jelastic.com/automatic-vertical-scaling" target="_blank">vertical scaling limits</a>&nbsp;to control your costs and&nbsp; <a href="http://docs.jelastic.com/automatic-horizontal-scaling" target="_blank">horizontal scaling triggers</a>&nbsp;to boost your application capacity.
+    <br>
+    <br>Read our guides to learn how to:
+    <div class="highlighted-block"> - <a href="http://docs.jelastic.com/application-configuration">Configure</a>&nbsp;your ${ENV_ENGINE} servers
+        <br/> - <a href="http://docs.jelastic.com/share-environment" target="_blank">Share an environment with your colleagues</a>
+        <br/> - <a href="https://docs.jelastic.com/custom-domains" target="_blank">Use your own domain</a>
+        <br/> - <a href="https://docs.jelastic.com/public-ipv4" target="_blank">Add a static public IP</a>
+        <br/> - <a href="http://docs.jelastic.com/view-app-statistics">Monitor</a>&nbsp;your app's stats and get&nbsp;<a href="http://docs.jelastic.com/environment-triggers">load notifications</a>
+        <br/> - <a href="https://docs.jelastic.com/statistic-log-cloud-hosting-in-jelastic" target="_blank">View log files</a>
+        <br/> - <a href="https://docs.jelastic.com/ssh-access" target="_blank">Connect via SSH</a>
+        <br/> </div>
+</div>
+---
+name: billing_account_destroyed_not_refill
+subject: Your ${HOSTER_NAME} Cloud account was destroyed!
+title: Your ${HOSTER_NAME} Cloud account was destroyed!
+---
+<div class="jel-main-content">
+    Your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> account has been just destroyed because it wasn't refilled.
+    <br>
+    <br>Sadly all environments owned by your account were deleted, but you can still reactivate your account to create new environments or use environments owned by other users.
+    <br>
+    <br>You can still log in to the <a href="${AUTH_LINK_REFILL}">the dashboard</a> and reactivate your account if you wish to create new Jelastic environments or use environments shared by other users.
+    <br>
+    <br><b> If you haven't already, please take a moment to let us know why you decided not to refill and continue using your ${HOSTER_NAME} PaaS account so that we can improve the platform in future.</b>
+</div>
+---
+name: centos_password_changed
+subject: ${HOSTER_NAME} - ${NODE_NAME}  Elastic VPS password has been reset!
+title: Elastic VPS password has been reset!
+---
+<div class="jel-main-content">
+    Just wanted to let you know that the password for your<a href="${URL_DASHBOARD}">&nbsp;${HOSTER_NAME} Cloud</a>&nbsp;VPS server has been successfully reset.
+    <br>
+    <br>Please use the following details for access:
+    <div class="highlighted-block"><b>Login:</b> ${LOGIN}
+        <br><b>Password:</b> <span class="password-field">${PASSWORD}</span> #if(${IP})
+        <br><b>Public IP:</b> ${IP} #end </div>
+</div>
+---
+name: notify_disk_iops_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available IOPS
+title: ${NODE_NAME} consumes ${LOAD_VALUE}% of available IOPS
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>#if(${TRIGGER_CONDITION_TYPE}=="GREATER")The amount of IOPS consumed by ${NODE_NAME} in the ${ENV_NAME} environment exceeded ${TRIGGER_VALUE}% #else The amount of IOPS consumed by ${NODE_NAME} in the ${ENV_NAME} environment became lower than ${TRIGGER_VALUE}% #end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Currently ${NODE_NAME}(s) consume(s) ${DISK_IOPS_USED}IOPS, that is ${LOAD_VALUE}% of available resources.
+    <br>
+    <br>#if(${TRIGGER_CONDITION_TYPE}=="GREATER") <strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul>
+            <li>Please contact our support team (<a href="${URL_HOSTER_SUPPORT}">${URL_HOSTER_SUPPORT}</a>)&nbsp;to request more resources for&nbsp;${NODE_NAME}&nbsp;if required. </li>
+        </ul>
+    </div>#end
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: environment_migration_success
+subject: ${HOSTER_NAME} - Environment ${ENV_NAME} has been migrated
+title: Environment has been successfully migrated
+---
+<div class="jel-main-content">
+    Let us inform you that your <a href="${URL_DASHBOARD}">${HOSTER_NAME}</a> environment <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> has been successfully migrated to the <strong>${NEW_REGION_NAME}</strong> region.
+    <br>
+    <br><strong>Details:</strong>
+    <br>#set($LABELS={"NAME":"Node Name", "REGION":"Region", "DURATION":"Duration", "TOTAL":"Total duration:", "LAN_IP":"Internal IP", "WAN_IP":"Public IP", "HOUR":"hr", "MIN":"min", "SEC":"sec"}) ${MIGRATION_REPORT}
+    <br>
+</div>
+---
+name: notify_mem_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment using ${LOAD_VALUE}% of available RAM
+title: ${NODE_NAME} is using ${LOAD_VALUE}% of available RAM
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>#if(${TRIGGER_CONDITION_GREATER}) The amount of RAM currently consumed by ${NODE_NAME} in environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>&nbsp;exceeded ${TRIGGER_VALUE}% #else The amount of RAM currently consumed by ${NODE_NAME} in environment&nbsp;<a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>&nbsp;fell below&nbsp;${TRIGGER_VALUE}% #end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Collectively, all&nbsp;${NODE_NAME} node(s) within this environment are consuming ${MEM_USED}MB (${CLOUDLETS_USED} cloudlets worth), which&nbsp;is ${LOAD_VALUE}% of the configured limit (via Cloudlet Scaling Limit). #if(${TRIGGER_CONDITION_GREATER})
+    <br>
+    <br><strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul>
+            <li>You may wish to review your code, or else consider increasing the Cloudlet Scaling Limit for ${NODE_NAME}&nbsp;to avoid performance degradation.
+                <br><a href="${AUTH_CHANGE_TOPOLOGY}" target="_blank">Click here to edit the Cloudlet Scaling Limit for ${NODE_NAME}</a></li>
+            <li>A Cloudlet is a composite unit of RAM and CPU. Your hourly charges are composed of Cloudlet usage (highest of peak RAM, or average CPU) split into Reserved and Dynamic Cloudlets. </li>
+            <li>By adjusting the Cloudlet Scaling Limit, you are allowing your ${NODE_NAME} to access more resources (Dynamic Cloudlets). You are only charged for Dynamic Cloudlets in use (setting a high maximum limit does not imply a high charge: you are only charged for periods where those resources are actively used). </li>
+            <li>Using Cloudlets, Jelastic's automatic vertical scaling saves you money, automatically scaling down as soon as intensive ${NODE_NAME} activity is completed.</li>
+        </ul>
+    </div>#end
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: glassfish_das_added
+subject: ${HOSTER_NAME} - ${NODE_NAME} DAS node added to ${ENV_NAME} environment
+title: ${NODE_NAME} DAS node added
+---
+<div class="jel-main-content">
+    Just wanted to let you know that a new ${NODE_NAME} DAS (Domain Administration Server)&nbsp;was added to&nbsp;your ${ENV_NAME} environment.
+    <br>
+    <br>Please use the following details to access its Admin Console:
+    <br>
+    <div class="highlighted-block"> <b>Admin Console URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Admin Console Login: </b> ${LOGIN}
+        <br><b>Admin Console Password: </b> <span class="password-field">${PASSWORD}</span> </div>
+    <br>Detailed instructions to set your environment variables in ${NODE_NAME} are available in the documentation: <a href="https://docs.jelastic.com/custom-environment-variables-java">Set environment variables in ${NODE_NAME} admin console</a>
+    <br>You may also like to check <a href="https://docs.jelastic.com/jdbc-connection-pool">how to use the ${NODE_NAME} connection pool</a>
+</div>
+---
+name: rdp_access
+subject: ${NODE_NAME} node added to ${ENV_NAME} environment
+title: ${NODE_NAME} added
+---
+<div class="jel-main-content">
+    Congratulations! A new <strong>${NODE_NAME}</strong> node has been successfully added to your <strong>${ENV_NAME}</strong> environment in the <a href="${URL_DASHBOARD}">Jelastic Cloud</a>. Please use the following data for establishing the connection to your remote <strong>${NODE_NAME}</strong> desktop via RDP:
+    <div class="highlighted-block"> <strong>Host Address</strong>: ${RDP_URL}
+        <br><strong>Login</strong>: ${RDP_LOGIN}
+        <br><strong>Password</strong>: <span class="password-field">${RDP_PASSWORD}</span> </div>To quickly connect to your ${NODE_NAME} node via the HTML5 client, use the next one-time link:
+    <br><a href="${AUTH_URL_RDP_CONNECT}" target="_blank">${AUTH_URL_RDP_CONNECT}</a>
+    <br>The detailed information on <a href="${URL_DOCS_RDP_ACCESS}" target="_blank">Windows containers at Jelastic</a> is available in the documentation.
+</div>
+---
+name: notify_net_ext_out_loading
+subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end
+title: ${NODE_NAME} consumes ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end
+---
+<div class="jel-main-content">
+    A '${TRIGGER_NAME}' alert was triggered
+    <br>
+    <br><strong>Reason</strong>:
+    <br>The transfer rate of external outgoing network traffic at ${NODE_NAME} in the <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment&nbsp;#if(${TRIGGER_CONDITION_GREATER})&nbsp;exceeded #else became lower than&nbsp;#end&nbsp;${TRIGGER_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end
+    <br>
+    <br><strong>Result</strong>:
+    <br>Currently ${NODE_NAME}(s) consume(s) ${LOAD_VALUE} #if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end.&nbsp;
+    <br>
+    <br><strong>Recommendation</strong>:
+    <div class="highlighted-block">
+        <ul>
+            <li> Please contact our support team (<a href="${URL_HOSTER_SUPPORT}">${URL_HOSTER_SUPPORT}</a>)&nbsp;to request increasing bandwidth for&nbsp;${NODE_NAME}&nbsp;if required. </li>
+        </ul>
+    </div>
+    <br>To get more info on setting up notification triggers, please, follow our <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentation</a>.
+    <br>
+    <br>You are receiving this alert because this environment is currently owned by or shared with you. If you no longer wish to receive alerts of this nature, or wish to adjust the trigger thresholds, please edit the environment Load Alerts in the <a href="${URL_DASHBOARD}" target="_blank">${HOSTER_NAME} Cloud dashboard</a>.
+</div>
+---
+name: hardnode_installation_success
+subject: ${HOSTER_NAME} - Notification: Hardware node has been successfully installed
+title: Hardware node has been successfully installed
+---
+<div class="jel-main-content">
+    Let us inform you that the ${HARD_NODE_NAME} hardware node has been successfully installed and added to the&nbsp;${HARD_NODE_GROUP} of the&nbsp;${REGION_NAME} region.
+    <br>
+    <br>The current hardware node status is&nbsp;${STATUS}.
+    <br>Total duration of installation:&nbsp;${TIME}
+    <br>#set($errors = ${MESSAGES})
+    <br>#if ($errors.size() != 0)
+    <br>Please also pay attention to the next warning(s), that occured during the installation:
+    <br>
+    <ul>#foreach($error in $errors)
+        <li>$error.action</li>#end
+        <br>
+    </ul>The detailed information on these issues can be found within the attached file.#end
+    <br>
+    <br>
+</div>
+---
+name: hardnode_installation_failed
+subject: ${HOSTER_NAME} - Notification: Hardware node installation has been failed
+title: Hardware node installation has been failed
+---
+<div class="jel-main-content">
+    Let us inform you that the ${HARD_NODE_NAME} hardware node installation and its addition to the ${HARD_NODE_GROUP} of the ${REGION_NAME} region has been failed.
+    <br>
+    <br>The current hardware node status is&nbsp;${STATUS}.
+    <br>
+    <br>The process has failed due to error(s) in the following operation(s):
+    <ul>#foreach($error in ${MESSAGES})
+        <li>$error.action</li>#end</ul>The detailed information on these issues can be found within the attached file.
+    <br>
+    <br>#if (${PCS_INSTALL_FAILED})Since problems with PCS installation should be handled manually, please do not restart the hardware node and contact ${HOSTER_NAME} team to fix this.&nbsp;#{else}Please fix the root issue of the failure and continue installation by clicking the "Resume Installation" button at the appropriate JCA tab.#end
+    <br>
+    <br>
+</div>
+---
+name: platform_installation_success
+subject: ${HOSTER_NAME} - Platform successfully installed
+title: ${HOSTER_NAME} platform successfully installed
+---
+<div class="jel-main-content">
+    <p>Your ${HOSTER_NAME} installation has been successfully completed.
+        <br>Feel free to access the platform with the credentials provided below:
+        <br>
+        <br>Admin panel URL:&nbsp;<a href="${URL_JCA}" target="_blank">${URL_JCA}</a>
+        <br>Dev dashboard URL:&nbsp;<a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a>
+        <br>
+        <br>Login:&nbsp;${LOGIN}
+        <br>Password:&nbsp;${PASSWORD}</p>
+    <p>
+        <br>What&rsquo;s next? Here are some useful tips to get started:</p>
+    <ul>
+        <li><a href="${URL_DOCS_HOSTER_INTRODUCTION}" target="_blank">Customize the platform settings via admin panel</a></li>
+        <li><a href="${URL_DOCS_JCA_ACCESS_CONTROL}" target="_blank">Collaborate with your team by granting the required access</a></li>
+        <li><a href="${URL_DOCS_DASHBOARD_GUIDE}" target="_blank">Deploy and run your first application</a></li>
+    </ul>
+    <p>
+        <br>For more specific details visit our documentation:</p>
+    <ul>
+        <li><a href="${URL_JELASTIC_OPS_DOCS}" target="_blank">OPS docs</a></li>
+        <li><a href="${URL_JELASTIC_DOCS}" target="_blank">Dev docs</a></li>
+    </ul>
+</div>
+---
+name: platform_license_expires
+subject: ${HOSTER_NAME} - License expires in ${DAYS_COUNT} day(s)
+title: ${HOSTER_NAME} license expires in ${DAYS_COUNT} day(s)
+---
+<div class="jel-main-content">
+    <p>Your ${HOSTER_NAME} license is going to expire in ${DAYS_COUNT} day(s).</p>
+    <p>Pay attention that after this, the number of servers in your installation will be automatically decreased to one (initially installed orchestrator). Environments on the rest of the servers will be suspended.</p>
+    <p>
+        <br />Please, extend the license to continue using the multi-server platform. You can get a renewed license here <a href="${URL_LICENSE_PURCHASE}" target="_blank">${URL_LICENSE_PURCHASE}</a></p>
+</div>
+---
+name: notify_killed_processes_info
+subject: #if(${OOM_KILLED_PROCESSES_COUNT}== 1) ${OOM_KILLED_PROCESS_NAME} process was #else ${OOM_KILLED_PROCESSES_COUNT} processes were #end killed by OOM killer at ${NODE_NAME} in the ${ENV_NAME}
+title: #if(${OOM_KILLED_PROCESSES_COUNT}== 1) ${OOM_KILLED_PROCESS_NAME} process was #else ${OOM_KILLED_PROCESSES_COUNT} processes were #end killed by OOM killer at ${NODE_NAME} in the ${ENV_NAME}
+---
+<div class="jel-main-content">
+    <p>The ${TRIGGER_NAME} alert has been executed. <strong>${NODE_NAME}</strong> node(s) in environment <strong>${ENV_NAME}</strong> attempted to use more RAM than it&rsquo;s provided (${RAM_LIMIT_MB} MiB per node) by the maximum cloudlet limit you&rsquo;ve configured (${RAM_LIMIT_CLOUDLETS} cloudlets per node).</p>As a result, the following processes were killed by the OOM killer at <strong>${NODE_NAME}</strong> container(s):
+    <br> ${OOM_REPORT}
+    <p>Currently <strong>${NODE_NAME}</strong> consumes ${CLOUDLETS_USED} cloudlet(s) (approximately ${MEM_USED} MiB) that is ${LOAD_VALUE}% of available resources.</p>
+    <p><strong>Note</strong>: During an emergency memory shortage, OOM killer attempts to free the maximum amount of memory by killing the least processes possible. Thus, the processes killed may not always indicate the processes that were causing an unexpectedly high memory load.</p>
+    <p><strong>Recommended Actions</strong>:</p>
+    <ul>
+        <li>Review the <a href="${AUTH_ENV_EVENTS_HISTORY_OOM}" target="_blank">OOM Killer alert history</a> in your dashboard</li>
+        <li>Check if your application was affected by the process(es) killed</li>
+        <li>Increase the cloudlet limit to allow <strong>${NODE_NAME}</strong> to access more RAM when needed</li>
+        <li>Restart <strong>${ENV_NAME}</strong> to ensure all necessary processes are running</li>
+    </ul>
+    <p>The more detailed guidance applicable to the affected process(es), how to analyse the issue in more detail, and how to avoid it in future can be found in our <a href="https://docs.jelastic.com/oom-killer-troubleshooting">documentation</a>. #set($reminder =${REMINDER_PERIOD} / 60)</p>
+    <p><strong>Note</strong>: #if($reminder != 0) Further messages about OOM kills on <strong>${NODE_NAME}</strong> will be suppressed for the next $reminder hour(s)&nbsp;to avoid flooding your mailbox. You can adjust this interval within the <a href="${URL_DOCS_ENV_ALERTS_EDIT}" target="_blank">load alert settings</a> in the dashboard. #else You are currently receiving immediate notifications for each OOM kill. You can suppress additional messages by adjusting the notification interval within the <a href="${URL_DOCS_ENV_ALERTS_EDIT}" target="_blank">load alert settings</a> in the dashboard #end</p>
+</div>
+---
+name: environment_node_added
+subject: Jelastic - ${NODE_NAME} container has been successfully created
+title: ${NODE_NAME} container has been successfully created
+---
+<div class="jel-main-content">
+    Congratulations! A new <strong>${NODE_NAME}</strong> container has been successfully added to your <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment in the <a href="${URL_DASHBOARD}" target="_blank">Jelastic Cloud</a>.
+    <br>
+    <br>Please use the following data to gain the admin access to it:
+    <br> #if(${URL}) <strong>Access URL</strong>: <a href="${URL}" target="_blank">${URL}</a>
+    <br> #end <strong>Login</strong>: ${LOGIN}
+    <br><strong>Password</strong>: <span class="password-field">${PASSWORD}</span>#if(${IP})
+    <br><strong>IP</strong>: ${IP} #end
+    <br>
+    <br>
+</div>
+---
+name: environment_attach_ext_ip
+subject: ${HOSTER_NAME} - Public IPs attached to ${NODE_NAME} (${NODE_ID}) container
+title: Public IP(s) successfully attached
+---
+<div class="jel-main-content">
+    The following Public IP adress(es) have been successfully attached to the <b>${NODE_NAME} (${NODE_ID})</b> container in your <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> environment:
+    <div class="highlighted-block">#if (${IPV4_ATTACHED_LIST_JOINED}) <b>Public IPv4:</b> ${IPV4_ATTACHED_LIST_JOINED}
+        <br>#end #if (${IPV6_ATTACHED_LIST_JOINED}) <b>Public IPv6:</b> ${IPV6_ATTACHED_LIST_JOINED}
+        <br>#end</div>
+    <br>Refer to Jelastic documentation to learn more on <a href="https://docs.jelastic.com/public-ipv4" target="_blank">server Public IP(s) management</a> and the features this option enables - e.g. how to:
+    <div class="highlighted-block">- <a href="https://docs.jelastic.com/custom-domain-via-arecord">bind custom domain name</a>
+        <br>- <a href="https://docs.jelastic.com/custom-ssl">enable Custom SSL</a>
+        <br>- <a href="https://docs.jelastic.com/multiple-domains">route multiple domains via single IP</a></div>
+</div>
+---
+name: hivext_create_token
+subject: ${HOSTER_NAME} - Notification: Token has been created
+title: Token has been created
+---
+<div class="jel-main-content">
+    A new token has been created:
+    <br>
+    <br>
+    <div class="highlighted-block"><strong>ID</strong>: ${TOKEN_ID}
+        <br><strong>Description</strong>: ${TOKEN_DESCRIPTION} </div>
+</div>
+---
+name: wildfly_controller_added
+subject: ${HOSTER_NAME} - Wildfly node added to ${ENV_NAME} environment
+title: Wildfly node added
+---
+<div class="jel-main-content">
+    Just wanted to let you know that a new Wildfly node&nbsp;was added to&nbsp;your ${ENV_NAME} environment.
+    <br>
+    <br>Please use the following details to access its Admin Console:
+    <br>
+    <div class="highlighted-block"> <b>Admin Console URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Admin Console Login: </b> ${LOGIN}
+        <br><b>Admin Console Password: </b> <span class="password-field">${PASSWORD}</span> </div>
+</div>
+---
+name: wildfly_controller_password_changed
+subject: Wildfly password for node changed
+title: Wildfly password for node changed
+---
+<div class="jel-main-content">
+    You recently requested a password reset for your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> Wildfly node.
+    <br>
+    <br>Here are the new credentials:
+    <div class="highlighted-block"> <b>Admin Console URL:</b> <a href="${URL}" target="_blank">${URL}</a>
+        <br><b>Admin Console Login: </b> ${LOGIN}
+        <br><b>Admin Console Password: </b> <span class="password-field">${PASSWORD}</span> </div>
 </div>
