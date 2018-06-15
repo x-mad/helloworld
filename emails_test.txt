@@ -411,7 +411,7 @@ title: Your balance is running low
 </div>
 ---
 name: notify_disk_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment used ${LOAD_VALUE}% of disk space
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment used ${LOAD_VALUE}% of disk space'
 title: ${NODE_NAME} is using ${LOAD_VALUE}% of available disk space
 ---
 <div class="jel-main-content">
