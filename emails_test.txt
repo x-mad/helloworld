@@ -4,5 +4,21 @@ subject: Jelastic - Password for ${NODE_NAME} has been successfully changed
 title: Password for ${NODE_NAME} has been successfully changed
 ---
 <div class="jel-main-content">
-  ddddddddddd
+    Just wanted to let you know that the password for <strong>${NODE_NAME}</strong> node has been successfully changed.
+
+    <br>Please use the credentials below to get the admin access to your <strong>${NODE_NAME}</strong> node:
+
+    <div class="highlighted-block"><strong>Login:</strong> ${LOGIN}
+        <br><strong>Password:</strong> ${PASSWORD}
+    </div>
+</div>
+---
+name: reseller_solution_deploy_successful
+subject: Application ${SOLUTION_NAME} has been deployed for ${TARGET_USER_EMAIL}
+title: Application ${SOLUTION_NAME} has been successfully deployed for ${TARGET_USER_EMAIL}
+---
+<div class="jel-main-content">
+    Your ${SOLUTION_NAME} application has been successfully deployed to your <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> hosting <a href="${ENV_URL}">environment</a>.
+    <br>
+    <br>${SOLUTION_TEXT}
 </div>
