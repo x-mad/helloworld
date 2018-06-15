@@ -4,5 +4,5 @@ subject: Jelastic - Password for ${NODE_NAME} has been successfully changed
 title: Password for ${NODE_NAME} has been successfully changed
 ---
 <div class="jel-main-content">
-ddddddddddd
+  ddddddddddd
 </div>
