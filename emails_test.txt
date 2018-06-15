@@ -704,7 +704,7 @@ title: Your ${HOSTER_NAME} Environment has been put to sleep!
 </div>
 ---
 name: notify_net_ext_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE} Mbps
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE} Mbps'
 title: ${NODE_NAME} consumes ${LOAD_VALUE} Mbps
 ---
 <div class="jel-main-content">
@@ -763,7 +763,7 @@ title: Your ${HOSTER_NAME} Cloud account was deactivated!
 </div>
 ---
 name: notify_cloudlets_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available cloudlets
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available cloudlets'
 title: ${NODE_NAME} at ${LOAD_VALUE}% of its Cloudlet Scaling Limit
 ---
 <div class="jel-main-content">
@@ -901,7 +901,7 @@ title: Congratulations! You’ve got a FREE bonus!
 </div>
 ---
 name: notify_inodes_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment using ${LOAD_VALUE}% of available inodes
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment using ${LOAD_VALUE}% of available inodes'
 title: ${NODE_NAME} is using ${LOAD_VALUE}% of available inodes
 ---
 <div class="jel-main-content">
@@ -1101,7 +1101,7 @@ title: FTP password reset
 </div>
 ---
 name: notify_cpu_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available CPU
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available CPU'
 title: ${NODE_NAME} consumes ${LOAD_VALUE}% of available CPU
 ---
 <div class="jel-main-content">
@@ -1201,7 +1201,7 @@ title: Database password reset
 </div>
 ---
 name: notify_disk_io_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available I/O
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available I/O'
 title: ${NODE_NAME} consumes ${LOAD_VALUE}% of available I/O
 ---
 <div class="jel-main-content">
@@ -1499,7 +1499,7 @@ title: Elastic VPS password has been reset!
 </div>
 ---
 name: notify_disk_iops_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available IOPS
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}% of available IOPS'
 title: ${NODE_NAME} consumes ${LOAD_VALUE}% of available IOPS
 ---
 <div class="jel-main-content">
@@ -1535,7 +1535,7 @@ title: Environment has been successfully migrated
 </div>
 ---
 name: notify_mem_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment using ${LOAD_VALUE}% of available RAM
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment using ${LOAD_VALUE}% of available RAM'
 title: ${NODE_NAME} is using ${LOAD_VALUE}% of available RAM
 ---
 <div class="jel-main-content">
@@ -1592,7 +1592,7 @@ title: ${NODE_NAME} added
 </div>
 ---
 name: notify_net_ext_out_loading
-subject: Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end
+subject: 'Monitoring alert: ${NODE_NAME} in ${ENV_NAME} environment consumes ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end'
 title: ${NODE_NAME} consumes ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end
 ---
 <div class="jel-main-content">
