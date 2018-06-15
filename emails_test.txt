@@ -1616,7 +1616,7 @@ title: ${NODE_NAME} consumes ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="
 </div>
 ---
 name: hardnode_installation_success
-subject: ${HOSTER_NAME} - Notification: Hardware node has been successfully installed
+subject: '${HOSTER_NAME} - Notification: Hardware node has been successfully installed'
 title: Hardware node has been successfully installed
 ---
 <div class="jel-main-content">
