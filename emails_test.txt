@@ -1637,7 +1637,7 @@ title: Hardware node has been successfully installed
 </div>
 ---
 name: hardnode_installation_failed
-subject: ${HOSTER_NAME} - Notification: Hardware node installation has been failed
+subject: '${HOSTER_NAME} - Notification: Hardware node installation has been failed'
 title: Hardware node installation has been failed
 ---
 <div class="jel-main-content">
@@ -1745,7 +1745,7 @@ title: Public IP(s) successfully attached
 </div>
 ---
 name: hivext_create_token
-subject: ${HOSTER_NAME} - Notification: Token has been created
+subject: '${HOSTER_NAME} - Notification: Token has been created'
 title: Token has been created
 ---
 <div class="jel-main-content">
