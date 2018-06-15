@@ -4,11 +4,5 @@ subject: Jelastic - Password for ${NODE_NAME} has been successfully changed
 title: Password for ${NODE_NAME} has been successfully changed
 ---
 <div class="jel-main-content">
-    Just wanted to let you know that the password for <strong>${NODE_NAME}</strong> node has been successfully changed.
-
-    <br>Please use the credentials below to get the admin access to your <strong>${NODE_NAME}</strong> node:
-
-    <div class="highlighted-block"><strong>Login:</strong> ${LOGIN}
-        <br><strong>Password:</strong> ${PASSWORD}
-    </div>
+ddddddddddd
 </div>
