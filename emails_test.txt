@@ -1,7 +1,7 @@
 ---
 name: cartridge_password_changed
-subject: Jelastic - TEST11 Password for ${NODE_NAME} has been successfully changed
-title: TEST11 Password for ${NODE_NAME} has been successfully changed
+subject: Jelastic - TEST33 Password for ${NODE_NAME} has been successfully changed
+title: TEST33 Password for ${NODE_NAME} has been successfully changed
 ---
 <div class="jel-main-content">
     Just wanted to let you know that the password for <strong>${NODE_NAME}</strong> node has been successfully changed.
