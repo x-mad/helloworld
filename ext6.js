@@ -25,7 +25,7 @@ Ext.define('ViewModel', {
     alias : 'viewmodel.viewmodel',
     
     data: {
-       title : 'aa'
+       selectedRec : null
     },
     
     stores : {
@@ -54,7 +54,13 @@ Ext.define('View', {
     items: [{
         xtype: 'grid',
         title: 'Users',
-        bind: '{users}',
+        bind: {
+            store: '{users}',
+            selection: '{selectedRec}'
+        },
+        
+        //reference: 'grid',
+        
         columns : [{
             text: 'Name',
             dataIndex: 'name',
@@ -77,15 +83,41 @@ Ext.define('View', {
             direction: 'right'
             
         },
+        bind: {
+            record : '{selectedRec}'
+        },
         defaults : {
             xtype: 'textfield'
         },
         items : [{
-             
+            label : 'Name',
+            name: 'name'
+        }, {
+            label : 'Email',
+            name: 'email'
+        }, {
+            label : 'Phone',
+            name: 'phone'
         }],
-        width: 300
-    }]
-   
+        width: 300,
+        buttons: [{
+            text: 'Cancel',
+            handler : function () {
+                this.up('formpanel').setCollapsed(true);
+            }
+        }, {
+            text: 'Save',
+            formBind: true,
+            handler : function () {
+                var form = this.up('formpanel');
+                
+                form.getValues()
+                form.setCollapsed(true);
+                debugger;
+            }
+        }]
+
+    }],
    
 });
 
