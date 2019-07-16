@@ -3,4 +3,4 @@ name: billing_account_activated
 title: test
 subject: test
 ---
-Gracias! Tu cuenta&nbsp;<a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> fu&eacute; reactivada con &eacute;xito y esta lista para utilizaci&oacute;n nuevamente.<br><br>URL Painel de Controlo: &nbsp;<a href="${URL_DASHBOARD}">${URL_DASHBOARD}&nbsp;</a><br><br>
+fff
