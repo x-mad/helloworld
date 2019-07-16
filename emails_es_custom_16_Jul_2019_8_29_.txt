@@ -1,6 +1,793 @@
 ---
 name: billing_account_activated
-title: test
-subject: test
+title: Tu cuenta Jelastic SaveInCloud se activ&oacute; con &eacute;xito!
+subject: Tu cuenta Jelastic SaveInCloud se activó con éxito!
 ---
-Gracias! Tu cuenta&nbsp;<a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> fu&eacute; reactivada con &eacute;xito y esta lista para utilizaci&oacute;n nuevamente.<br><br>URL Painel de Controlo: &nbsp;<a href="${URL_DASHBOARD}">${URL_DASHBOARD}&nbsp;</a><br><br>
+Gracias! Tu cuenta <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> fu&eacute; reactivada con &eacute;xito y esta lista para utilizaci&oacute;n nuevamente.<br><br>URL Painel de Controlo:  <a href="${URL_DASHBOARD}">${URL_DASHBOARD} </a><br><br>
+---
+name: billing_account_bonus
+title: Felicitaciones! Usted gan&oacute; un bonus!<br>
+subject: Jelastic SaveInCloud - Usted ganó un bonus!
+---
+<p>Felicidades, usted gan&oacute; un premio de Jelastic SaveInCloud.<br>Recordamos que agregamos en tu cuenta un bonus para uso de nuestro Jelastic SaveIncloud.</p><p>Usted compr&oacute; conosotros ${FUND_AMOUNT}, y gan&oacute; un bonus de ${BONUS}.</p><p>Tu saldo actual &eacute;s de: ${TOTAL_BALANCE}</p><p>Cuanto m&aacute;s usted comprar conosostros m&aacute;s podr&aacute; ganar bonus. Siga promoviendo y formando parte del Jelastic SaveInCloud, la plataforma de Alojamiento mas segura del mundo!</p>
+---
+name: billing_account_change_group
+title: El grupo de tu cuenta Jelastic SaveInCloud ha sido cambiado!
+subject: Jelastic SaveInCloud - Grupo de tu cuenta ha sido cambiado
+---
+<p>El grupo de tu Cuenta Jelastic SaveInCloud ha sido cambiado para ${GROUP}.</p><p>Lea m&aacute;s sobre los tipos de cuentas en: <a href="${URL_DOCS_REFILL_ACCOUNT}" target="_blank">${URL_DOCS_REFILL_ACCOUNT}</a></p><br><br>
+---
+name: billing_account_change_group_with_bonus
+title: El grupo de tu cuenta Jelastic SaveInCloud ha sido cambiado!
+subject: Jelastic SaveInCloud - Grupo de tu cuenta ha sido cambiado
+---
+<p>El grupo de tu Cuenta Jelastic SaveInCloud ha sido cambiado para ${GROUP}.<br>Tu bonus &eacute;s de ${BONUS}.<br></p><p>Lea m&aacute;s sobre los tipos de cuentas en: <a href="${URL_DOCS_REFILL_ACCOUNT}" target="_blank">${URL_DOCS_REFILL_ACCOUNT}</a></p><br>
+---
+name: billing_account_convert_to_billing
+title: Bienvenido al Jelastic SaveInCloud !!
+subject: Bienvenido al Jelastic SaveInCloud
+---
+<p>Gracias por elegir al Jelastic SaveInCloud.</p><p>Usted recibir&aacute; con brevedad un email que contiene los datos de Login del Panel del Cliente de ${HOSTER_NAME}.</p><p>Nuestra recomendaci&oacute;n &eacute;s que usted ingrese al Portal y mire las opciones para conocer mejor las funciones financieras y tecnicas antes de comienzar a utilizar efectivamente. Si desea utilizar ahora, simplemente ingrese con tu login en el <a href="${URL_DASHBOARD}" target="_blank">Panel de Controlo</a>.</p><p>Gracias por tu inter&eacute;s en el Jelastic SaveInCloud, y nuevamente, sea Bienvenido.</p><br>
+---
+name: billing_account_convert_to_trial
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+<p>Gracias por formar parte del equipo de desarrolladores del Jelastic SaveInCloud. Gracias por tu ingreso, nosotros tenemos actualmente el mejor servicio de Nube en Java y PHP del mercado. Con Jelastic SaveInCloud, &eacute;s sensillo su migraci&oacute;n de la versi&oacute;n de Prueba para la conversi&oacute;n Pagada. Esa migraci&oacute;n no tiene impacto en sua aplicaciones que est&aacute;n en tu ambiente de Prueba. Pero tanto, usted necesita hacer el pago del ambiente Jelastic SaveInCloud para que no tenga m&aacute;s restricciones en sus ambientes o que permita agrand&aacute;-los.</p><p>Por favor recuerde-se, con excepci&oacute;n de que usted ya haya convertido tu cuenta y pagado, -- tu tiempo de pruebas termina en <strong>14 dias</strong>, y su ambiente beta Jelastic SaveInCloud se terminar&aacute;, y todos los datos ser&aacute;n borrados.</p><p><strong>Para sacar todas las limitaciones de tu cuenta Jelastic SaveInCloud ingrese al <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a>, haga el Login, y clique en el link "Convertir para Versi&oacute;n Completa" que se encuentra en el Menu.</strong></p><p>Gracias nuevamente por formar parte da la fam&iacute;lia ${HOSTER_NAME}. Estamos anciosos de proveer pra usted los recursos completos de nuestra plataforma e de alojar su proyecto conosotros!</p>
+---
+name: billing_account_created_in_external_billing
+title: Tu cuenta Jelastic SaveInCloud PBA ha sido criada con &eacute;xito
+subject: Tu cuenta Jelastic SaveInCloud PBA ha sido criada con éxito
+---
+<p>Felicidades! Tu cuenta Jelastic SaveInCloud fue actualizada para la Versi&oacute;n Completa.</p><p>Ahora usted tendr&aacute; aceso al Parallels Business Automation, que es el panel de controlo financiero por lo cual usted podr&aacute; manejar tus Pagos e Formas de Pago.</p><p>Sigue los detalles de Login abajo:</p><p>URL Panel de Controlo Financiero: ${BILLING_PORTAL_URL}<br>Usu&aacute;rio: ${BILLING_PORTAL_USERNAME}<br>Contrase&ntilde;a: ${BILLING_PORTAL_PASSWORD}</p><p>Nosotros recomendamos que usted vea las opciones del Panel para conocer mejor nuestro ambiente Financiero y de Soporte, antes de iniciar. Pero si usted desea iniciar imediactamente, simplemente ingrese al <a href="${URL_DASHBOARD}" target="_blank">Panel de Controlo Jelastic SaveInCloud</a>.</p>
+---
+name: billing_account_deactivated
+title: Tu cuenta Jelastic SaveInCloud ha sido desactivada!
+subject: Tu cuenta Jelastic SaveInCloud ha sido desactivada!
+---
+Usted va seguir teniendo aceso al <a href="${URL_DASHBOARD}">Painel Jelastic SaveInCloud</a>, pero todos los ambientes est&aacute;n pausados y usted no podr&aacute; ejecutar cualquer cambio o crear nuevos ambientes.<br><br>Para activar tu cuenta usted necesita cargar saldo, y podr&aacute; hacer por el Panel Financiero: <a href="${URL_REFILL_ACCOUNT}" target="_blank">${URL_REFILL_ACCOUNT}</a><br><br>Cuando usted active tu cuenta, para reiniciar los ambientes tenes que apretar el bot&oacute;n <strong>Iniciar </strong>de manera manual.
+---
+name: billing_account_deactivated_trial
+title: Tu cuenta Jelastic SaveInCloud ha sido desactivada!
+subject: Tu cuenta Jelastic SaveInCloud ha sido desactivada!
+---
+Usted va seguir teniendo aceso al <a href="${URL_DASHBOARD}">Painel Jelastic SaveInCloud</a>, pero todos los ambientes est&aacute;n pausados y usted no podr&aacute; ejecutar cualquer cambio o crear nuevos ambientes.<br><br>Para activar tu cuenta usted necesita <a href="${URL_UPGRADE_ACCOUNT}">convertirla</a>.<br><br>Cuando usted active tu cuenta, para reiniciar los ambientes tenes que apretar el bot&oacute;n <strong>Iniciar </strong>de manera manual.<br>
+---
+name: billing_account_destroyed
+title: Tu cuenta Jelastic SaveInCloud se v&aacute; borrar!
+subject: Tu cuenta Jelastic SaveInCloud se vá borrar!
+---
+Tu cuenta <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> se v&aacute; borrar.<br><br>V&oacute;s seguis teniendo aceso a tu cuenta en cualquer momento, solo que tus ambientes fueron borrados.<br><br>Para reactivar tu cuenta, por favor ingrese al Panel de Controlo, y Active tu cuenta para la Versi&oacute;n Completa (por si no tengas todav&iacute;a hecho ese procedimiento) y haga un pago:<br><br>URL Panel de Controlo: <a href="${URL_DASHBOARD}">${URL_DASHBOARD}</a><br><br>
+---
+name: billing_account_destroyed_not_refill
+title: Tu cuenta Jelastic SaveInCloud ha sido borrada!
+subject: Tu cuenta Jelastic SaveInCloud ha sido borrada!
+---
+Tu cuenta Jelastic SaveInCloud ha sido borrada porque usted no carg&oacute; saldo en el tiempo permitido para reactivaci&oacute;n.<br><br>Cualquer duda, hable conosotros: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a><br>Obtenga m&aacute;s informaciones sobre nuestra comunidad Jelastic SaveInCloud:  <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a>
+---
+name: billing_account_destroyed_not_refill_during_days
+title: Tu cuenta Jelastic SaveInCloud ha sido borrada!
+subject: Tu cuenta Jelastic SaveInCloud ha sido borrada!
+---
+Tu cuenta Jelastic SaveInCloud ha sido borrada porque no cargaste saldo en el tiempo establecido de ${DAYS_COUNT} dias despues de la desactivaci&oacute;n.<br><br>Por favor, hable con nuestro soporte <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a> si desea reactivar tu cuenta y utilizar nuestros servicios. <br><br>Para m&aacute;s informaciones sobre nuestra Comunidade Jelastic SaveInCloud, ingrese al <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a> .
+---
+name: billing_account_destroyed_trial_ended
+title: Your Jelastic account was destroyed!
+subject: Your Jelastic account was destroyed!
+---
+Tu cuenta Jelastic SaveInCloud ha sido borrada porque el periodo de Pruebas se termin&oacute; y tu cuenta no fu&eacute; convertida a la Versi&oacute;n Completa durante los ${DAYS_COUNT} dia(s).<br><br>Cualquer duda, hable con nuestro soporte ${URL_HOSTER_SUPPORT}. <br><br>Para m&aacute;s informaciones sobre nuestra Comunidade Jelastic SaveInCloud, ingrese al <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a> .<a href="${URL_JELASTIC_COMMUNITY}" target="_blank"><br><br></a>
+---
+name: billing_account_going_be_destroyed
+title: Tu cuenta Jelastic SaveInCloud va ser borrada!
+subject: Tu cuenta Jelastic SaveInCloud va ser borrada!
+---
+Tu cuenta <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> va ser borrada en ${DAYS_COUNT} dia(s).<br>Est&eacute; atento porque todos sus ambientes tambi&eacute;n van a ser borrados.<br><br>Por favor, cargue cr&eacute;ditos en tu cuenta para seguir usando nuestros servicios:<br>Panel Financiero: <a href="${URL_REFILL_ACCOUNT}">${URL_REFILL_ACCOUNT}</a><br><br><strong>Quede conosotros y desfrute de todos nuestros benef&iacute;cios</strong><br><br>Nosotros siempre trabajamos en mejoras de nuestra Plataforma, agregamos nuevas funcionalidades, desarrollamos la seguridad de los datos, y hacemos todo pensado en lo mejor para ustedes clientes. Nos encantar&iacute;a mantener usted como nuestro cliente, para que puedas comprobar todos los benef&iacute;cios que podemos brindar.
+---
+name: billing_account_going_be_destroyed_trial
+title: Tu cuenta Jelastic SaveInCloud podr&aacute; ser borrada!
+subject: Tu cuenta Jelastic SaveInCloud podrá ser borrada!
+---
+Tu cuenta <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> podr&aacute; ser borrada en ${DAYS_COUNT} dia(s).<br>Est&eacute; atento porque todos sus ambientes tambi&eacute;n van a ser borrados.<br><br>Por favor, <a href="${URL_UPGRADE_ACCOUNT}">convierta tu cuenta</a> para seguir usando los servicios de Jelastic SaveInCloud.<br><br><strong>Quede conosotros y desfrute de todos nuestros benef&iacute;cios</strong><br><br>Nosotros siempre trabajamos en mejoras de nuestra Plataforma, agregamos nuevas funcionalidades, desarrollamos la seguridad de los datos, y hacemos todo pensado en lo mejor para ustedes clientes. Nos encantar&iacute;a mantener usted como nuestro cliente, para que puedas comprobar todos los benef&iacute;cios que podemos brindar.<br>
+---
+name: billing_account_needs_convert
+title: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+subject: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+---
+Tu per&iacute;odo de Pruebas va terminar en ${DAYS_COUNT} dia(s).<br><br>No te olvides de <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convertir tu cuenta</a> para seguir usando los servicios de Jelastic SaveInCloud.
+---
+name: billing_account_needs_convert_in_days
+title: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+subject: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+---
+Tu cuenta Jelastic SaveInCloud podr&aacute; quedar sin el bonus ofrecido por nosotros en ${DAYS_COUNT} dia(s).<br><br>Por favor, <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convierta tu cuenta ahora</a> para seguir usando los servicios de Jelastic SaveInCloud.
+---
+name: billing_account_needs_refill
+title: Tu cuenta Jelastic SaveInCloud necesita de Saldo!
+subject: Tu cuenta Jelastic SaveInCloud necesita de Saldo!
+---
+Basado en el uso reciente, averiguamos que tu <a href="${URL_DASHBOARD}">Conta Jelastic SaveInCloud</a> quedar&aacute; sin saldo!<br><br>Sus ambientes pueden quedar colgados, y nadie va poder aceder a tu aplicaci&oacute;n o website.<br><br><a href="${URL_REFILL_ACCOUNT}">Cargue Saldo en tu Cuenta</a> ahora para evitar qualquier problemas.<br><br>
+---
+name: billing_account_needs_refill_in_days
+title: Tu cuenta Jelastic SaveInCloud necesita de Saldo!
+subject: Tu cuenta Jelastic SaveInCloud necesita de Saldo!
+---
+Basado en el uso reciente, averiguamos que tu <a href="${URL_DASHBOARD}">Conta Jelastic SaveInCloud</a> quedar&aacute; sin saldo en aproximadamente  ${DAYS_COUNT} dia(s)!<br><br>Sus ambientes pueden quedar colgados, y nadie va poder aceder a tu aplicaci&oacute;n o website.<br><br><a href="${URL_REFILL_ACCOUNT}">Cargue Saldo en tu Cuenta</a> ahora para evitar qualquier problemas.<br>
+---
+name: billing_account_out_of_money
+title: Tu cuenta Jelastic SaveInCloud necesita de Saldo!
+subject: Tu cuenta Jelastic SaveInCloud necesita de Saldo!
+---
+Su(s) ambiente(s) <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> pueden colgar por la falta de cr&eacute;ditos en tu cuenta.<br><br>No te preocupes, sus ambientes estan seguramente respaldados en nuestra plataforma a espera de tu renovaci&oacute;n - solamente <a href="${URL_REFILL_ACCOUNT}">cargue un cr&eacute;dito</a> ahora y sus aplicaciones van a estar disponibles nuevamente en pocos segundos!<br><br><strong>Atenci&oacute;n: </strong>Sus ambientes var a ser borrados en ${DAYS_COUNT} dia(s) si usted no cargar saldo en tu cuenta!<br><br>
+---
+name: billing_account_suspended
+title: Tu conta Jelastic SaveInCloud ha sido suspendida!
+subject: Tu conta Jelastic SaveInCloud ha sido suspendida!
+---
+Perd&oacute;n, pero nos gustar&iacute;a comunicar que suspendemos tu cuenta <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> por violaci&oacute;n de los Termos de Uso de los Servicios. Es una situaci&oacute;n delicada, pero esa suspensi&oacute;n fue necesaria y nuestra ultima opci&oacute;n!<br><br>Les Ruego que hable <a href="${URL_HOSTER_SUPPORT}">con nuestro soporte</a> para revisar esta situaci&oacute;n, solicitar detalles de lo sucedido, o tambien si te parece que fue mal interpretado - pero por favor esa revisi&oacute;n requiere de tu actitud y soluci&oacute;n rapida y imediacta.
+---
+name: billing_account_trial_ended
+title: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+subject: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+---
+Tu periodo de Pruebas del Jelastic SaveInCloud termin&oacute;. Usted sigue teniendo aceso al <a href="${URL_DASHBOARD}">Panel de Controlo Jelastic SaveInCloud</a>, pero todos sus ambientes van a ser colgados y usted no podr&aacute; realizar ningun cambio o agregar nuevos.<br><br>Por favor, <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convierta tu cuenta</a> para activar sus ambientes y seguir utilizando los servicios Jelastic SaveInCloud.<br><br>Cuando usted activar tu cuenta, necesitar&aacute; reiniciar los ambientes y para eso ten&eacute;s que apretar el bot&oacute;n <strong>Iniciar </strong>de manera manual.
+---
+name: billing_account_trial_out_of_bonus
+title: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+subject: Tu cuenta Jelastic SaveInCloud necesita ser convertida!
+---
+Tu Periodo de Pruebas del Jelastic SaveInCloud se terminaron. Sus ambientes van a ser colgados.<br><br>Por favor, <a href="${URL_UPGRADE_ACCOUNT}" target="_blank">convierta tu cuenta</a> para activar sus ambientes y seguir utilizando los servicios Jelastic SaveInCloud.<br>
+---
+name: billing_account_upgrade_bonus
+title: Felicidades! Usted gan&oacute; un bonus!
+subject: Jelastic SaveInCloud - Usted ganó un bonus!
+---
+Usted recein termin&oacute; de hacer upgrade en tu cuenta, y somos muy agradecidos, y como manera de agradecer, tenemos un regalo para vos!<br>Les brindamos a usted un <strong>Saldo Gratis</strong> para utilizar en tu Jelastic SaveInCloud.<br><br>Usted pag&oacute; el monto de ${FUND_AMOUNT}, y con eso te ganaste ${BONUS}.<br><br>Tu saldo actual es de: <strong>${TOTAL_BALANCE}</strong><br><br>Cuanto m&aacute;s usted comprar conosostros m&aacute;s podr&aacute; ganar bonus. Siga promoviendo y formando parte del Jelastic SaveInCloud, la plataforma de Alojamiento mas segura del mundo!<br>
+---
+name: billing_system
+title: Informaci&oacute;n de nuestro Sistema Financiero.
+subject: Jelastic SaveInCloud - Información de nuestro Sistema Financiero
+---
+${MESSAGE}
+---
+name: cartridge_node_added
+title: Cartridge ha sido agregado con &eacute;xito
+subject: Jelastic SaveInCloud - Cartridge ha sido agregado con éxito
+---
+Felicitaciones! Tu nuevo nodo <strong>${NODE_NAME}</strong> ha sido agregado con &eacute;xito en tu ambiente <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a>.<br><br>Por favor utilice los datos seguientes para aceder como admin a tu nodo <strong>${NODE_NAME}</strong>:<br><b>Login:</b> ${LOGIN}<br><b>Contrase&ntilde;a:</b> <span class="password-field">${PASSWORD}</span><br><br>Utilize as seguintes informa&ccedil;&otilde;es para configurar e gerenciar seu cartridge:<br><b>IP:</b> ${INTERNAL_IP} #set($NODE = ${NODE_NAME}) #if($NODE == "Redis") #printCartValues({ "OPENSHIFT_APP_DNS" : "DNS address", "OPENSHIFT_REDIS_PORT" : "Port", "OPENSHIFT_REDIS_SENTINEL_PORT" : "Sentinel Port" } $CART_DATA) #end #if($NODE == "Neo4j") #printCartValues({ "OPENSHIFT_APP_DNS" : "DNS address", "OPENSHIFT_NEO4J_DB_PORT" : "Port" } $CART_DATA) #end #if($NODE == "Cassandra") #printCartValues({ "OPENSHIFT_APP_DNS" : "DNS address", "OPENSHIFT_CASSANDRA_DB_PORT" : "Port" } $CART_DATA) #end <br><br>#macro(printCartValues $keysMap $CART_DATA) #foreach($data in $CART_DATA) #set($keyData = false) #set($keyData = $keysMap.get($data.Key)) #if($keyData) #set($value = $data.Value) #if(!$value)#set($value = "-")#end <br><b>$keyData:</b> $value #end #end #end
+---
+name: cartridge_password_changed
+title: Contrase&ntilde;a del ${NODE_NAME} ha sido cambiada con &eacute;xito
+subject: Jelastic SaveInCloud - Contraseña del ${NODE_NAME} ha sido cambiada con éxito
+---
+Tenemos el agrado de informar que la contrase&ntilde;a del nodo <strong>${NODE_NAME}</strong> ha sido cambiada con &eacute;xito.<br><br>Por favor utilice los datos seguientes para tener aceso admin al nodo <strong>${NODE_NAME}</strong>:<br><strong>Login:</strong> ${LOGIN}<br><strong>Contrase&ntilde;a:</strong> ${PASSWORD}<br><br>
+---
+name: centos_node_added
+title: Nodo con VPS El&aacute;stico ha sido agregado con &eacute;xito
+subject: Jelastic SaveInCloud - Nodo con VPS Elástico ha sido agregado con éxito
+---
+Nos gustaria comunicar que tu nuevo servidor <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> VPS ha sido agregado en tu ambiente.<br><br>Por favor utilice los siguientes detalles para aceso: #if(${URL}) <br>URL de Aceso: <a href="${URL}" target="_blank">${URL}</a> #end <br>Usuario: ${LOGIN}<br>Contrase&ntilde;a: <span class="password-field">${PASSWORD}</span> #if(${IP}) <br>IP P&uacute;blica: ${IP} #end <br><br>Instrucciones detalladas en <a href="http://jelastic.com/docs/vps">como aceder un VPS El&aacute;stico con aceso root</a> estan disponibles en nuestra documentaci&oacute;n.
+---
+name: centos_password_changed
+title: La Contrase&ntilde;a de tu VPS El&aacute;stico ha sido reseteada!
+subject: Jelastic SaveInCloud - La Contraseña de tu VPS Elástico ha sido reseteada!
+---
+Nos comunicamos con ustedes para informar que la contrase&ntilde;a de tu servidor <a href="${URL_DASHBOARD}">Jelastic Cloud</a> VPS ha sido reseteada.<br><br>Por favor utilice los siguientes detalles de aceso: #if(${URL}) <br>URL de Aceso: <a href="${URL}" target="_blank">${URL}</a> #end <br>Usu&aacute;rio: ${LOGIN} <br>Contrase&ntilde;a: <span class="password-field">${PASSWORD}</span> #if(${IP}) <br>IP P&uacute;blica: ${IP} #end
+---
+name: confirm_install_solution
+title: Confirmaci&oacute;n del Deploy de tu Aplicaci&oacute;n
+subject: Jelastic SaveInCloud - Confirmación del Deploy de tu Aplicación
+---
+Gracias por su inter&eacute;s en el Jelastic SaveInCloud. Usted est&aacute; muy cerca de completar el Deploy de tu aplicaci&oacute;n en el <a href="http://jelastic.com" target="_blank">Jelastic SaveInCloud.</a><br><br>Para completar el Deploy de tu aplicaci&oacute;n ${SOLUTION_NAME}, haga un click en el link abajo:<br><br><a href="${AUTH_INSTALL_SOLUTION}" target="_blank">${AUTH_INSTALL_SOLUTION}</a><br><br>
+---
+name: couchdb_node_added
+title: Nodo con CouchDB ha sido Agregado con &Eacute;xito
+subject: Jelastic SaveInCloud - Nodo con CouchDB ha sido Agregado con Éxito
+---
+Tenemos el agrado de informar que tu nuevo servidor <a href="${URL_DASHBOARD}">Jelastic Cloud</a> CouchDB ha sido agregado con &eacute;xito en tu ambiente.<br><br>Por favor, utilice los detalles abajo para aceder a la interface WEB de Administraci&oacute;n:<br>URL de Aceso: <a href="${URL}" target="_blank">${URL}</a><br>Usu&aacute;rio : ${LOGIN}<br>Contrase&ntilde;a : <span class="password-field">${PASSWORD}</span><br><br>Instrucciones detalladas para ayudar en el inicio del uso del CouchDB junto a tu aplicaci&oacute;n est&aacute;n disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/connection-to-couchdb" target="_blank">Connection to CouchDB</a><br><br>
+---
+name: create_token
+title: Un token fue creado
+subject: '${HOSTER_NAME} - Notification: Token has been created'
+---
+<div class="jel-main-content"><p>Se ha agregado un nuevo token de acceso ${TOKEN_DESCRIPTION} a su cuenta.</p><p>Haga clic en el siguiente enlace para administrar sus tokens de acceso:</p><table class="button button-padding"><tbody><tr><td><a href="${AUTH_USER_ACCESS_TOKENS}" target="_blank"> <span>Manage Access Tokens</span> </a></td></tr></tbody></table></div>
+---
+name: db_password_changed
+title: Contrase&ntilde;a del Banco de Datos ha sido cambiada
+subject: Jelastic SaveInCloud - Contraseña del Banco de Datos ha sido cambiada
+---
+Usted recein hiciste una solicitud de cambio de contrase&ntilde;a de tu servidor de banco de datos del <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a>.<br><br>Siguen los nuevos datos de aceso: #if(${URL}) <br>URL : <a href="${URL}" target="_blank">${URL}</a> #end <br>Login : ${LOGIN}<br>Contrase&ntilde;a : <span class="password-field">${PASSWORD}</span><br><br>Por favor recuerdese que si tus aplicaciones utilizan los datos de aceso antiguos, usted necesitar&aacute; actualizar para los nuevos datos (Recomendamos que usted crie usuarios propios que tengan aceso a la aplicaci&oacute;n solamente, manteniendo el usuario admin solamente para tu administraci&oacute;n<em>!</em>)<br><br>
+---
+name: docker_node_added
+title: Container Docker ha sido creado con &eacute;xito
+subject: Jelastic SaveInCloud - Container Docker ha sido creado con éxito
+---
+Felicitaciones! Tu nuevo Container Docker ha sido creado con &eacute;xito en el ambiente <a href="${ENV_URL}" target="_blank"><em>${ENV_NAME}</em></a> de tu <a href="${URL_DASHBOARD}" target="_blank">Jelastic SaveInCloud</a>.<br><br>Por favor utilice los siguientes datos para tener aceso admin: <br>#if(${URL}) <strong>URL de Aceso</strong>: <a href="${URL}" target="_blank">${URL}</a><br>#end <strong>Login</strong>: ${LOGIN}<br><strong>Password</strong>: <span class="password-field">${PASSWORD}</span><br><strong>IP</strong>: ${IP}<br><br>Detalles sobre el Docker:<br><strong>Nome</strong>: ${DOCKER_NAME} #if(${DOCKER_HUB_URL}) <br><strong>Hub URL</strong>: ${DOCKER_HUB_URL} #end <br><br>Informaciones detalladas en como <a href="http://docs.jelastic.com/docker-configuration" target="_blank">configurar</a>, <a href="http://docs.jelastic.com/docker-update" target="_blank">actualizar</a> y <a href="http://docs.jelastic.com/docker-ssh-access" target="_blank">aceder</a> a los containeres Docker por SSH estan disponibles en nuestra documentaci&oacute;n.
+---
+name: docker_password_changed
+title: Contrase&ntilde;a del Container Docker ha sido cambiada con &eacute;xito
+subject: Jelastic SaveInCloud - Contraseña del Container Docker ha sido cambiada con éxito
+---
+Tenemos el agrado de informar que la contrase&ntilde;a del Container Docker <strong>${DOCKER_NAME}</strong> de tu ambiente <a href="${ENV_URL}" target="_blank"><em>${ENV_NAME}</em></a> ha sido cambiada con &eacute;xito.<br><br>Por favor utilice los siguientes datos para tener aceso admin a tu Docker: <br>#if(${URL}) <strong>URL de Aceso</strong>: <a href="${URL}" target="_blank">${URL}</a><br>#end <strong>Login</strong>: ${LOGIN}<br><strong>Contrase&ntilde;a</strong>: <span class="password-field">${PASSWORD}</span><br><strong>IP</strong>: ${IP}
+---
+name: edit_token
+title: El token de acceso ha recibido permisos adicionales
+subject: '${HOSTER_NAME} - Notification: Access Token has been granted additional
+  permissions'
+---
+<div class="jel-main-content"><p>Al token de acceso ${TOKEN_DESCRIPTION} se le han otorgado permisos adicionales.</p><p>Sigue el enlace de abajo para administrar tus tokens de acceso:</p><table class="button button-padding"><tbody><tr><td><a href="${AUTH_USER_ACCESS_TOKENS}" target="_blank"><span>Manage Access Tokens</span></a></td></tr></tbody></table></div>
+---
+name: environment_access_granted
+title: Aceso a lo(s) ambiente(s) han sido concedidos
+subject: Jelastic SaveinCloud - Aceso a lo(s) ambiente(s) han sido concedidos
+---
+<p>Tenemos buenas not&iacute;cias! Usted ha sido autorizado a aceder a lo(s) siguiente(s) ambiente(s) de ${OWNER_USER_NAME} usuario:${ENVS_LIST}<br></p><p>Sigue el link para manejar los ambientes compartidos:<br><br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a></p>
+---
+name: environment_attach_ext_ip
+title: <p>IP p&uacute;blica (s) adjunta correctamente<br></p>
+subject: ${HOSTER_NAME} - Public IPs attached to ${NODE_NAME} (${NODE_ID}) container
+---
+<div class="jel-main-content"><p>Las siguientes direcciones IP p&uacute;blicas se han adjuntado correctamente al contenedor ${NODE_NAME} (${NODE_ID}) en su entorno ${ENV_NAME}:<br>#if(${IPV4_ATTACHED_LIST_JOINED}) IPv4 p&uacute;blico: ${IPV4_ATTACHED_LIST_JOINED}<br>#end #if(${IPV6_ATTACHED_LIST_JOINED}) IPv6 p&uacute;blico: ${IPV6_ATTACHED_LIST_JOINED}<br>#fin<br> Consulte la documentaci&oacute;n de Jelastic para obtener m&aacute;s informaci&oacute;n sobre  <a href="https://docs.jelastic.com/public-ipv4" target="_blank">server Public IP(s) management</a> y las funciones que esta opci&oacute;n habilita, por ejemplo, c&oacute;mo:</p><div class="highlighted-block"><ul style="margin-left: 10px;"><li><a href="https://docs.jelastic.com/custom-domain-via-arecord">bind custom domain name</a></li><li><a href="https://docs.jelastic.com/custom-ssl">enable Custom SSL</a></li><li><a href="https://docs.jelastic.com/multiple-domains">route multiple domains via single IP</a></li></ul></div></div>
+---
+name: environment_export_success
+title: Ambiente ${ENV_NAME} ha sido exportado con &eacute;xito
+subject: Jelastic SaveInCloud - Ambiente ${ENV_NAME} ha sido exportado con éxito
+---
+<p><p>Tenemos el agrado de comunicar que tu ambiente <a href="${ENV_URL}" target="_blank"><em>${ENV_NAME}</em></a> ha sido exportado con &eacute;xito.</p><p>Sigue la URL para manejar el listado de ambientes exportados: <a href="${AUTH_EXPORT_SETTINGS}" target="_blank">${AUTH_EXPORT_SETTINGS}</a>.<br><br>Usted podr&aacute; encuentrar m&aacute;s detalles sobre exportaci&oacute;n de ambientes en nuestra <a href="http://docs.jelastic.com/environment-export">documentation</a>.</p></p>
+---
+name: environment_has_been_slept
+title: Tu Ambiente Jelastic ha sido puesto en hibernaci&oacute;n!
+subject: Jelastic SaveInCloud - Tu Ambiente Jelastic ha sido puesto en hibernación
+---
+Usted se olvid&oacute; de utilizar tu servidor <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> ? Ellos estan solos esperandote!<br><br>Nombre del Ambiente: ${ENV_NAME}<br><br>Tu ambiente se v&aacute; arrancar solo si cualquer actividad sea detectada (ejemplo: aceso a tu p&aacute;gina o banco de datos), o usted podr&aacute; arrancar manualmente pulsando el bot&oacute;n <strong>Iniciar</strong> del <a href="${URL_DASHBOARD}">Panel de Controlo</a><br><br>
+---
+name: environment_migration_failed
+title: Migraci&oacute;n del Ambiente ${ENV_NAME} ha fallado
+subject: Jelastic SaveInCloud - Migración del Ambiente ${ENV_NAME} ha fallado
+---
+Comunicamos que la migraci&oacute;n de tu <a href="${URL_DASHBOARD}">Jelastic Cloud</a> ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> asi a la regi&oacute;n <strong>${NEW_REGION_NAME}</strong> ha fallado por razones tecnicas. <br><br>Por favor <a href="${URL_HOSTER_SUPPORT}" target="_blank">hable con nuestro soporte</a> sobre el tema enviando los siguientes detalles:<br><br><strong>Ambiente:</strong> <a href="${ENV_URL}" target="_blank">${ENV_URL}</a> <br><strong>Regi&oacute;n Actual:</strong> ${OLD_REGION_NAME} <br><strong>Regi&oacute;n de Destino:</strong> ${NEW_REGION_NAME} <br><strong>Hora de In&iacute;cio:</strong> ${MIGRATION_START_TIME} <br><strong>Hora de Fin:</strong> ${MIGRATION_END_TIME} <br><br><br>
+---
+name: environment_migration_success
+title: Ambiente ${ENV_NAME} ha sido migrado con &eacute;xito
+subject: Jelastic SaveInCloud - Ambiente ${ENV_NAME} ha sido migrado con éxito
+---
+Tenemos el agrado de informar que tu <a href="${URL_DASHBOARD}">Jelastic Cloud</a> ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha sido migrado con &eacute;xito para la regi&oacute;n <strong>${NEW_REGION_NAME}</strong>.<br><br><strong>Detalles:</strong><br>#set($LABELS={"NAME":"Node Name", "REGION":"Region", "DURATION":"Duration", "TOTAL":"Total duration:", "LAN_IP":"Internal IP", "WAN_IP":"Public IP", "HOUR":"hr", "MIN":"min", "SEC":"sec"}) ${MIGRATION_REPORT}
+---
+name: environment_node_added
+title: ${NODE_NAME} contenedor ha sido creado exitosamente
+subject: Jelastic - ${NODE_NAME} container has been successfully created
+---
+<div class="jel-main-content"><p>&iexcl;Felicidades! Se ha agregado con &eacute;xito un nuevo contenedor de ${NODE_NAME} a su entorno ${ENV_NAME} en la Nube Jelastic.</p><p>Por favor, use los siguientes datos para obtener acceso de administrador:<br>#if(${URL}) URL de acceso: ${URL}<br>#end Login: ${LOGIN}<br>Contrase&ntilde;a: ${PASSWORD} #if(${IP})<br>IP: ${IP} #end</p></div>
+---
+name: environment_node_post_install_failed
+title: La ejecuci&oacute;n de las acciones posteriores a la instalaci&oacute;n del contenedor ${NODE_NAME} (${NODE_ID_TEXT}) ha fallado
+subject: '${HOSTER_NAME} - Notification: Executing post install actions for ${NODE_NAME}
+  (${NODE_ID_TEXT}) container of ${ENV_NAME} has been failed'
+---
+<div id="maincontent" class="jel-main-content"><p>Error al ejecutar las acciones posteriores a la instalaci&oacute;n para el contenedor ${NODE_NAME} (${NODE_ID_TEXT}) del entorno ${ENV_NAME} en Jelastic Cloud.</p><p>El proceso ha fallado debido a los siguientes errores:<br>${ERROR}</p></div>
+---
+name: environment_successfully_created
+title: Tu Ambiente Jelastic SaveInCloud ha Sido Creado con &Eacute;xito!
+subject: Jelastic SaveInCloud - Tu Ambiente ha Sido Creado con Éxito
+---
+Buenas not&iacute;cias! Tu ambiente <a href="${ENV_URL}" target="_blank"><strong>${ENV_NAME}</strong></a> ha sido creado - ahora usted puede aceder al <a href="${URL_DASHBOARD}">Panel de Controlo</a> para implementar tu aplicaci&oacute;n y utilizar las ventajas &uacute;nicas que el Jelastic SaveInCloud te ofrece.<br><br>Quer&eacute;s algunos consejos? Siguen algunos:<ul><li><a href="http://docs.jelastic.com/deployment-guide">implemente tu c&oacute;digo</a></li><li><a href="http://docs.jelastic.com/application-configuration">configure</a> tus servidores</li><li>ajuste la escala automactica <a href="http://docs.jelastic.com/automatic-vertical-scaling">vertical</a> y <a href="http://docs.jelastic.com/automatic-horizontal-scaling">horizontal</a></li><li>obtenga <a href="http://docs.jelastic.com/public-ipv4">IP p&uacute;blica</a> y nombre de <a href="http://docs.jelastic.com/custom-domains">dom&iacute;nios personalizados</a></li><li><a href="http://docs.jelastic.com/view-app-statistics">monitoree</a> estad&iacute;sticas de tu aplicaci&oacute;n y reciba <a href="http://docs.jelastic.com/environment-triggers">notificaciones de utilizaci&oacute;n</a></li><li><a href="http://docs.jelastic.com/share-environment">comparta</a> tu ambiente con tu equipo</li></ul>
+---
+name: environment_transfer_fail
+title: Transfer&eacute;ncia del ambiente ha fallado
+subject: Jelastic SaveInCloud - Transferéncia del ambiente ha fallado
+---
+Comunicamos que la transfer&eacute;ncia de tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> para la cuenta ${TARGET_USER_NAME} ha fallado.<br><br>#set($code = $ERROR_CODE)#set($CODE_WRONG_STATUS = 8)#set($CODE_QUOTAS_REACHED = 2338)#set($CODE_MAX_ENVS = 2360)#set($CODE_MAX_CLOUDLETS = 2361)#set($CODE_HA_NOT_ALLOWED = 2362)#set($CODE_EXT_IP_NOT_ALLOWED = 2363)#set($CODE_VDS_NOT_ALLOWED = 2364)#set($CODE_MAX_NODES = 2365)#set($CODE_WRONG_GROUP = 2407) #if($code == $CODE_QUOTAS_REACHED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions.#end #if($code == $CODE_MAX_ENVS)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - the number of environments exceeded the maximum.#end #if($code == $CODE_MAX_CLOUDLETS)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - the number of cloudlets per container reached the maximum.#end #if($code == $CODE_HA_NOT_ALLOWED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - High Availability usage is restricted.#end #if($code == $CODE_EXT_IP_NOT_ALLOWED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - External IP usage is restricted.#end #if($code == $CODE_VDS_NOT_ALLOWED)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - VPS usage is restricted.#end #if($code == $CODE_MAX_NODES)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account restrictions - the number of containers per environment reached the maximum.#end #if($code == $CODE_WRONG_STATUS)<b>Reason:</b> environment transfer is not allowed due to ${TARGET_USER_NAME} account status.#end #if($code == $CODE_WRONG_GROUP)<b>Reason:</b> environment can be transferred only to the billing account.#end<br><br>Usted puede encuentrar m&aacute;s detalles sobre transfer&eacute;ncias de ambientes en nuestra <a href="${URL_DOCS_ENV_TRANSFER}" target="_blank">documentaci&oacute;n</a>.
+---
+name: environment_transfer_request
+title: Solicitud de Transfer&eacute;ncia de ambiente
+subject: Jelastic SaveInCloud - Solicitud de Transferéncia de ambiente
+---
+Comunicamos que el usuario ${OWNER_USER_NAME} le gustar&iacute;a de transladar su ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> para tu cuenta.<br><br>Por favor confirme si desea recibir ese ambiente haciendo click en el link abajo:<br><br><a href="${AUTH_CONFIRM_TRANSFER}" target="_blank">${AUTH_CONFIRM_TRANSFER}</a><br><br>Usted podr&aacute; encuentrar m&aacute;s informaciones sobre transfer&eacute;ncia de ambientes en nuestra <a href="${URL_DOCS_ENV_TRANSFER}" target="_blank">documentaci&oacute;n</a>.<br>
+---
+name: environment_transfer_success
+title: Ambiente ha sido transladado con &eacute;xito
+subject: Jelastic SaveInCloud - Ambiente ha sido transladado con éxito
+---
+Comunicamos que usted translad&oacute; con &eacute;xito el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> para el usu&aacute;rio ${TARGET_USER_NAME}.<br><br>Usted podr&aacute; encuentrar m&aacute;s informaciones sobre transfer&eacute;ncias de ambientes en nuestra <a href="${URL_DOCS_ENV_TRANSFER}" target="_blank">documentaci&oacute;n</a>.<br><br>
+---
+name: environment_without_cp_created
+title: Tu Ambiente Jelastic SaveInCloud ha Sido Creado con &Eacute;xito!
+subject: Jelastic SaveInCloud - Tu Ambiente ha Sido Creado con Éxito
+---
+Buenas not&iacute;cias! Tu ambiente <strong>${ENV_NAME}</strong> ha sido creado - ahora usted puede aceder al <a href="${URL_DASHBOARD}">Panel de Controlo</a> para implementar tu aplicaci&oacute;n y utilizar las ventajas &uacute;nicas que el Jelastic SaveInCloud te ofrece.<br><br>Quer&eacute;s algunos consejos? Siguen algunos:<ul><li><a href="http://docs.jelastic.com/application-configuration">configure</a> tus servidores</li><li>ajuste la escala automactica <a href="http://docs.jelastic.com/automatic-vertical-scaling">vertical</a> y <a href="http://docs.jelastic.com/automatic-horizontal-scaling">horizontal</a></li><li>obtenga <a href="http://docs.jelastic.com/public-ipv4">IP p&uacute;blica</a> y nombre de <a href="http://docs.jelastic.com/custom-domains">dom&iacute;nios personalizados</a></li><li><a href="http://docs.jelastic.com/view-app-statistics">monitoree</a> estad&iacute;sticas de tu aplicaci&oacute;n y reciba <a href="http://docs.jelastic.com/environment-triggers">notificaciones de utilizaci&oacute;n</a></li><li><a href="http://docs.jelastic.com/share-environment">comparta</a> tu ambiente con tu equipo</li></ul>
+---
+name: glassfish_das_added
+title: Nodo GlassFish DAS ha sido agregado con &eacute;xito
+subject: Jelastic - Nodo GlassFish DAS ha sido agregado con éxito
+---
+Tenemos el agrado de comunicar que tu nuevo Glassfish DAS (Domain Administration Server) ${URL_DASHBOARD} ha sido agregado a tu ambiente.<br><br>Por favor utilice las informaciones para aceso al Console de Admin:<br>Admin Console URL : <a href="${URL}" target="_blank">${URL}</a><br>Admin Console Login : ${LOGIN}<br>Admin Console Contrase&ntilde;a : <span class="password-field">${PASSWORD}</span><br><br>Instrucciones detalladas de las variables del ambiente en GlassFish estan disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/Environment-variables-in-GlassFish">Configurar variables en el ambiente Admin Console GlassFish</a><br><br>Tambien tenemos informaciones de <a href="http://jelastic.com/docs/GlassFish-Connection-Pool">Como utilizar GlassFish connection pool</a>
+---
+name: glassfish_das_password_changed
+title: Contrase&ntilde;a DAS del Nodo GlassFish ha sido cambiada con &eacute;xito
+subject: Jelastic SaveInCloud - Contraseña DAS del Nodo GlassFish ha sido cambiada con éxito
+---
+Hiciste una solicitud recentemente de reset de la contrase&ntilde;ade tu <a href="${URL_DASHBOARD}">Jelastic Cloud</a> Glassfish DAS (Domain Administration Server).<br><br>Siguen los nuevos datos de aceso:<br>Access URL: <a href="${URL}" target="_blank">${URL}</a><br>Admin Console Login: ${LOGIN}<br>Admin Console Senha: <span class="password-field">${PASSWORD}<span id="mce_noneditablecaret" data-mce-bogus="true"></span></span><br><br>
+---
+name: hardnode_installation_failed
+title: Instalaci&oacute;n del Nodo Hardware ha fallado
+subject: 'Notificación Jelastic : Instalación del Nodo Hardware ha fallado'
+---
+Les comunicamos que la instalaci&oacute;n del nodo hardware ${HARD_NODE_NAME} agregado al grupo ${HARD_NODE_GROUP} en la regi&oacute;n ${REGION_NAME} ha fallado.<br><br>El status actual del nodo hardware &eacute;s ${STATUS}.<br><br>El proceso ha tenido fallas y saltaron errores en las seguientes operaciones:<ul>#foreach($error in ${MESSAGES})<li>$error.action</li>#end</ul>Las informaciones detalladas podr&aacute;s encuentrar en el archivo adjunto.<br><br>#if(${PCS_INSTALL_FAILED})Estos problemas con instalaciones de PCS deben ser corregidos manualmente, por favor no reinicie el nodo hardware y hable con el soporte Jelastic para solucionar. #{else}Por favor solucione esta falla y siga la instalaci&oacute;n haciendo un click en el bot&oacute;n "Resume Installation" en el menu correspondiente en el JCA.#end
+---
+name: hardnode_installation_success
+title: Nodo Hardware ha sido agregado con &eacute;xito
+subject: 'Notificación Jelastic : Nodo Hardware ha sido agregado con éxito'
+---
+Tenemos el agrado de informar que tu nodo hardware ${HARD_NODE_NAME} ha sido instalado con &eacute;xito y agregado al grupo ${HARD_NODE_GROUP} en la  regi&oacute;n ${REGION_NAME}.<br><br>El status actual del nodo hardware &eacute;s ${STATUS}.<br>Tiempo de duraci&oacute;n de la instalaci&oacute;n: ${TIME}<br>#set($errors = ${MESSAGES})<br>#if($errors.size() != 0)<br>Por favor est&eacute; atento en los avisos siguientes, ocurridos durante la instalaci&oacute;n:<br><ul>#foreach($error in $errors)<li>$error.action</li>#end<br></ul>Las informaciones detalladas de estos problemas pueden ser localizadas en el archivo adjunto.#end
+---
+name: jelastic_software_package_ftp_installed
+title: Tu FTP ha sido instalado con &eacute;xito
+subject: Jelastic SaveInCloud - FTP ha sido instalado con éxito
+---
+Tu FTP ha sido instalado con &eacute;xito en tu ambiente <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a>.<br><br>Link del FTP:<br>${FTP_URL}<br><br>Usuario: ${PACKAGE_LOGIN}<br>Contrase&ntilde;a: <span class="password-field">${PACKAGE_PASSWORD}</span><br>IP Publica: ${PACKAGE_IP}<br><br>URL del Ambiente: <a href="${ENV_URL}">${ENV_URL}</a><br><br>Instrucciones detalladas de como configurar tu FTP/FTPS estan disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/ftp-ftps-support">Soporte al Protocolo FTP/FTPS</a>
+---
+name: jelastic_software_package_ftp_password_changed
+title: Contrase&ntilde;a de FTP ha sido cambiada
+subject: Jelastic SaveInCloud - Contraseña de FTP ha sido cambiada
+---
+Usted hiciste una solicitud de reset de contrase&ntilde;a de tu servidor de FTP en el <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a>.<br><br>Siguen los nuevos datos de aceso:<br><br>Link del FTP:<br>${FTP_URL}<br><br>Usuario: ${PACKAGE_LOGIN}<br>Contrase&ntilde;a: <span class="password-field">${PACKAGE_PASSWORD}</span><br>IP Publica: ${PACKAGE_IP}<br><br>URL del Ambiente: <a href="${ENV_URL}">${ENV_URL}</a><br><br>Instrucciones detalladas de como configurar tu FTP/FTPS estan disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/ftp-ftps-support">Soporte al Protocolo FTP/FTPS</a><br>
+---
+name: jelastic_system
+title: Notificaciones del Sistema.
+subject: Jelastic SaveInCloud - Notificaciones del Sistema
+---
+${MESSAGE}
+---
+name: lemp_node_added
+title: LEMP Node <br>Successfully Created
+subject: LEMP Node Successfully Added to Your ${HOSTER_NAME} Environment
+---
+<div class="jel-main-content">
+    A new LEMP container with pre-installed NGINX, PHP-FPM, Redis and MariaDB is successfully added to your ${ENV_NAME} environment at ${HOSTER_NAME}.
+    <br>
+    <br>
+    Please use the following data to access MariaDB server on the added node:
+    <div class="highlighted-block">
+        <b>phpMyAdmin:</b> <a href="${URL}" target="_blank">${URL}</a><br>
+        <b>Login:</b> ${LOGIN}<br>
+        <b>Password:</b> <span class="password-field">${PASSWORD}</span>
+    </div>
+
+    <b>Note:</b> access to phpMyAdmin can be restricted if 'PHPMYADMIN_ENABLED' variable is set to 'false'.
+    <br>
+    <br>
+    <a href="http://docs.jelastic.com/connection-to-mariadb" target="_blank">Connect to MariaDB</a> from your application code using the linked instruction and the following details:
+    <div class="highlighted-block">
+        <b>Host:</b> ${NODE_HOST}<br>
+        <b>Login:</b> ${LOGIN}<br>
+        <b>Password:</b> ${PASSWORD}<br>
+        <b>Database:</b> (create it using phpMyAdmin above)
+    </div>
+
+    <b>Note:</b>
+    <ul>
+        <li>Use <b>${NODE_HOST}</b> in your application code to connect</li>
+        <li>${LOGIN} user has full administrative access to the server, so it is recommended defining a new restricted user via phpMyAdmin</li>
+    </ul>
+    <br>
+    Use the <a href="https://docs.jelastic.com/database-configuration-files#etc" target="_blank">configuration files guide</a> to adjust the MariaDB server settings as required.
+</div>
+
+---
+name: mariadb_node_added
+title: Nodo MariaDB ha sido agregado con &eacute;xito
+subject: Jelastic SaveInCloud - Nodo MariaDB ha sido agregado con éxito
+---
+Tenemos el agrado de informar que tu nuevo servidor MariaDB en tu <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> ha sido agregado con &eacute;xito al ambiente.<br><br>Porfavor utilice los siguientes datos para tener aceso a la interface web de administraci&oacute;n phpMyAdmin:<br>URL de Aceso: <a href="${URL}" target="_blank">${URL}</a><br>Usuario : ${LOGIN}<br>Contrase&ntilde;a : <span class="password-field">${PASSWORD}</span><br><br>Instrucciones detalladas para ayudar con el in&iacute;cio de la utilizaci&oacute;n del MariaDB con tu aplicaci&oacute;n estan disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/connection-to-mariadb" target="_blank">Conectando al MariaDB</a>
+---
+name: mongodb_node_added
+title: Nodo MongoDB ha sido agregado con &eacute;xito
+subject: Jelastic SaveInCloud - Nodo MongoDB ha sido agregado con éxito
+---
+Tenemos el agrado de informar que tu nuevo servidor MongoDB de tu <a href="${URL_DASHBOARD}">Jelastic Cloud</a> ha sido agregado con &eacute;xito al ambiente.<br><br>Porfavor siguen los detalles para aceder al ambiente web de administraci&oacute;n:<br>URL de Aceso : <a href="${URL}" target="_blank">${URL}</a><br>Usuario : ${LOGIN}<br>Contrase&ntilde;a : <span class="password-field">${PASSWORD}</span><br><br>Instrucciones detalladas para ayudar a iniciar el uso del MongoDB con tu aplicaci&oacute;n estan disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/connection-to-mongodb" target="_blank">Conectando al MongoDB</a><br><br>
+---
+name: mssql_node_added
+title: Nodo MSSQL ha sido creado con &eacute;xito
+subject: Jelastic SaveInCloud - Nodo MSSQL ha sido creado con éxito
+---
+Felicitaciones! Tu nuevo nodo <strong>${NODE_NAME}</strong> ha sido agregado con &eacute;xito en tu ambiente <strong>${ENV_NAME}</strong> en el <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a>.<br><br>Porfavor utilice los siguientes datos para tener <strong>aceso admin</strong>:<br><strong>Host</strong>: ${DB_HOST}<br><strong>IP Interno</strong>: ${INTERNAL_IP}<br><strong>Login</strong> : ${LOGIN}<br><strong>Contrase&ntilde;a</strong> : <span class="password-field">${PASSWORD}</span><br><br>Para establecer una conexi&oacute;n remota al ${NODE_NAME}  via <strong>RDP</strong>, porfavor utilice los siguientes datos:<br><strong>URL de Aceso</strong>: ${RDP_URL}<br><strong>Login</strong>: ${RDP_LOGIN}<br><strong>Contrase&ntilde;a</strong>: ${RDP_PASSWORD}<br><br>Para conectar de manera sensilla al nodo ${NODE_NAME} por el navegador, utilice el siguiente link directo: <br><a href="${AUTH_URL_RDP_CONNECT}" target="_blank">${AUTH_URL_RDP_CONNECT}</a><br><br>Instrucciones detalladas en : <a href="http://jelastic.com/docs/connection-to-mssql" target="_blank">Como configurar el Servidor MSSQL</a> en el Jelastic est&aacute;n disponibles en nuestra documentaci&oacute;n.
+---
+name: mysql_node_added
+title: Nodo MySQL ha sido agregado con &eacute;xito
+subject: Jelastic SaveInCloud - Nodo MySQL ha sido agregado con éxito
+---
+Tenemos el agrado de informar que el nuevo servidor MySQL de tu <a href="${URL_DASHBOARD}">Jelastic Cloud</a> ha sido agregado al ambiente.<br><br>Por favor utilice los siguientes datos para aceder a la interface web de administraci&oacute;n phpMyAdmin:<br>URL de Aceso: <a href="${URL}" target="_blank">${URL}</a><br>Login : ${LOGIN}<br>Contrase&ntilde;a : <span class="password-field">${PASSWORD}</span><br><br>Instrucciones detalladas para ayudar usted a iniciar la utilizaci&oacute;n del MySQL con tu aplicaci&oacute;n estan disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/connection-to-mysql" target="_blank">Conectando al MySQL</a><br><br>
+---
+name: notify_cloudlets_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE}% de los cloudlets
+  disponibles'
+subject: 'Notificación Jelastic SaveInCLoud: ${NODE_NAME} consumio ${LOAD_VALUE}%
+  de los cloudlets disponibles'
+---
+<p>Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n</strong>:<br>#if(${TRIGGER_CONDITION_GREATER})El volumen de cloudlets consumidos por el ${NODE_NAME} de tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excecido ${TRIGGER_VALUE}% #else El volumen de cloudlets consumidos por el ${NODE_NAME} de tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor que ${TRIGGER_VALUE}%#end <br><br><strong>Resultado</strong>:<br>Actualmente el ${NODE_NAME}(s) consumio ${CLOUDLETS_USED} cloudlets, que representa ${LOAD_VALUE}% de los recursos disponibles.<br><br><strong>Recomendaciones:</strong><br></p><ul>#if(${TRIGGER_CONDITION_GREATER})<li>Por favor considere agregar m&aacute;s cloudlets para tu container ${NODE_NAME} para no tener p&eacute;rdida de velocidad.<br><br></li>#end<li>El intervalo de tiempo de &eacute;sta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas alertas de tu panel de controlo por si usted reciba con mucha frequ&eacute;ncia estos emails.<br><br></li><li>Recuerde, usted solamente paga lo que utiliz&aacute;s en los Cloudlets Din&acirc;micos dentro del l&iacute;mite disponible que usted configura.#if(${TRIGGER_CONDITION_GREATER}) Despues de terminada las tareas, tu aplicaci&oacute;n podr&aacute; exigir menos recursos, y el numero de cloudlets que ella podr&aacute; utilizar va a ser reducido automacticamente.#end</li></ul>Sigue el link para cambiar el limite escalonable del nodo ${NODE_NAME} ahora:<br><a href="${AUTH_CHANGE_TOPOLOGY}" target="_blank">${AUTH_CHANGE_TOPOLOGY}</a><br><br>Para recibir m&aacute;s informaciones en como configurar las notificaciones, por favor, sigue nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.<br><p></p><br>
+---
+name: notify_cpu_loading
+title: Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE}% del CPU disponible
+subject: 'Notificación Jelastic SaveInCloud: ${NODE_NAME} consumio ${LOAD_VALUE}%
+  del CPU disponible'
+---
+Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_CONDITION_GREATER})El volume de CPU consumido por el ${NODE_NAME} de tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excedido en ${TRIGGER_VALUE}% #else El volume de CPU consumido por el ${NODE_NAME} de tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor de que ${TRIGGER_VALUE}% #end <br><br><strong>Resultado:</strong><br>Actualmente el ${NODE_NAME}(s) consume ${CLOUDLETS_USED} cloudlets (aproximadamente ${CPU_USED} MHz) que representa ${LOAD_VALUE}% de los recursos disponibles.<br><p><strong>Recomendaciones:</strong><br></p><ul>#if(${TRIGGER_CONDITION_GREATER})<li>Por favor considere agregar m&aacute;s cloudlets a tu container ${NODE_NAME} para no tener p&eacute;rdida de velocidad.<br>#end</li><li>El intervalo de tiempo de &eacute;sta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas alertas de tu panel de controlo por si usted reciba con mucha frequ&eacute;ncia estos emails.<br><br></li><li>Recuerde, usted solamente paga lo que utiliz&aacute;s en los Cloudlets Din&acirc;micos dentro del l&iacute;mite disponible que usted configura.#if(${TRIGGER_CONDITION_GREATER}) Despues de terminada las tareas, tu aplicaci&oacute;n podr&aacute; exigir menos recursos, y el numero de cloudlets que ella podr&aacute; utilizar va a ser reducido automacticamente.#end</li></ul>Sigue el link para cambiar el limite escalonable del nodo ${NODE_NAME} ahora:<br><br><a href="${AUTH_CHANGE_TOPOLOGY}" target="_blank">${AUTH_CHANGE_TOPOLOGY}</a><br><br>Para recibir m&aacute;s informaciones en como configurar las notificaciones, por favor, sigue nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.<strong><br></strong>
+---
+name: notify_disk_io_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE}% de los I/O disponibles'
+subject: 'Notificación Jelastic SaveInCloud: ${NODE_NAME} consumio ${LOAD_VALUE}%
+  de los I/O disponibles'
+---
+Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_CONDITION_GREATER})El nivel de utilizaci&oacute;n de disco I/O del ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excedido ${TRIGGER_VALUE}% #else El nivel de utilizaci&oacute;n de disco I/O del ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor que ${TRIGGER_VALUE}% #end <br><br><strong>Resultado:</strong><br>Actualmente ${NODE_NAME}(s) consume ${DISK_IO_USED}KB/s que representa ${LOAD_VALUE}% de los recursos disponibles.<br><br><strong>Recomendaciones:</strong><br><ul><li>El intervalo de tiempo de esta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas en tu panel de controlo por si usted reciba muchos emails con frecuencia.<br>#if(${TRIGGER_CONDITION_GREATER})<br></li><li>Si &eacute;s neces&aacute;rio, usted puede solicitar un contacto con el soporte de tu proveedor de alojamiento y solicitar m&aacute;s recursos para tu container ${NODE_NAME} y as&iacute; evitar p&eacute;rdida de performance. #end</li></ul><br>Para m&aacute;s informaciones sobre configuraciones de notificaciones, por favor, consulte nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.<br><br>
+---
+name: notify_disk_iops_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE}% de los IOPS disponibles'
+subject: 'Notificación Jelastic SaveInCloud: ${NODE_NAME} consumio ${LOAD_VALUE}%
+  de los IOPS disponibles'
+---
+Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_CONDITION_GREATER})El volume de IOPS consumidos por ${NODE_NAME} de tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excedido ${TRIGGER_VALUE}% #else El volume de IOPS consumidos por ${NODE_NAME} de tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor que ${TRIGGER_VALUE}% #end <br><br><strong>Resultado:</strong><br>Actualmente ${NODE_NAME}(s) consume ${DISK_IOPS_USED} IOPS, que representa ${LOAD_VALUE}% de los recursos disponibles.<br><br><strong>Recomendaciones:</strong><br><ul><li>El intervalo de tiempo de esta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas en tu panel de controlo por si usted reciba muchos emails con frecuencia.<br>#if(${TRIGGER_CONDITION_GREATER})<br></li><li>Si &eacute;s neces&aacute;rio, usted puede solicitar un contacto con el soporte de tu proveedor de alojamiento y solicitar m&aacute;s recursos para tu container ${NODE_NAME} y as&iacute; evitar p&eacute;rdida de performance. #end</li></ul><br>Para m&aacute;s informaciones sobre configuraciones de notificaciones, por favor, consulte nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.<br><br>
+---
+name: notify_disk_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE}% del espacio en disco
+  disponible'
+subject: 'Notificación Jelastic SaveInCloud: ${NODE_NAME} consumio ${LOAD_VALUE}%
+  del espacio en disco disponible'
+---
+Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_CONDITION_GREATER})El volume de disco consumido por ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excedido ${TRIGGER_VALUE}% #else El volume de disco consumido por ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor de ${TRIGGER_VALUE}% #end <br><br><strong>Resultado:</strong><br>Actualmente ${NODE_NAME}(s) consume ${DISK_USED} GB de espacio en disco que representa ${LOAD_VALUE}% de los recursos disponibles.<br><br><strong>Recomendaciones:</strong><br><ul><li>El intervalo de tiempo de esta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas en tu panel de controlo por si usted reciba muchos emails con frecuencia.<br>#if(${TRIGGER_CONDITION_GREATER})<br></li><li>Si &eacute;s neces&aacute;rio, usted puede solicitar un contacto con el soporte de tu proveedor de alojamiento y solicitar m&aacute;s recursos para tu container ${NODE_NAME} y as&iacute; evitar p&eacute;rdida de performance. #end</li></ul><br>Para m&aacute;s informaciones sobre configuraciones de notificaciones, por favor, consulte nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.<br><br>
+---
+name: notify_inodes_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE}% de los inodes disponibles'
+subject: 'Notificación Jelastic SaveInCloud: ${NODE_NAME} consumio ${LOAD_VALUE}%
+  de los inodes disponibles'
+---
+Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_CONDITION_GREATER}) El volume de inodes consumido por ${NODE_NAME} en tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excedido en ${TRIGGER_VALUE}% #else El volume de inodes consumido por ${NODE_NAME} en tu ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor que ${TRIGGER_VALUE}% #end <br><br><strong>Resultado:</strong><br>Actualmente ${NODE_NAME}(s) consume ${INODES_USED} inodes que representa ${LOAD_VALUE}% de los recursos disponibles.<br><br><strong>Recomendaciones:</strong><br><ul><li>El intervalo de tiempo de esta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas en tu panel de controlo por si usted reciba muchos emails con frecuencia.<br>#if(${TRIGGER_CONDITION_GREATER})<br></li><li>Si &eacute;s neces&aacute;rio, usted puede solicitar un contacto con el soporte de tu proveedor de alojamiento y solicitar m&aacute;s recursos para tu container ${NODE_NAME} y as&iacute; evitar p&eacute;rdida de performance. #end</li></ul><br>Para m&aacute;s informaciones sobre configuraciones de notificaciones, por favor, consulte nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.<br><br>
+---
+name: notify_killed_processes_info
+title: 'El proceso #if(${OOM_KILLED_PROCESSES_COUNT} == 1) ${OOM_KILLED_PROCESS_NAME}
+  fue #else ${OOM_KILLED_PROCESSES_COUNT} los procesos #end murieron por el asesino
+  de OOM en ${NODE_NAME} en el ${ENV_NAME'
+subject: '#if(${OOM_KILLED_PROCESSES_COUNT}== 1) ${OOM_KILLED_PROCESS_NAME} process
+  was #else ${OOM_KILLED_PROCESSES_COUNT} processes were #end killed by OOM killer
+  at ${NODE_NAME} in the ${ENV_NAME}'
+---
+<div id="maincontent" class="jel-main-content"><p>Se ha ejecutado la alerta ${TRIGGER_NAME}. ${NODE_NAME} nodo (s) en el entorno ${ENV_NAME} intent&oacute; usar m&aacute;s RAM que la proporcionada (${RAM_LIMIT_MB} MiB por nodo) por el l&iacute;mite m&aacute;ximo de cloudlet que ha configurado (${RAM_LIMIT_CLOUDLETS} cloudlets por nodo).</p><p>Como resultado, los siguientes procesos fueron eliminados por el asesino de OOM en el (los) contenedor (es) de ${NODE_NAME}:<br>${OOM_REPORT}</p><p>Actualmente ${NODE_NAME} consume ${CLOUDLETS_USED} cloudlet (es) (aproximadamente ${MEM_USED} MiB) que es ${LOAD_VALUE}% de los recursos disponibles.</p><p>Nota: durante una escasez de memoria de emergencia, el asesino OOM intenta liberar la cantidad m&aacute;xima de memoria eliminando el menor n&uacute;mero de procesos posible. Por lo tanto, los procesos eliminados no siempre indican los procesos que causaron una carga de memoria inesperadamente alta.</p><p>Acciones recomendadas:<br>Revise el historial de alertas de OOM Killer en su panel de control<br>Compruebe si su aplicaci&oacute;n fue afectada por el (los) proceso (s) cancelado (s)<br>Aumente el l&iacute;mite de cloudlet para permitir que ${NODE_NAME} acceda a m&aacute;s RAM cuando sea necesario<br>Reinicie ${ENV_NAME} para asegurarse de que se est&eacute;n ejecutando todos los procesos necesarios<br>La gu&iacute;a m&aacute;s detallada aplicable a los procesos afectados, c&oacute;mo analizar el problema con m&aacute;s detalle y c&oacute;mo evitarlo en el futuro se puede encontrar en nuestra documentaci&oacute;n.</p><p>#set ($ recordatorio = ${REMINDER_PERIOD} / 60) Nota: #if($ recordatorio! = 0) Se eliminar&aacute;n los mensajes adicionales sobre muertes de OOM en ${NODE_NAME} durante las siguientes $ recordatorios para evitar inundar su buz&oacute;n. Puede ajustar este intervalo dentro de la configuraci&oacute;n de alerta de carga en el panel de control. #else Actualmente est&aacute; recibiendo notificaciones inmediatas por cada muerte OOM. Puede suprimir mensajes adicionales ajustando el intervalo de notificaci&oacute;n dentro de la configuraci&oacute;n de alerta de carga en el tablero. #fin</p></div>
+---
+name: notify_mem_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE}% de la mem&oacute;ria
+  RAM disponible'
+subject: 'Notificación Jelastic SaveInCloud: ${NODE_NAME} consumio ${LOAD_VALUE}%
+  de la memória RAM disponible'
+---
+Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_CONDITION_GREATER}) El volume de memoria RAM utilizado por ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excedido ${TRIGGER_VALUE}% #else El volume de memoria RAM utilizado por ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor que ${TRIGGER_VALUE}% #end <br><br><strong>Resultado:</strong> <br>Actualmente ${NODE_NAME}(s) consume ${CLOUDLETS_USED} cloudlets (aproximadamente ${MEM_USED} MB) que representa ${LOAD_VALUE}% de los recursos disponibles.<br><br><strong>Recomendaciones:</strong><br><ul>#if(${TRIGGER_CONDITION_GREATER})<li>Por favor considere agregar m&aacute;s cloudlets a tu container ${NODE_NAME} para no tener p&eacute;rdida de velocidad.<br></li>#end</ul><ul><li>El intervalo de tiempo de &eacute;sta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas alertas de tu panel de controlo por si usted reciba con mucha frequ&eacute;ncia estos emails.<br><br></li><li>Recuerde, usted solamente paga lo que utiliz&aacute;s en los Cloudlets Din&acirc;micos dentro del l&iacute;mite disponible que usted configura.#if(${TRIGGER_CONDITION_GREATER}) Despues de terminada las tareas, tu aplicaci&oacute;n podr&aacute; exigir menos recursos, y el numero de cloudlets que ella podr&aacute; utilizar va a ser reducido automacticamente.#end</li></ul><p>Sigue el link para cambiar el limite escalonable del nodo ${NODE_NAME} ahora:<br><br><a href="${AUTH_CHANGE_TOPOLOGY}" target="_blank">${AUTH_CHANGE_TOPOLOGY}</a><br><br>Para recibir m&aacute;s informaciones en como configurar las notificaciones, por favor, sigue nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.</p>
+---
+name: notify_net_ext_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} consumio ${LOAD_VALUE} KB/s de tr&aacute;fego'
+subject: 'Notificación Jelastic SaveInCloud: ${NODE_NAME} consumio ${LOAD_VALUE} KB/s
+  de tráfego'
+---
+Informamos a usted sobre la activaci&oacute;n del trigger ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_CONDITION_GREATER})La tasa de tr&aacute;fego de datos externo en ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> ha excedido ${TRIGGER_VALUE} KB/s #else La tasa de tr&aacute;fego de datos externo en ${NODE_NAME} en el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> &eacute;s menor que ${TRIGGER_VALUE} KB/s #end <br><br><strong>Resultado:</strong><br>Actualmente ${NODE_NAME}(s) consume ${NET_EXT_USED} KB/s.<br><br><strong>Recomendaciones:</strong><br><ul><li>El intervalo de tiempo de esta notificaci&oacute;n puede ser ajustado dentro de las configuraciones de alertas en tu panel de controlo por si usted reciba muchos emails con frecuencia.<br>#if(${TRIGGER_CONDITION_GREATER})<br></li><li>Si &eacute;s neces&aacute;rio, usted puede solicitar un contacto con el soporte de tu proveedor de alojamiento y solicitar m&aacute;s recursos para tu container ${NODE_NAME} y as&iacute; evitar p&eacute;rdida de performance. #end</li></ul><br>Para m&aacute;s informaciones sobre configuraciones de notificaciones, por favor, consulte nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.<br><br>
+---
+name: notify_net_ext_out_loading
+title: 'Notificaci&oacute;n: ${NODE_NAME} ha utilizado ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC")
+  Mbps #else% #end'
+subject: 'Notificación Jelastic : ${NODE_NAME} ha utilizado ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC")
+  Mbps #else% #end'
+---
+Informamos a usted sobre la execuci&oacute;n del ${TRIGGER_NAME}.<br><br><strong>Raz&oacute;n:</strong><br>La taza de transfer&eacute;ncia de tr&aacute;fego externo en el nodo ${NODE_NAME} en tu ambiente  <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a>  #if(${TRIGGER_CONDITION_GREATER}) ha excedido #else &eacute;s menor que #end ${TRIGGER_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end<br><br><strong>Resultado:</strong><br>Actualmente ${NODE_NAME}(s) ha utilizado ${LOAD_VALUE}#if(${TRIGGER_CONDITION_VALUE_TYPE}=="SPECIFIC") Mbps #else% #end. <br><br><strong>Recomendaciones:<br></strong>#if(${TRIGGER_CONDITION_GREATER})<ul><li>Ponga en contacto con tu proveedor de alojamiento y haga una solicitud para agrandar el l&iacute;mite de transfer&eacute;ncia de datos de tu ambiente, para no tener problemass con performance de tu aplicaci&oacute;n; #end</li></ul><ul><li>El tiempo de envio de notificaciones podr&aacute; ajustarse en tu panel de contr&oacute;l en las configuraciones de avisos por si est&eacute; recibiendo muchos comunicados</li></ul><br>Para m&aacute;s informaciones en como configurar las reglass de notificaciones, lea nuestra <a target="_blank" href="${URL_DOCS_ENV_ALERTS}">documentaci&oacute;n</a>.
+---
+name: notify_node_added
+title: Nodo ${NODE_NAME} ha sido agregado a tu ambiente ${ENV_NAME}
+subject: Jelastic SaveInCloud - Nodo ${NODE_NAME} ha sido agregado
+---
+Informamos a usted, que el nodo ${NODE_NAME} ha sido agregado al ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> debido al escalonamiento horizontal configurado.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_RESOURCE_TYPE}=="CPU") CPU#elseif(${TRIGGER_RESOURCE_TYPE}=="MEM") RAM#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IO") Disk I/O#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IOPS") Disk IOPS#elseif(${TRIGGER_RESOURCE_TYPE}=="NET_EXT") External network traffic#end consumption exceeded ${TRIGGER_VALUE}#if(${TRIGGER_RESOURCE_TYPE}=="NET_EXT")KB/s#else% level#end. <br><br><strong>Resultado:</strong><br>Requisici&oacute;n del ${NODE_NAME} ha sido agregada con &eacute;xito.<br>Actualmente el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> posee ${NODE_COUNT} ${NODE_NAME} nodo(s).<br><br>Aqui usted va encuentrar m&aacute;s detalles sobre escalonamiento horizontal en nuestra <a target="_blank" href="${URL_DOCS_HORIZONTAL_SCALING}">documentaci&oacute;n</a>.<br><br>
+---
+name: notify_node_removed
+title: Nodo ${NODE_NAME} ha sido borrado de tu ambiente ${ENV_NAME}
+subject: Jelastic SaveInCloud - Nodo ${NODE_NAME} ha sido borrado
+---
+Informamos a usted, que el nodo ${NODE_NAME} ha sido borrado al ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> debido al escalonamiento horizontal configurado.<br><br><strong>Raz&oacute;n:</strong><br>#if(${TRIGGER_RESOURCE_TYPE}=="CPU") CPU#elseif(${TRIGGER_RESOURCE_TYPE}=="MEM") RAM#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IO") Disk I/O#elseif(${TRIGGER_RESOURCE_TYPE}=="DISK_IOPS") Disk IOPS#elseif(${TRIGGER_RESOURCE_TYPE}=="NET_EXT") External network traffic#end consumption went below ${TRIGGER_VALUE}#if(${TRIGGER_RESOURCE_TYPE}=="NET_EXT")KB/s#else% level#end. <br><br><strong>Resultado:</strong><br>El nodo ${NODE_NAME} ha sido borrado con &eacute;xito.<br>Actualmente el ambiente <a href="${ENV_URL}" target="_blank">${ENV_NAME}</a> posee ${NODE_COUNT} ${NODE_NAME} nodo(s).<br><br>Aqui usted va encuentrar m&aacute;s detalles sobre escalonamiento horizontal en nuestra <a target="_blank" href="${URL_DOCS_HORIZONTAL_SCALING}">documentaci&oacute;n</a>.<br><br><br>
+---
+name: pool_system
+title: Notificaci&oacute;n
+subject: Jelastic SaveInCloud - Notificación
+---
+${MESSAGE}<br>
+---
+name: postgres_node_added
+title: Nodo PostgreSQL ha sido agregado con &eacute;xito
+subject: Jelastic SaveInCloud - Nodo PostgreSQL ha sido agregado con éxito
+---
+Tenemos el agrado de informar que tu nuevo servidor PostgreSQL de tu <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a> ha sido agregado al ambiente.<br><br>Porfavor utilice los siguientes datos para aceder a la interface de administraci&oacute;n web phpPgAdmin:<br>URL de Aceso: <a href="${URL}" target="_blank">${URL}</a><br>Login : ${LOGIN}<br>Contrase&ntilde;a : <span class="password-field">${PASSWORD}</span><br><br>Instrucciones detalladas para ayudar usted a iniciar el uso del PostgreSQL con tu aplicaci&oacute;n est&aacute;n disponibles en nuestra documentaci&oacute;n: <a href="http://jelastic.com/docs/connection-to-postgresql" target="_blank">Conectando al PostgreSQL</a><br><br>
+---
+name: pswd_recovery
+title: Tu contrase&ntilde;a ha sido reseteada!
+subject: Jelastic SaveInCloud - Tu contraseña ha sido reseteada!
+---
+Tu contrase&ntilde;a fue reseteada para: ${NEW_PASSWORD}<br><br>Por favor ingres&aacute; nuevamente en tu panel de controlo en <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a> y haga el login con tu email y la nueva contrase&ntilde;a.<br><br>Nosotros recomendamos que usted cambie nuevamente para una contrase&ntilde;a que puedas acordarse y que sea dificil de adivinar. Para hacer eso, haga un click en el nombre de tu cuenta en la parte superior derecha y seleccione <strong>Cambiar contrase&ntilde;a</strong>.<br><br>
+---
+name: rdp_access
+title: Nodo ${NODE_NAME} ha sido creado con &eacute;xito
+subject: Jelastic SaveInCloud - Nodo ${NODE_NAME} ha sido creado con éxito
+---
+Felicitaciones! El nuevo nodo <strong>${NODE_NAME}</strong> ha sido agregado con &eacute;xito al ambiente <strong>${ENV_NAME}</strong> en el <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a>.<br><br>Por favor utilice los siguientes datos para establecer conexi&oacute;n remota con tu <strong>${NODE_NAME}</strong> por RDP:<br><strong>Direci&oacute;n o Host</strong> : ${RDP_URL}<br><strong>Login</strong> : ${RDP_LOGIN}<br><strong>Contrase&ntilde;a</strong> : <span class="password-field">${RDP_PASSWORD}</span><br><br>Para aceder de manera f&aacute;cil al nodo ${NODE_NAME} por el navegador, utilice el link abajo: <br><a href="${AUTH_URL_RDP_CONNECT}" target="_blank">${AUTH_URL_RDP_CONNECT}</a><br><br>Informaciones detalladas sobre <a href="${URL_DOCS_RDP_ACCESS}" target="_blank">Containers Windows en el Jelastic SaveInCloud</a> estan disponibles en nuestra documentaci&oacute;n.
+---
+name: rdp_password_changed
+title: Contrase&ntilde;a del ${NODE_NAME} ha sido cambiada con &eacute;xito
+subject: Jelastic SaveInCloud - Contraseña del ${NODE_NAME} ha sido cambiada con éxito
+---
+Tenemos el agrado de informar a usted que la contrase&ntilde;a del nodo <strong>${NODE_NAME}</strong> en tu ambiente <strong>${ENV_NAME}</strong> ha sido cambiada con &eacute;xito.<br><br>Por favor utilice los siguientes datos para establecer una conexi&oacute;n remota con <strong>${NODE_NAME}</strong> via RDP:<br><strong>Direci&oacute;n Host </strong>: ${RDP_URL}<br><strong>Login</strong> : ${RDP_LOGIN}<br><strong>Contrase&ntilde;a</strong> : <span class="password-field">${RDP_PASSWORD}</span><br><br>Para aceder de manera f&aacute;cil en tu nodo ${NODE_NAME} via navegador, utilice el siguiente link con solamente un click: <br><a href="${AUTH_URL_RDP_CONNECT}" target="_blank">${AUTH_URL_RDP_CONNECT}</a><br><br>
+---
+name: reseller_confirm_install_solution
+title: Solicitud de Instalaci&oacute;n de la Aplicaci&oacute;n ${SOLUTION_NAME}<span id="mce_noneditablecaret" data-mce-bogus="true"></span>
+subject: Solicitud de Instalación de la Aplicación ${SOLUTION_NAME} por ${TARGET_USER_EMAIL}
+---
+Informamos que el usuario <strong>${TARGET_USER_EMAIL}</strong> hizo una solicitud de instalaci&oacute;n de la aplicaci&oacute;n <strong>${SOLUTION_NAME}</strong>.<br><br>Para completar la instalaci&oacute;n de la aplicaci&oacute;n <strong>${SOLUTION_NAME}</strong>, clique en el link abajo:<br><br><a href="${AUTH_INSTALL_SOLUTION}" target="_blank">${AUTH_INSTALL_SOLUTION}</a><br><br>
+---
+name: reseller_request_install_details
+title: Solicitud de Instalaci&oacute;n ${SOLUTION_NAME} ha sido enviada
+subject: Solicitud de Instalación ${SOLUTION_NAME} ha sido enviada
+---
+Gracias por utilizar nuestros servicios!<br><br>Informamos que tu solicitud de instalaci&oacute;n de la aplicaci&oacute;n <strong>${SOLUTION_NAME}</strong> ha sido enviada.<br><br>Nuestro equipo se va contactar con usted y proveer todos los detalles con brevedad.<br><br>
+---
+name: reseller_solution_deploy_successful
+title: Aplicaci&oacute;n ${SOLUTION_NAME} ha sido instalada con &eacute;xito por ${TARGET_USER_EMAIL}<span id="mce_noneditablecaret" data-mce-bogus="true"></span>
+subject: Aplicación ${SOLUTION_NAME} ha sido instalada con éxito por ${TARGET_USER_EMAIL}
+---
+Informamos que la aplicaci&oacute;n <strong>${SOLUTION_NAME}</strong> ha sido instalada con &eacute;xito atrav&eacute;s de la solicitud hecha por <strong>${TARGET_USER_EMAIL}</strong>.<br><br><strong>Detalles:</strong><br>Email del Usuario: ${TARGET_USER_EMAIL}<br>URL del Ambiente: <a href="${ENV_URL}">${ENV_URL}</a><br>Panel de Controlo: <a href="${URL_DASHBOARD}">${URL_DASHBOARD}</a> <br><br>${SOLUTION_TEXT}<br><br>
+---
+name: solution_deploy_successful
+title: Tu aplicaci&oacute;n ${SOLUTION_NAME} ha sido instalada con &eacute;xito en el Jelastic SaveInCloud
+subject: Jelastic SaveInCloud - Aplicación ha sido Instalada con éxito
+---
+Tu aplicaci&oacute;n ${SOLUTION_NAME} ha sido instalada con &eacute;xito en tu <a href="${ENV_URL}">ambiente</a> de alojamiento del <a href="${URL_DASHBOARD}">Jelastic SaveInCloud</a>.<br><br>${SOLUTION_TEXT}<br>
+---
+name: statistics_system
+title: Notificaci&oacute;n de Estad&iacute;sticas de Utilizaci&oacute;n
+subject: Jelastic SaveInCloud - Notificación de Estadísticas de Utilización
+---
+${MESSAGE}
+---
+name: user_2fa_activation
+title: <p>Autenticaci&oacute;n de dos factores habilitada<br></p>
+subject: Two-Factor Authentication Enabled for Your ${HOSTER_NAME} Account
+---
+<div class="jel-main-content"><p>La autenticaci&oacute;n de dos factores (2FA) est&aacute; habilitada para su cuenta ${HOSTER_NAME}.</p><p>Para ingresar al panel de control, deber&aacute;:<br> 1.pega un c&oacute;digo de la aplicaci&oacute;n correspondiente en tu tel&eacute;fono<br> 2.proporcionar el nombre de usuario regular y las credenciales de contrase&ntilde;a</p><p>Importante: guarde los c&oacute;digos de recuperaci&oacute;n para el inicio de sesi&oacute;n de emergencia en caso de que el autenticador no est&eacute; disponible. De lo contrario, el acceso a la cuenta se perder&aacute; permanentemente.</p><p>Descubra c&oacute;mo administrar 2FA, operar a trav&eacute;s de API con</p> <a href="${URL_DOCS_USER_ACCESS_TOKENS}" target="_blank">access tokens</a>, <p>o deshabilita esta caracter&iacute;stica:<br></p><table class="button button-padding last"><tbody><tr><td><a href="${AUTH_USER_ACCOUNT_SETTINGS}" target="_blank"> <span>Manage Account Settings</span> </a></td></tr></tbody></table></div>
+---
+name: user_2fa_deactivation
+title: <p><p>Autenticaci&oacute;n de dos factores deshabilitada<br></p></p>
+subject: Two-Factor Authentication Disabled for Your ${HOSTER_NAME} Account
+---
+<div class="jel-main-content"><p>La autenticaci&oacute;n de dos factores (2FA) est&aacute; inhabilitada para su cuenta ${HOSTER_NAME}. El c&oacute;digo de la aplicaci&oacute;n de autenticaci&oacute;n ya no es necesario para acceder al panel de control.</p><p>Siga el siguiente enlace para administrar la configuraci&oacute;n de su cuenta:</p><table class="button button-padding last"><tbody><tr><td><a href="${AUTH_USER_ACCOUNT_SETTINGS}" target="_blank"> <span>Manage Account Settings</span> </a></td></tr></tbody></table></div>
+---
+name: user_2fa_forced_activation
+title: <p>La autenticaci&oacute;n de dos factores comienza en<br>${ACTIVATION_DATE}</p>
+subject: Two-Factor Authentication for Your ${HOSTER_NAME} Account Starts at ${ACTIVATION_DATE}
+---
+<div class="jel-main-content"><p>Su acceso a ${HOSTER_NAME} Cluster Admin Panel, panel de desarrolladores y API de la plataforma ser&aacute; restringido con autenticaci&oacute;n de dos factores (2FA).</p><p>Importante: para seguir usando su cuenta, realice la configuraci&oacute;n 2FA requerida hasta ${ACTIVATION_DATE} y guarde los c&oacute;digos de recuperaci&oacute;n. De lo contrario, el acceso se perder&aacute; permanentemente.</p><p>Descubra c&oacute;mo configurar y administrar 2FA, as&iacute; como operar a trav&eacute;s de API con</p> <a href="${URL_DOCS_USER_ACCESS_TOKENS}" target="_blank">access tokens</a>.<table class="button button-padding last"><tbody><tr><td><a href="${AUTH_USER_ACCOUNT_SETTINGS}" target="_blank"> <span>SET UP TWO-FACTOR AUTHENTICATION</span> </a></td></tr></tbody></table></div>
+---
+name: user_email_successfully_changed
+title: Email ha sido cambiado con &eacute;xito
+subject: Jelastic SaveInCloud - Email ha sido cambiado con éxito
+---
+El email de tu cuenta Jelastic SaveInCloud ha sido cambiado con &eacute;xito para:<br>${EMAIL}<br><br>Para seguir trabajando en tu Jelastic SaveinCloud, usted tendr&aacute; que aceder al Panel de Controlo con tu nuevo email.<br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Nuevo Login: ${EMAIL}<br><br>Si desea usted tambien podr&aacute; <a href="${LINK_RESET_PASSWORD_DIALOG}" target="_blank">resetear tu contrase&ntilde;a aqui</a>.<br><br>
+---
+name: user_relation_confirm
+title: Invitaci&oacute;n ha sido confirmada
+subject: Jelastic SaveInCloud - Invitación ha sido confirmada
+---
+Buena noticia!<br>El Usuario ${LINKED_USER_NAME} acept&oacute; tu invitaci&oacute;n para compartir tu cuenta.<br><br>Sigue la URL para manejar las cuentas compartidas:<br><br><a href="${AUTH_LINKED_USERS_SETTINGS}" target="_blank">${AUTH_LINKED_USERS_SETTINGS}</a>
+---
+name: user_relation_request
+title: Invitaci&oacute;n para compartir cuenta
+subject: Jelastic SaveInCloud - Invitación para compartir cuenta
+---
+Buena not&iacute;cia! Usted acaba de recibir una invitaci&oacute;n para compartir la cuenta Jelastic SaveInCloud del usuario ${OWNER_USER_NAME}.<br><br>Por favor clique en el link abajo para aceptar y confirmar la invitaci&oacute;n:<br><br><a href="${AUTH_CONFIRM_RELATION}" target="_blank">${AUTH_CONFIRM_RELATION}</a><br><br>Importante! La invitaci&oacute;n termina en ${CONFIRM_KEY_VALIDITY_DAYS} dias.<br><br>
+---
+name: user_relation_unlink_owner
+title: Usuario ha sido disociado de tu cuenta
+subject: Jelastic SaveInCloud - Usuario ha sido disociado de tu cuenta
+---
+Informamos por medio de este email que el usuario ${LINKED_USER_NAME} ha sido disociado de tu cuenta.<br><br>Sigue la URL para manejar sus cuentas compartidas:<br><br><a href="${AUTH_LINKED_USERS_SETTINGS}" target="_blank">${AUTH_LINKED_USERS_SETTINGS}</a><br><br>
+---
+name: user_relation_unlink_user
+title: Usted ha sido disociado de tu cuenta corporativa
+subject: Jelastic SaveInCloud - Usted ha sido disociado de tu cuenta corporativa
+---
+Informamos por medio de este email que tu cuenta ha sido disociada por el usuario ${OWNER_USER_NAME}.<br><br>Sigue el link para manejar los privilegios actuales con las otras cuentas:<br><br><a href="${AUTH_RELATIONS_SETTINGS}" target="_blank">${AUTH_RELATIONS_SETTINGS}</a><br><br><br>
+---
+name: user_ssh_key_added
+title: Llave SSH ha sido agregada a tu cuenta Jelastic SaveInCloud
+subject: Jelastic SaveInCloud - Llave SSH ha sido agregada
+---
+La siguiente llave SSH ha sido agregada a tu cuenta Jelastic SaveInCloud:<br><br><strong>Titulo:</strong> ${SSH_KEY_TITLE}<br><strong>Fingerprint:</strong> ${SSH_KEY_FINGERPRINT}<br><br>Por favor utilice los datos abajo para configurar el aceso al cliente SSH:<br><strong>ssh ${SSH_USER}@${DOMAIN_SSH_GATEWAY} -p 3022</strong><br><br>Usted puede leer nuestra <a href="${URL_DOCS_SSH_ACCESS}" target="_blank">documentaci&oacute;n</a> para encuentrar m&aacute;s detalles sobre el aceso SSH en tus ambientes.<br><br>Si la llave agregada posee algun error, usted puede borrar ella <a href="${AUTH_SSH_SETTINGS}" target="_blank">ac&aacute;</a>.
+---
+name: welcome_for_auto_cluster
+title: Bienvenido al Jelastic DevOps PaaS y Container-Based IaaS
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Aqui ten&eacute;s todo lo que necesita para impezar:<br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a> <br><br>En el per&iacute;odo gratis de 2 semanas, los recursos de tu cuenta son limitados a:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>Si usted actualizar tu cuenta para la versi&oacute;n completa, estas limitaciones ya no van existir y usted ganar&aacute; el aceso completo a todos los recursos e posibilidades que el Jelastic SaveInCloud ofrece. Usted podr&aacute; actualizar tu cuenta a cualquer momento - solo pulsar el bot&oacute;n "Convertir mi Cuenta" en el menu superior de tu Panel de Controlo Jelastic SaveInCloud.<br><br>Para m&aacute;s informaciones en como actualizar para cuentas pagadas, haga un contacto con tu provedor de alojamiento en <a href="http://docs.jelastic.com/billing-system" target="_blank">Informaciones del Sistema de Cobro</a> y obtenga las instrucciones correspondientes.<br><p>Al proceder, usted acepta los <a href="${URL_HOSTER_TERMS}" target="_blank">T&eacute;rminos de servicio</a>.<br></p>
+---
+name: welcome_for_beta
+title: Bienvenido al Jelastic SaveInCloud !
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elejir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Siguen los datos que necesit&aacute;s para arrancar:<br><br>Panel de Controlo Jelastic: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Suger&eacute;ncias y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Limitaciones de su ambiente de prueba:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>
+---
+name: welcome_for_beta
+title: Bienvenido al Jelastic SaveInCloud !
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elejir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Siguen los datos que necesit&aacute;s para arrancar:<br><br>Panel de Controlo Jelastic: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Suger&eacute;ncias y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Limitaciones de su ambiente de prueba:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>
+---
+name: welcome_for_billing
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_billing
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_billing_interativa
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_billing_parceria_bsk
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_billing_parceria_gamarra
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_collaborators
+title: Bienvenido al Jelastic DevOps PaaS y Container-Based IaaS
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Aqui ten&eacute;s todo lo que necesita para impezar:<br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a> <br><br>En el per&iacute;odo gratis de 2 semanas, los recursos de tu cuenta son limitados a:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>Si usted actualizar tu cuenta para la versi&oacute;n completa, estas limitaciones ya no van existir y usted ganar&aacute; el aceso completo a todos los recursos e posibilidades que el Jelastic SaveInCloud ofrece. Usted podr&aacute; actualizar tu cuenta a cualquer momento - solo pulsar el bot&oacute;n "Convertir mi Cuenta" en el menu superior de tu Panel de Controlo Jelastic SaveInCloud.<br><br>Para m&aacute;s informaciones en como actualizar para cuentas pagadas, haga un contacto con tu provedor de alojamiento en <a href="http://docs.jelastic.com/billing-system" target="_blank">Informaciones del Sistema de Cobro</a> y obtenga las instrucciones correspondientes.
+---
+name: welcome_for_locaweb_migrated
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_locaweb_migrated_omd
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_locaweb_migrated_post
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_pos_parceria_websolute
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_post
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_post_interativa
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_post_parc_icozweb
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_post_parceria_dante
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_post_parceria_k7
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_post_parceria_toolscloud
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_post_personalizado_molero
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_preco_diferenciado
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_selfstack_beta
+title: Bienvenido al Jelastic SaveInCloud !
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elejir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Siguen los datos que necesit&aacute;s para arrancar:<br><br>Panel de Controlo Jelastic: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Suger&eacute;ncias y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Limitaciones de su ambiente de prueba:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>
+---
+name: welcome_for_selfstack_billing
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_selfstack_post
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_selfstack_trial
+title: Bienvenido al Jelastic DevOps PaaS y Container-Based IaaS
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Aqui ten&eacute;s todo lo que necesita para impezar:<br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a> <br><br>En el per&iacute;odo gratis de 2 semanas, los recursos de tu cuenta son limitados a:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>Si usted actualizar tu cuenta para la versi&oacute;n completa, estas limitaciones ya no van existir y usted ganar&aacute; el aceso completo a todos los recursos e posibilidades que el Jelastic SaveInCloud ofrece. Usted podr&aacute; actualizar tu cuenta a cualquer momento - solo pulsar el bot&oacute;n "Convertir mi Cuenta" en el menu superior de tu Panel de Controlo Jelastic SaveInCloud.<br><br>Para m&aacute;s informaciones en como actualizar para cuentas pagadas, haga un contacto con tu provedor de alojamiento en <a href="http://docs.jelastic.com/billing-system" target="_blank">Informaciones del Sistema de Cobro</a> y obtenga las instrucciones correspondientes.<br><p>Al proceder, usted acepta los <a href="${URL_HOSTER_TERMS}" target="_blank">T&eacute;rminos de servicio</a>.<br></p>
+---
+name: welcome_for_sitetrial
+title: Bienvenido al Jelastic DevOps PaaS y Container-Based IaaS
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Aqui ten&eacute;s todo lo que necesita para impezar:<br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a> <br><br>En el per&iacute;odo gratis de 2 semanas, los recursos de tu cuenta son limitados a:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>Si usted actualizar tu cuenta para la versi&oacute;n completa, estas limitaciones ya no van existir y usted ganar&aacute; el aceso completo a todos los recursos e posibilidades que el Jelastic SaveInCloud ofrece. Usted podr&aacute; actualizar tu cuenta a cualquer momento - solo pulsar el bot&oacute;n "Convertir mi Cuenta" en el menu superior de tu Panel de Controlo Jelastic SaveInCloud.<br><br>Para m&aacute;s informaciones en como actualizar para cuentas pagadas, haga un contacto con tu provedor de alojamiento en <a href="http://docs.jelastic.com/billing-system" target="_blank">Informaciones del Sistema de Cobro</a> y obtenga las instrucciones correspondientes.
+---
+name: welcome_for_testbeta
+title: Bienvenido al Jelastic SaveInCloud !
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elejir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Siguen los datos que necesit&aacute;s para arrancar:<br><br>Panel de Controlo Jelastic: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Suger&eacute;ncias y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Limitaciones de su ambiente de prueba:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>
+---
+name: welcome_for_testbilling
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: welcome_for_trial
+title: Bienvenido al Jelastic DevOps PaaS y Container-Based IaaS
+subject: Bienvenido al Jelastic SaveInCloud!
+---
+Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a>. Aqui ten&eacute;s todo lo que necesita para impezar:<br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br><br>Para completar la activaci&oacute;n de tu cuenta, haga un click en el link abajo:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a><br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a> <br><br>En el per&iacute;odo gratis de 2 semanas, los recursos de tu cuenta son limitados a:<ul><li>2 ambientes por cuenta</li><li>4 servidores de aplicaci&oacute;n por ambiente</li><li>8 cloudlets por servidor de aplicaci&oacute;n</li><li>3 GB de espacio en disco por servidor de aplicaci&oacute;n</li></ul>Si usted actualizar tu cuenta para la versi&oacute;n completa, estas limitaciones ya no van existir y usted ganar&aacute; el aceso completo a todos los recursos e posibilidades que el Jelastic SaveInCloud ofrece. Usted podr&aacute; actualizar tu cuenta a cualquer momento - solo pulsar el bot&oacute;n "Convertir mi Cuenta" en el menu superior de tu Panel de Controlo Jelastic SaveInCloud.<br><br>Para m&aacute;s informaciones en como actualizar para cuentas pagadas, haga un contacto con tu provedor de alojamiento en <a href="http://docs.jelastic.com/billing-system" target="_blank">Informaciones del Sistema de Cobro</a> y obtenga las instrucciones correspondientes.<br><p>Al proceder, usted acepta los <a href="${URL_HOSTER_TERMS}" target="_blank">T&eacute;rminos de servicio</a>.<br></p>
+---
+name: welcome_for_vps_ip
+title: Bienvenido a la Versi&oacute;n Completa del Jelastic SaveInCloud
+subject: Bienvenido a la Versión Completa del Jelastic SaveInCloud
+---
+Felicitaciones! Tu cuenta ha sido actualizada.<br><br>Usted recibir&aacute; con brevedad un email con los datos de aceso al Panel de Controlo de ${HOSTER_NAME}. Nosotros recomendamos que usted utilice un poco de tu tiempo para comprender el funcionamiento de los m&eacute;todos de cobro y tecnicos que nustra soluci&oacute;n te provee. <br><br>Si desea aprovechar ahora y desfrutar de todos los recursos de las cuentas pagadas del Jelastic SaveInCloud, simplemente ingrese al Panel con los siguientes datos: <br><br>Panel de Controlo: <a href="${URL_DASHBOARD}" target="_blank">${URL_DASHBOARD}</a><br>Login: ${EMAIL}<br>Contrase&ntilde;a: ${PASSWORD}<br><br>Tambien, usted puede ingresar automaticamente haciendo un click en el siguiente link:<br><a href="${AUTH_LINK}" target="_blank">${AUTH_LINK}</a> <br><br>Manual del Panel de Controlo: <a href="https://docs.jelastic.com/jelastic-dashboard-guide" target="_blank">https://docs.jelastic.com/jelastic-dashboard-guide</a><br>Dudas y Soporte: <a href="${URL_HOSTER_SUPPORT}" target="_blank">${URL_HOSTER_SUPPORT}</a>, <a href="${URL_JELASTIC_COMMUNITY}" target="_blank">${URL_JELASTIC_COMMUNITY}</a><br><br>Gracias por elegir <a href="http://jelastic.com/" target="_blank">Jelastic DevOps PaaS</a> y sea bienvenido a bordo!
+---
+name: wildfly_controller_added
+title: Se agreg&oacute; un nodo controlador de dominio Wildfly
+subject: ${HOSTER_NAME} - Nodo controlador de dominio Wildfly agregado al entorno ${ENV_NAME}
+---
+<div class="jel-main-content">Solo quer&iacute;a que sepan que se agreg&oacute; un nuevo nodo controlador de dominio Wildfly a su entorno ${ENV_NAME}.<br><br><div class="highlighted-block">Utilice la siguiente informaci&oacute;n para acceder a su consola de administraci&oacute;n:<b><br>URL de la consola de administraci&oacute;n:</b> <a href="${URL}" target="_blank">${URL}</a> <br><b>Inicio de sesi&oacute;n de consola de administraci&oacute;n: </b> ${LOGIN}<br><b>Contrase&ntilde;a de la consola de administraci&oacute;n: </b> <span class="password-field">${PASSWORD}</span></div></div>
+---
+name: wildfly_controller_password_changed
+title: La contrase&ntilde;a de Wildfly para el nodo del controlador de dominio cambi&oacute;
+subject: La contraseña de Wildfly para el nodo del controlador de dominio cambió
+---
+<div class="jel-main-content">Recientemente solicit&oacute; un restablecimiento de contrase&ntilde;a para su nodo <a href="${URL_DASHBOARD}">${HOSTER_NAME} Cloud</a> controlador de dominio Wildfly. <br><div class="highlighted-block"><br>Estas son las nuevas credenciales:<br><b>URL de la consola de administraci&oacute;n::</b> <a href="${URL}" target="_blank">${URL}</a> <br><b>Login de la Consola de administraci&oacute;n: </b> ${LOGIN}<br><b>Contrase&ntilde;a de la consola de administraci&oacute;n: </b> <span class="password-field">${PASSWORD}</span></div></div>
